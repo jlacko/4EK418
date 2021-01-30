@@ -1,0 +1,3178 @@
+{
+	"type" : "FeatureCollection",
+	"name" : "FSV_VerejnaWC_b",
+	"features" : [
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.414256558000034, 50.098839274000056 ]
+			},
+			"properties" : {
+				"OBJECTID" : 1,
+				"ADRESA" : "Praha 7, Milady Horákové 98",
+				"OTEVRENO" : "po-ne 7:00-24:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.422901687000035, 50.10004133100006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 2,
+				"ADRESA" : " ",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.438505551000048, 50.09943111100006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 3,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.440563636000036, 50.108412764000036 ]
+			},
+			"properties" : {
+				"OBJECTID" : 4,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.436311337000063, 50.108607144000075 ]
+			},
+			"properties" : {
+				"OBJECTID" : 5,
+				"ADRESA" : "Praha 7, Partyzánská 7",
+				"OTEVRENO" : "po-pá 7:00-16:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.445391089000054, 50.09868634400004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 6,
+				"ADRESA" : "Bubenské nábř. 306/13",
+				"OTEVRENO" : "po-so 8:00-20:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.445464790000074, 50.10000967900004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 7,
+				"ADRESA" : "Bubenské nábř. 306/13",
+				"OTEVRENO" : "po-pá 8:00-16:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.440076027000032, 50.10974506500003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 8,
+				"ADRESA" : "Praha 7, Partyzánská",
+				"OTEVRENO" : "po-ne 6:00-21:00",
+				"CENA" : "10/15 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.456224317000022, 50.08232958100007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 9,
+				"ADRESA" : " ",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.467344085000036, 50.07845495400005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 10,
+				"ADRESA" : "Vinohradská , Praha 3",
+				"OTEVRENO" : "listopad prosinec leden únor 8:00-17:00,březen duben říjen+dušičky 8:00-18:00,květen-září 8:00-19:00",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.461174561000064, 50.078797518000044 ]
+			},
+			"properties" : {
+				"OBJECTID" : 11,
+				"ADRESA" : "Vinohradská 2828/151",
+				"OTEVRENO" : "po-so 9:00-24:00; ne 10:00-24:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.474070405000077, 50.07867147700006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 12,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-21:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.461296335000043, 50.07811828700005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 13,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "8/5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.45555766700005, 50.077627230000076 ]
+			},
+			"properties" : {
+				"OBJECTID" : 14,
+				"ADRESA" : null,
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.449245672000075, 50.07732838800007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 15,
+				"ADRESA" : " ",
+				"OTEVRENO" : null,
+				"CENA" : "8/5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.542764275000025, 50.07231102800006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 16,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 9:00-21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.539358176000064, 50.07628527000003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 17,
+				"ADRESA" : "Praha 10 Štěrboholy, Zamenhofova 440",
+				"OTEVRENO" : "po-ne 10:00-20:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.541696758000057, 50.07470733100007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 18,
+				"ADRESA" : "Praha 10 Štěrboholy, Zamenhofova 440",
+				"OTEVRENO" : "po-ne 10:00-20:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.539110503000074, 50.07378995000005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 19,
+				"ADRESA" : "Praha 10 Štěrboholy, Zamenhofova 440",
+				"OTEVRENO" : "po-ne  10:00-20:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.437702110000032, 50.09048415600006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 20,
+				"ADRESA" : "Sokolovská 2080",
+				"OTEVRENO" : "po-ne 6:00-01:00",
+				"CENA" : "jednotná cena 10 Kč (možnost odečíst formou konzumace)"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.439704969000047, 50.089371121000056 ]
+			},
+			"properties" : {
+				"OBJECTID" : 21,
+				"ADRESA" : "Křižíkova 6/344, Praha 8",
+				"OTEVRENO" : "po-ne 05:00-23:30",
+				"CENA" : "jednotná cena 10 Kč/0,40 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.629452620000052, 50.07993726900003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 22,
+				"ADRESA" : "Praha 9, Českobrodská",
+				"OTEVRENO" : "5:00-24:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.440797276000069, 50.08898199200007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 23,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 02:45-00:30",
+				"CENA" : "jednotná cena 10 Kč/0,40 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.435842642000068, 50.08380755500008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 24,
+				"ADRESA" : "Praha 2, Wilsonova 8",
+				"OTEVRENO" : "po-ne 03:15-00:45",
+				"CENA" : "jednotná cena 20 Kč/1 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.51598851600005, 50.076331855000035 ]
+			},
+			"properties" : {
+				"OBJECTID" : 25,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "8/5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.344649154000024, 50.08763609400006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 26,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-21:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.347598040000037, 50.095552112000064 ]
+			},
+			"properties" : {
+				"OBJECTID" : 27,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-21:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.36464144000007, 50.09853412800004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 28,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-21:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.418376311000031, 50.08227560900008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 29,
+				"ADRESA" : "Národní 25/961, Praha 1",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.354414346000056, 50.09688936500004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 30,
+				"ADRESA" : "Etiopská 686/3, Praha 6",
+				"OTEVRENO" : "po-čt 8:00-22:30; pá 8:00-01:00; so 9:00-01:00; ne 10:00-01:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.418347898000036, 50.08792519600007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 31,
+				"ADRESA" : "Kaprova 14, Praha 1",
+				"OTEVRENO" : "po-čt 8:00-24:00; pá 8:00-01:00; so 9:00-01:00; ne 09:00-24:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.436446336000074, 50.090282761000026 ]
+			},
+			"properties" : {
+				"OBJECTID" : 32,
+				"ADRESA" : "Na Poříčí 46, Praha 1",
+				"OTEVRENO" : "po-pá 8:00-24:00;  so 9:00-24:00; ne 10:00-23:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.39634193300003, 50.09984853800006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 33,
+				"ADRESA" : "Vítězné náměstí 1, Praha 6",
+				"OTEVRENO" : "po-čt 7:00-01:00; pá 7:00-02:00; so 9:00-02:00; ne 09:00-23:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.428178098000046, 50.08043443500003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 34,
+				"ADRESA" : "Václavské náměstí 801/52, Praha 1",
+				"OTEVRENO" : "po-st 9:00-01:00; čt 9.00-06.00; pá-so nonstop; ne 00:00-01:00",
+				"CENA" : "jednotná cena 10 Kč (možnost odečíst formou konzumace)"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.422768655000027, 50.08360386500004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 35,
+				"ADRESA" : "28. října 12, Praha 1",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 10 Kč (možnost odečíst formou konzumace)"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.420371927000076, 50.081433796000056 ]
+			},
+			"properties" : {
+				"OBJECTID" : 36,
+				"ADRESA" : "Spálená 2121/22, Praha 1",
+				"OTEVRENO" : null,
+				"CENA" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.430128990000071, 50.085743156000035 ]
+			},
+			"properties" : {
+				"OBJECTID" : 37,
+				"ADRESA" : null,
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.431514708000066, 50.08572860400005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 38,
+				"ADRESA" : null,
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.289210436000076, 50.05365055400006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 39,
+				"ADRESA" : "Řevnická 121/1",
+				"OTEVRENO" : "po-ne 9:00 - 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.286725898000043, 50.05395460900007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 40,
+				"ADRESA" : "Řevnická 121/1",
+				"OTEVRENO" : "po-ne 9:00 - 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.285702076000064, 50.05319868400005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 41,
+				"ADRESA" : "Řevnická 121/1",
+				"OTEVRENO" : "po-ne 9:00 - 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.286725898000043, 50.05395460900007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 42,
+				"ADRESA" : "Řevnická 121/1",
+				"OTEVRENO" : "po-ne 9:00 - 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.290679110000042, 50.05373018100005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 43,
+				"ADRESA" : " ",
+				"OTEVRENO" : null,
+				"CENA" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.409093016000043, 50.08947666800003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 44,
+				"ADRESA" : "Vojanovy sady, Praha 1",
+				"OTEVRENO" : "duben-září 9:00-20:00; říjen-březen 11:00-17:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.419989831000066, 50.08134552400003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 45,
+				"ADRESA" : "Spálená 2121/22, Praha 1",
+				"OTEVRENO" : "po-pá 8:00-21:00; so-ne 9:00-21:00",
+				"CENA" : "jednotná cena 10 Kč (možnost odečíst formou konzumace)"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.428629492000027, 50.080144517000065 ]
+			},
+			"properties" : {
+				"OBJECTID" : 46,
+				"ADRESA" : "Václavské náměstí 56, Praha 1",
+				"OTEVRENO" : "po 6:30-24:00; út-so nonstop; ne 00:00-03:00",
+				"CENA" : "jednotná cena 10 Kč (možnost odečíst formou konzumace)"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.414066131000027, 50.085836587000074 ]
+			},
+			"properties" : {
+				"OBJECTID" : 47,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 9:30-22:30",
+				"CENA" : "jednotná cena 20 Kč/1 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.414030473000025, 50.08571065500007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 48,
+				"ADRESA" : "Novotného lávka 200/5",
+				"OTEVRENO" : "po-ne 12:00-21:00",
+				"CENA" : "jednotná cena 15 Kč/0,70 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.663536682000029, 50.08731630400007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 49,
+				"ADRESA" : "U Trativodu 91",
+				"OTEVRENO" : "po-so 5:45-17:15; ne 7:45-17:35",
+				"CENA" : "jednotná cena 8 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.537976465000042, 50.05462168400004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 50,
+				"ADRESA" : "U Hostivařského nádraží 165/3",
+				"OTEVRENO" : "po-pá 5:40-17:00; so-ne 6:00-17:00",
+				"CENA" : "jednotná cena 8 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.591477994000059, 50.03402351500006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 51,
+				"ADRESA" : "U starého nádraží 262/2",
+				"OTEVRENO" : "po-ne 6:15-17:30",
+				"CENA" : "jednotná cena 8 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.364620976000026, 49.985860313000046 ]
+			},
+			"properties" : {
+				"OBJECTID" : 52,
+				"ADRESA" : "Vrážská 43/5",
+				"OTEVRENO" : null,
+				"CENA" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.406380489000071, 50.02778297400005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 53,
+				"ADRESA" : "Pikovická 869/2",
+				"OTEVRENO" : "po-čt, ne 7:00-17:20; pá 7:00-18:20; so 6:00-18:20",
+				"CENA" : "jednotná cena 8 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.612813732000063, 50.11649862500008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 54,
+				"ADRESA" : "Libuňská 632/1",
+				"OTEVRENO" : "po-ne 6:30-17:30",
+				"CENA" : "jednotná cena 8 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.346302484000034, 50.09483462700007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 55,
+				"ADRESA" : "Nad stanicí 42",
+				"OTEVRENO" : "po-pá 7:05-19:20; so-ne 8:05-16:50",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.493324852000057, 50.03676032100003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 56,
+				"ADRESA" : "Türkova 2317/5, Praha 4",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.474079993000032, 50.05265444400004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 57,
+				"ADRESA" : "Chodovská 228/3, Praha 4",
+				"OTEVRENO" : "po-ne 8:00-01:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.638399701000026, 50.10806985700003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 58,
+				"ADRESA" : "Olomoucká 2332, Horní Počernice",
+				"OTEVRENO" : "po-ne 7:00-22:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.399550129000033, 50.09713736100008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 59,
+				"ADRESA" : "Václavkova 169/1",
+				"OTEVRENO" : "po-ne 6:50-17:45",
+				"CENA" : "jednotná cena 8 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.29238547500006, 50.05265101600003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 60,
+				"ADRESA" : "Sárská 124",
+				"OTEVRENO" : "po-pá 7:00-23:00; so-ne 8:00-23:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.342228201000069, 50.05494081100005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 61,
+				"ADRESA" : "Bucharova",
+				"OTEVRENO" : "po-ne 7:00-22:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.417358155000045, 50.08744103600003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 62,
+				"ADRESA" : "Mariánské náměstí 1",
+				"OTEVRENO" : "po 13:00-20:00; út-pá 9:00-20:00; so 13:00-18:00",
+				"CENA" : "jednotná cena 10 Kč (v případě prokázání se účtenkou z místního bufetu či vstupenkou na akci v knih*"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.468029256000023, 50.04033032900003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 63,
+				"ADRESA" : "Ke garážím 1557/4",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.499306855000043, 50.110004907000075 ]
+			},
+			"properties" : {
+				"OBJECTID" : 64,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 7-20 h; so-ne 8-19 h",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.429662060000055, 50.04957947200006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 65,
+				"ADRESA" : null,
+				"OTEVRENO" : "duben-říjen 7:00-21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.446131164000064, 50.068474441000035 ]
+			},
+			"properties" : {
+				"OBJECTID" : 66,
+				"ADRESA" : null,
+				"OTEVRENO" : "listopad-březen 6:00-22:00; duben-říjen 6:00-24:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.296457329000077, 50.05308778500006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 67,
+				"ADRESA" : "Sárská 5/133, Praha 5 ",
+				"OTEVRENO" : "po-ne 8:00 - 22:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.404868800000031, 50.093959092000034 ]
+			},
+			"properties" : {
+				"OBJECTID" : 68,
+				"ADRESA" : "Mariánské hradby",
+				"OTEVRENO" : "po-ne 10:00-18:00",
+				"CENA" : "jednotná cena 10 Kč/0,5 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.40194322900004, 50.07322822000003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 69,
+				"ADRESA" : "Plzeňská 8",
+				"OTEVRENO" : "po-ne 9-21 h",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.402424912000072, 50.07251633900006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 70,
+				"ADRESA" : "Plzeňská 8",
+				"OTEVRENO" : "po-ne 6-24 h",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.408511346000068, 50.06181295300007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 71,
+				"ADRESA" : "Praha 5, Nádražní 1/279",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 7:00-21:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.388729845000057, 50.05791997400007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 72,
+				"ADRESA" : " ",
+				"OTEVRENO" : null,
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.35490965200006, 50.048385315000075 ]
+			},
+			"properties" : {
+				"OBJECTID" : 73,
+				"ADRESA" : "Radlická 520/117",
+				"OTEVRENO" : "po-ne 9:00 - 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.355840353000076, 50.04732490200007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 74,
+				"ADRESA" : "Radlická 520/117",
+				"OTEVRENO" : "po-ne 9:00 - 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.370976257000052, 50.054504852000036 ]
+			},
+			"properties" : {
+				"OBJECTID" : 75,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 7-20 h; so-ne 8-19 h",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.353914888000077, 50.047488377000036 ]
+			},
+			"properties" : {
+				"OBJECTID" : 76,
+				"ADRESA" : "Radlická 520/117",
+				"OTEVRENO" : "po-ne 9:00 - 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.576612591000071, 50.110090584000034 ]
+			},
+			"properties" : {
+				"OBJECTID" : 77,
+				"ADRESA" : "Chlumecká 2461",
+				"OTEVRENO" : "po-čt, ne 6:30-23:30; pá-so 6:30-24:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.613422309000043, 50.12447977000005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 78,
+				"ADRESA" : "Praha 9, Novopacká 2860\r\n",
+				"OTEVRENO" : "po-ne 6:00-24:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.455852308000033, 50.12455443700003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 79,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-21:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.468982646000029, 50.12660248200007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 80,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.47333492000007, 50.103437333000045 ]
+			},
+			"properties" : {
+				"OBJECTID" : 81,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6-21 h; so-ne 8-20 h",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.476084224000033, 50.10446114900003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 82,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6-21 h; so-ne 8-20 h",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.438643897000077, 50.090905460000045 ]
+			},
+			"properties" : {
+				"OBJECTID" : 83,
+				"ADRESA" : " ",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.464294412000072, 50.097266397000055 ]
+			},
+			"properties" : {
+				"OBJECTID" : 84,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 7-20 h; so-ne 8-19 h",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.451831178000077, 50.093319800000074 ]
+			},
+			"properties" : {
+				"OBJECTID" : 85,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 7-20 h; so-ne 8-19 h",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.402772177000031, 50.07324463200007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 86,
+				"ADRESA" : "Plzeňská 8",
+				"OTEVRENO" : "po-ne 9-21 h",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.410268660000042, 50.06275446200004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 87,
+				"ADRESA" : "Praha 5, Strakonická 116",
+				"OTEVRENO" : "po-ne: 6:00-24:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.407365450000043, 50.07495727600008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 88,
+				"ADRESA" : "Praha 5, Zborovská 11",
+				"OTEVRENO" : "po a st 8:00-17:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.40185438800006, 50.073226713000054 ]
+			},
+			"properties" : {
+				"OBJECTID" : 89,
+				"ADRESA" : "Plzeňská 8",
+				"OTEVRENO" : "po-ne 9-23 h",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.44031706100003, 50.08980926300006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 90,
+				"ADRESA" : "Křižíkova 6/344, Praha 8",
+				"OTEVRENO" : "po-ne 05:00-23:00",
+				"CENA" : "jednotná cena 20 Kč/1 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.438939409000056, 50.08959185900005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 91,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.583174677000045, 50.10969387800003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 92,
+				"ADRESA" : "Praha 9, Chlumecká ulice 764/2",
+				"OTEVRENO" : "po-ne 7:00-24:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.583749452000063, 50.10816674100005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 93,
+				"ADRESA" : "Chlumecká 765/7",
+				"OTEVRENO" : "po-ne 8:00-22:00 ",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.57786389000006, 50.10893644600003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 94,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6-21 h; so-ne 8-20 h",
+				"CENA" : "5/8 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.559252675000039, 50.10668352700003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 95,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 7-20 h; so-ne 8-19 h",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.424901480000074, 50.01423266100005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 96,
+				"ADRESA" : "Praha 4, Lhotecká 169/2b",
+				"OTEVRENO" : "po-ne 7:00-01:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.414686096000025, 50.00572154500003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 97,
+				"ADRESA" : "Praha 4, Soukalova 3",
+				"OTEVRENO" : null,
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.310590317000049, 50.06471588200003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 98,
+				"ADRESA" : "Skuteckého 1395/1",
+				"OTEVRENO" : "po-so 7:00-24:00; 8:00-24:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.304533309000021, 50.06948678900005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 99,
+				"ADRESA" : "Praha 6, Španielova 50",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.494484201000034, 50.14701308900004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 100,
+				"ADRESA" : "Praha 8, Cínovecká ul. 796",
+				"OTEVRENO" : "po-ne 6:00-01:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.48571422200007, 50.07136251900005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 101,
+				"ADRESA" : null,
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.491128223000032, 50.07277569900003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 102,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-20:00; so-ne 8:00-20:00",
+				"CENA" : "8/5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.507847796000021, 50.06800400600008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 103,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-20:00; so-ne 8:00-20:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.467948110000066, 50.067776888000026 ]
+			},
+			"properties" : {
+				"OBJECTID" : 104,
+				"ADRESA" : "Praha 10, U Slávie 1527",
+				"OTEVRENO" : "po-ne 9:00-21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.468897619000074, 50.066996190000054 ]
+			},
+			"properties" : {
+				"OBJECTID" : 105,
+				"ADRESA" : "Praha 10, U Slávie 1527",
+				"OTEVRENO" : "po-ne 9:00-21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.468897619000074, 50.066996190000054 ]
+			},
+			"properties" : {
+				"OBJECTID" : 106,
+				"ADRESA" : "Praha 10, U Slávie 1527",
+				"OTEVRENO" : "po-ne 9:00-21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.470692684000028, 50.06795583500008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 107,
+				"ADRESA" : "Praha 10, U Slavie 1540/2a",
+				"OTEVRENO" : "po-ne 6:00-24:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.447885437000025, 50.064821265000035 ]
+			},
+			"properties" : {
+				"OBJECTID" : 108,
+				"ADRESA" : "Praha 10, Ukrajinská 2b/304",
+				"OTEVRENO" : "po-ne 03:45-00:35",
+				"CENA" : "jednotná cena 8 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.53874128600006, 50.077914141000065 ]
+			},
+			"properties" : {
+				"OBJECTID" : 109,
+				"ADRESA" : "Praha 10, Průmyslová 700/30a",
+				"OTEVRENO" : "po-ne 7:00-24:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.54398201500004, 50.00869090200007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 110,
+				"ADRESA" : "Újezd u Průhonic 280",
+				"OTEVRENO" : null,
+				"CENA" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.416879911000024, 50.064609949000044 ]
+			},
+			"properties" : {
+				"OBJECTID" : 111,
+				"ADRESA" : null,
+				"OTEVRENO" : "nejasná",
+				"CENA" : "dobrovolné"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.431747661000031, 50.075597095000035 ]
+			},
+			"properties" : {
+				"OBJECTID" : 112,
+				"ADRESA" : "Praha 2, Jugoslávská 11",
+				"OTEVRENO" : "po-čt 6:00-2:00; pá 6:00-5:00; so 7:00-5:00; ne 7:00-02:00",
+				"CENA" : "jednotná cena 10 Kč (možnost odečíst formou konzumace)"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.43496674000005, 50.08257114000003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 113,
+				"ADRESA" : "Praha 2, Wilsonova 8",
+				"OTEVRENO" : "po-ne 03:15-00:45",
+				"CENA" : "jednotná cena 20 Kč/1 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.437919661000024, 50.07530974200006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 114,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "8/5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.418834823000054, 50.07563356600008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 115,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.415356941000027, 50.07347478100007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 116,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "WC jednotná cena 5 Kč, sprcha 40 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.430136890000028, 50.07542684900005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 117,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 7:00-20:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.420480071000043, 50.07584421800004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 118,
+				"ADRESA" : " ",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.430016205000072, 50.075560117000066 ]
+			},
+			"properties" : {
+				"OBJECTID" : 119,
+				"ADRESA" : " ",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.294152152000038, 50.05043105000004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 120,
+				"ADRESA" : "Skandinávská 162/27",
+				"OTEVRENO" : "po - ne 7:00-23:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.341323535000072, 50.04988062600006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 121,
+				"ADRESA" : null,
+				"OTEVRENO" : " ",
+				"CENA" : " "
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.331403709000028, 50.044584547000056 ]
+			},
+			"properties" : {
+				"OBJECTID" : 122,
+				"ADRESA" : " ",
+				"OTEVRENO" : null,
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.322249352000028, 50.04522874200006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 123,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 7-20 h; so-ne 8-19 h",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.307741615000054, 50.04680925300005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 124,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 7-20 h; so-ne 8-19 h",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.353238033000025, 50.05094173200007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 125,
+				"ADRESA" : " ",
+				"OTEVRENO" : null,
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.502185713000074, 50.13843675100003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 126,
+				"ADRESA" : "Praha 9, Veselská 663",
+				"OTEVRENO" : "po - ne 9:00-21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.501003858000047, 50.13540373700005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 127,
+				"ADRESA" : "Praha 9, Veselská 663",
+				"OTEVRENO" : "po - ne 9:00-21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.503053316000035, 50.136540395000054 ]
+			},
+			"properties" : {
+				"OBJECTID" : 128,
+				"ADRESA" : "Praha 9, Veselská 663",
+				"OTEVRENO" : "po - ne 9:00-21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.516217752000045, 50.12516825000006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 129,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-21:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.526288218000047, 50.03049615400005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 130,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 9:00-15:00",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.507888334000029, 50.02773593500007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 131,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.491740891000063, 50.03129575400004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 132,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-21:00",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.477572337000026, 50.03739458800004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 133,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-21:00",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.489683850000063, 50.03056911700003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 134,
+				"ADRESA" : "Praha 4, Roztylská 2321/19",
+				"OTEVRENO" : "po-ne 9:00- 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.490195076000077, 50.03200284500008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 135,
+				"ADRESA" : "Praha 4, Roztylská 2321/19",
+				"OTEVRENO" : "po-ne 9:00- 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.491574513000046, 50.031555841000056 ]
+			},
+			"properties" : {
+				"OBJECTID" : 136,
+				"ADRESA" : "Praha 4, Roztylská 2321/19",
+				"OTEVRENO" : "po-ne 9:00- 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.488812304000078, 50.03109679600004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 137,
+				"ADRESA" : "Praha 4, Roztylská 2321/19",
+				"OTEVRENO" : "po-ne 9:00- 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.517105350000065, 50.052769977000025 ]
+			},
+			"properties" : {
+				"OBJECTID" : 138,
+				"ADRESA" : "Praha 10, Švehlova 1391/32",
+				"OTEVRENO" : "po-pá 9:00-21:00, so-ne 10:00-21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.518053287000043, 50.053193855000075 ]
+			},
+			"properties" : {
+				"OBJECTID" : 139,
+				"ADRESA" : "Praha 10, Švehlova 1391/32",
+				"OTEVRENO" : "po-pá 9:00-21:00, so-ne 10:00-21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.438003234000064, 50.04060237700003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 140,
+				"ADRESA" : " ",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.460195670000076, 50.04170087700004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 141,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-21:00",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.448095030000047, 50.04484185100006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 142,
+				"ADRESA" : " ",
+				"OTEVRENO" : null,
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.439123994000056, 50.03389926300008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 143,
+				"ADRESA" : "Praha 4,  Jižní Spojka 1971/3",
+				"OTEVRENO" : "po-ne 6:00-24:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.44229907600004, 50.03385307900004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 144,
+				"ADRESA" : "Praha 4,  Sulická",
+				"OTEVRENO" : "po-ne nonstop",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.432969634000074, 50.02631517000003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 145,
+				"ADRESA" : "Novodvorská 1800/136",
+				"OTEVRENO" : "po-ne 9:00 - 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.433608680000077, 50.027122932000054 ]
+			},
+			"properties" : {
+				"OBJECTID" : 146,
+				"ADRESA" : "Novodvorská 1800/136",
+				"OTEVRENO" : "po-ne 9:00 - 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.440271321000068, 50.06447574200007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 147,
+				"ADRESA" : " ",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.439325174000032, 50.05150075200004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 148,
+				"ADRESA" : " ",
+				"OTEVRENO" : null,
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.433945787000027, 50.05644810500007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 149,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-20:00; so-ne 9:00-15:00",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.42993099000006, 50.06318193800007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 150,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 9:00-15:00",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.438314942000034, 50.05136215200008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 151,
+				"ADRESA" : "Na Pankráci 87",
+				"OTEVRENO" : "po-ne 9-21 h",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.424918712000022, 50.06020581200005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 152,
+				"ADRESA" : "Praha 2, V Pevnosti 4, Vyšehrad",
+				"OTEVRENO" : "v době provozu školy-po dohodě",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.438046298000074, 50.05092160700008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 153,
+				"ADRESA" : "Na Pankráci 87",
+				"OTEVRENO" : "po-ne 9-21 h",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.404723575000048, 50.079253333000054 ]
+			},
+			"properties" : {
+				"OBJECTID" : 154,
+				"ADRESA" : " ",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.403628206000064, 50.06857818800006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 155,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.408808836000048, 50.06054844700003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 156,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "5/10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.401721251000026, 50.074409166000066 ]
+			},
+			"properties" : {
+				"OBJECTID" : 157,
+				"ADRESA" : "Praha 5, Kartouzská 6",
+				"OTEVRENO" : null,
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.403284187000054, 50.07220884000003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 158,
+				"ADRESA" : "Praha 5, Plzeňská 4",
+				"OTEVRENO" : "po-ne 6:00-01:00",
+				"CENA" : "jednotná cena 10 Kč (možnost odečíst formou konzumace)"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.417055149000078, 50.09010751100004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 159,
+				"ADRESA" : "U Starého hřbitova 3a",
+				"OTEVRENO" : "po-ne 9-18 h (léto); po-ne 9-16 h(zima)",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.419322774000022, 50.08933784800007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 160,
+				"ADRESA" : null,
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.416153875000077, 50.08856328500008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 161,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-23:00; so-ne 8:00-23:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.421916717000045, 50.085380333000046 ]
+			},
+			"properties" : {
+				"OBJECTID" : 162,
+				"ADRESA" : " ",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.427133757000036, 50.089045706000036 ]
+			},
+			"properties" : {
+				"OBJECTID" : 163,
+				"ADRESA" : "Praha 1, Nám. Republiky",
+				"OTEVRENO" : "po-ne 9:00-20:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.425035845000025, 50.085883781000064 ]
+			},
+			"properties" : {
+				"OBJECTID" : 164,
+				"ADRESA" : "Praha 1, Ovocný trh 1096/8",
+				"OTEVRENO" : "po-so 9:00-20:00, ne 10:00-19:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.425705910000033, 50.08761165900006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 165,
+				"ADRESA" : "Templová 3/769",
+				"OTEVRENO" : "po-čt 9:00-20:00",
+				"CENA" : "jednotná cena 15 Kč/0,80E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.42187350200004, 50.087884975000065 ]
+			},
+			"properties" : {
+				"OBJECTID" : 166,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 9-19 h",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.419369870000025, 50.08706218400005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 167,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 11:00-23:00 ",
+				"CENA" : "jednotná cena 20 Kč/1 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.420196806000035, 50.08685560100008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 168,
+				"ADRESA" : "Staroměstské nám. 1/3",
+				"OTEVRENO" : "po-ne 9:00-21:00",
+				"CENA" : "jednotná cena 20 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.420249030000036, 50.083755902000064 ]
+			},
+			"properties" : {
+				"OBJECTID" : 169,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 9:00-21:00 (léto); po-ne 9:00-19:00 (zima)",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.414091005000046, 50.086403665000034 ]
+			},
+			"properties" : {
+				"OBJECTID" : 170,
+				"ADRESA" : "Křižovnické náměstí 3, Praha 1",
+				"OTEVRENO" : "květen-září 10:00-19:00; říjen-duben 10:00-18:00",
+				"CENA" : "jednotná cena 20 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.410086033000027, 50.081198044000075 ]
+			},
+			"properties" : {
+				"OBJECTID" : 171,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 8-22 h (léto); po-ne 8-19 h (zima)",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.42680593700004, 50.08635195200003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 172,
+				"ADRESA" : " ",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.408791778000023, 50.092480814000055 ]
+			},
+			"properties" : {
+				"OBJECTID" : 173,
+				"ADRESA" : "Na Opyši 147/1, Malá Strana",
+				"OTEVRENO" : "po-ne 8:00-19:00",
+				"CENA" : "jednotná cena 10 Kč/0,5 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.395080664000034, 50.083443299000066 ]
+			},
+			"properties" : {
+				"OBJECTID" : 174,
+				"ADRESA" : "Petřínské sady, Praha 1",
+				"OTEVRENO" : "duben-září 10:00-22:00; říjen a březen 10:00-20:00; listopad-únor 10:00-18:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.404762504000075, 50.088104643000065 ]
+			},
+			"properties" : {
+				"OBJECTID" : 175,
+				"ADRESA" : "Malostranské náměstí 22/36",
+				"OTEVRENO" : "po-čt 9-19 h; pá-ne 9-20.30 h",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.40488315600004, 50.08748015300006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 176,
+				"ADRESA" : "Mostecká 21",
+				"OTEVRENO" : "po-pá 7:00-01:00; so-ne 7:00-02:00",
+				"CENA" : "jednotná cena 10 Kč (možnost odečíst formou konzumace)"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.408368492000022, 50.09235100400008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 177,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 11:00-23:00",
+				"CENA" : "turniket na 20 Kč/1 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.39447163400007, 50.08314600700004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 178,
+				"ADRESA" : "Petřínské sady, Praha 1",
+				"OTEVRENO" : "duben-říjen 9:15-20:00; listopad-březen 9:15-18:00",
+				"CENA" : "jednotná cena 20 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.407865327000025, 50.08325728600005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 179,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 9-19 h",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.409587982000062, 50.09106021100007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 180,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-21:00",
+				"CENA" : "jednotná cena 8 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.403442946000041, 50.08265768100006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 181,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 9:00-23:30",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.399977081000031, 50.09051946100004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 182,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 7.30-20:00",
+				"CENA" : "jednotná cena 10 Kč/0,5 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.403960937000022, 50.091659710000044 ]
+			},
+			"properties" : {
+				"OBJECTID" : 183,
+				"ADRESA" : "Jiřská 2",
+				"OTEVRENO" : "po-ne 7:30-20:00",
+				"CENA" : "jednotná cena 10 Kč/0,5 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.398421195000026, 50.09221929300003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 184,
+				"ADRESA" : "U Prašného mostu 55/3",
+				"OTEVRENO" : "po-ne 7-21 h",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.390238002000046, 50.087851682000064 ]
+			},
+			"properties" : {
+				"OBJECTID" : 185,
+				"ADRESA" : "Pohořelec 25, Hradčany",
+				"OTEVRENO" : "po-ne 9:00-18:00",
+				"CENA" : "jednotná cena 15 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.401176920000069, 50.09053723800008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 186,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 9-17 h",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.388470377000033, 50.086331220000034 ]
+			},
+			"properties" : {
+				"OBJECTID" : 187,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 9-17.30 h",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.396549290000053, 50.08206752400008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 188,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 9:00-23:30",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.388443281000036, 50.08768283400008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 189,
+				"ADRESA" : " ",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.432466455000053, 50.088455589000034 ]
+			},
+			"properties" : {
+				"OBJECTID" : 190,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.428814862000024, 50.08825250400008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 191,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.43050174700005, 50.07971296900007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 192,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-20:00",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.419853636000028, 50.08228954900005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 193,
+				"ADRESA" : "Národní 63/26",
+				"OTEVRENO" : "po-so 8:00-21:00, ne 9:00-20:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.434047056000054, 50.090273066000066 ]
+			},
+			"properties" : {
+				"OBJECTID" : 194,
+				"ADRESA" : "Na Poříčí 1068/23",
+				"OTEVRENO" : "po-pá 9:00-20:00; so 9:00-18:00; ne 10:00-18:00",
+				"CENA" : null
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.42136798000007, 50.08212262700005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 195,
+				"ADRESA" : "Jungmannova 29/35",
+				"OTEVRENO" : "po-čt 8-18 h; pá 8-16 h",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.422763367000073, 50.07943551000005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 196,
+				"ADRESA" : "Vodičkova 18, Praha 1",
+				"OTEVRENO" : "po a st 8-18 h; út a čt 8-16 h, pá 8-14 h",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.430196791000071, 50.08928624600003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 197,
+				"ADRESA" : "nám. Republiky 2",
+				"OTEVRENO" : "po-ne 8:00-23:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.425341133000074, 50.08474687000006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 198,
+				"ADRESA" : "Na Příkopě 10",
+				"OTEVRENO" : "po-st 7:00-24:00; čt-ne nonstop",
+				"CENA" : "jednotná cena 10 Kč (možnost odečíst formou konzumace)"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.42319905000005, 50.080072003000055 ]
+			},
+			"properties" : {
+				"OBJECTID" : 199,
+				"ADRESA" : "Vodičkova 15",
+				"OTEVRENO" : "po-pá 6:00-20:00 h; so-ne 7:00-20:00h",
+				"CENA" : "jednotná cena 10 Kč (možnost odečíst formou konzumace)"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.428903147000028, 50.080653598000026 ]
+			},
+			"properties" : {
+				"OBJECTID" : 200,
+				"ADRESA" : null,
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.413981869000054, 50.081180292000056 ]
+			},
+			"properties" : {
+				"OBJECTID" : 201,
+				"ADRESA" : "Divadelní 223/1",
+				"OTEVRENO" : "po-ne 9-21 h (léto); po-ne 9-19.30 h (zima)",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.266502028000048, 50.10646577600005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 202,
+				"ADRESA" : null,
+				"OTEVRENO" : "nonstop",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.412887607000073, 50.08118549200003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 203,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 10-20 h",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.43014219500003, 50.07988874000006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 204,
+				"ADRESA" : "Václavské nám.812/ 59",
+				"OTEVRENO" : "po-ne nonstop",
+				"CENA" : "jednotná cena 10 Kč (možnost odečíst formou konzumace)"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.425080883000021, 50.083467503000065 ]
+			},
+			"properties" : {
+				"OBJECTID" : 205,
+				"ADRESA" : "Václavské nám. 9",
+				"OTEVRENO" : "po-pá 7:00-05:00 h; so-ne nonstop",
+				"CENA" : "jednotná cena 10 Kč (možnost odečíst formou konzumace)"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.429974813000058, 50.08920811300004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 206,
+				"ADRESA" : "nám. Republiky 3",
+				"OTEVRENO" : "ne-st 09:00-21:00; čt-so 09:00-22:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.422870045000025, 50.08227356800006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 207,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-ne 15.dubna-14.září 9:00-21:00; 15.září-14.října 9:00-20:00; 15.října-14.dubna 9:00-19:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.43360291700003, 50.08754959100003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 208,
+				"ADRESA" : "Praha 1, Hybernská 13/1014",
+				"OTEVRENO" : "po-ne 06:30-22:00",
+				"CENA" : "jednotná cena 15 Kč/1 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.426028219000045, 50.08241606200005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 209,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-23:00; so-ne 8:00-23:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.423639692000052, 50.08417554000005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 210,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-23:00; so-ne 8:00-23:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.433779103000063, 50.082971619000034 ]
+			},
+			"properties" : {
+				"OBJECTID" : 211,
+				"ADRESA" : "Praha 2, Wilsonova 8",
+				"OTEVRENO" : "po-ne 07:00-22:00",
+				"CENA" : "jednotná cena 20 Kč/1 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.434566290000078, 50.08404663600004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 212,
+				"ADRESA" : "Praha 2, Wilsonova 8",
+				"OTEVRENO" : "po-ne 07:00-22:30",
+				"CENA" : "jednotná cena 20 Kč/1 E"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.395764550000024, 50.099676024000075 ]
+			},
+			"properties" : {
+				"OBJECTID" : 213,
+				"ADRESA" : " ",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.394465327000034, 50.100542708000035 ]
+			},
+			"properties" : {
+				"OBJECTID" : 214,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-21:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.291316007000034, 50.092763208000065 ]
+			},
+			"properties" : {
+				"OBJECTID" : 215,
+				"ADRESA" : "Praha 6, Fajtlova 1090/1",
+				"OTEVRENO" : "po-ne 9:00 - 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.291324884000062, 50.09274198300005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 216,
+				"ADRESA" : "Praha 6, Fajtlova 1090/1",
+				"OTEVRENO" : "po-ne 9:00 - 21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.269887547000053, 50.10871896900005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 217,
+				"ADRESA" : null,
+				"OTEVRENO" : "nonstop",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.265846862000046, 50.10580987800006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 218,
+				"ADRESA" : null,
+				"OTEVRENO" : "nonstop",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.267611292000026, 50.10751630900006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 219,
+				"ADRESA" : null,
+				"OTEVRENO" : "nonstop",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.268512624000039, 50.10842694200005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 220,
+				"ADRESA" : null,
+				"OTEVRENO" : "nonstop",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.265826870000069, 50.10556667800006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 221,
+				"ADRESA" : null,
+				"OTEVRENO" : "nonstop",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.265418215000068, 50.105926287000045 ]
+			},
+			"properties" : {
+				"OBJECTID" : 222,
+				"ADRESA" : null,
+				"OTEVRENO" : "nonstop",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.267699482000069, 50.104682866000076 ]
+			},
+			"properties" : {
+				"OBJECTID" : 223,
+				"ADRESA" : null,
+				"OTEVRENO" : "nonstop",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.322853493000025, 50.09308534300004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 224,
+				"ADRESA" : "Praha 6, Evropská 634/204",
+				"OTEVRENO" : "po-ne 6:00-1:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.40456937700003, 50.09714144700007 ]
+			},
+			"properties" : {
+				"OBJECTID" : 225,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 8:00-21:00",
+				"CENA" : "8/5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.48935388800004, 50.126321276000056 ]
+			},
+			"properties" : {
+				"OBJECTID" : 226,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 9:00-15:00",
+				"CENA" : "jednotná cena 10 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.494434556000044, 50.10466405200003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 227,
+				"ADRESA" : "Praha 9, Českomoravská 17",
+				"OTEVRENO" : "otevřeno při akcích v O2 Aréně",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.49119859800004, 50.10426965500005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 228,
+				"ADRESA" : "Praha 9, Českomoravská 2420/15a",
+				"OTEVRENO" : "po-ne 9:00-21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.490435821000062, 50.103779228000064 ]
+			},
+			"properties" : {
+				"OBJECTID" : 229,
+				"ADRESA" : "Praha 9, Českomoravská 2420/15a",
+				"OTEVRENO" : "po-ne 9:00-21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.491180684000028, 50.10427840600005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 230,
+				"ADRESA" : "Praha 9, Českomoravská 2420/15a",
+				"OTEVRENO" : "po-ne 9:00-21:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.493106819000047, 50.10647838600005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 231,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 6-21 h; so-ne 8-20 h",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.502821724000057, 50.10165973200003 ]
+			},
+			"properties" : {
+				"OBJECTID" : 232,
+				"ADRESA" : " ",
+				"OTEVRENO" : "nonstop",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.500166898000032, 50.11036472200004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 233,
+				"ADRESA" : "Praha 9, Sokolovská 324/14",
+				"OTEVRENO" : "po,st 8:00-18:00,út,čt 8:00-15:30,pá 8:00-12:30",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.501476612000033, 50.10981881400005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 234,
+				"ADRESA" : "P 9, Vysočanská 945",
+				"OTEVRENO" : "po-so 7:00-22:00, ne 8:00-22:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.50153681200004, 50.11048210800004 ]
+			},
+			"properties" : {
+				"OBJECTID" : 235,
+				"ADRESA" : "Praha 9, Vysočanská 945",
+				"OTEVRENO" : "po-so 7:00-22:00, ne 8:00-22:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.497506809000072, 50.112166252000065 ]
+			},
+			"properties" : {
+				"OBJECTID" : 236,
+				"ADRESA" : "Praha 9, U vinných sklepů",
+				"OTEVRENO" : "po-pá 4:10-00:35; so 4:30-00:35; ne 4:55-00:35",
+				"CENA" : "jednotná cena 8 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.501830016000042, 50.10149328500006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 237,
+				"ADRESA" : "Praha 9, Českomoravská 316",
+				"OTEVRENO" : "denně 3:30-00:35",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.515157887000044, 50.11036575800006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 238,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 7-20 h; so-ne 8-19 h",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.502042025000037, 50.11035109000005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 239,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 7-20 h; so-ne 8-19 h",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.499744264000071, 50.11967551400005 ]
+			},
+			"properties" : {
+				"OBJECTID" : 240,
+				"ADRESA" : "Praha 9, Vysočanská 20/382",
+				"OTEVRENO" : "po-ne 7:00-01:00",
+				"CENA" : "jednotná cena 10 Kč (možnost odečíst formou konzumace)"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.498668849000069, 50.119196256000066 ]
+			},
+			"properties" : {
+				"OBJECTID" : 241,
+				"ADRESA" : null,
+				"OTEVRENO" : "po-pá 6:00-21:00; so-ne 6:00-20:00",
+				"CENA" : "jednotná cena 5 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.50579216500006, 50.15089866300008 ]
+			},
+			"properties" : {
+				"OBJECTID" : 242,
+				"ADRESA" : "Kostelecká 823, Praha 9 ",
+				"OTEVRENO" : "po-ne 7:00 - 22:00",
+				"CENA" : "zdarma"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.519575754000073, 50.14911532700006 ]
+			},
+			"properties" : {
+				"OBJECTID" : 243,
+				"ADRESA" : "Praha 9, Čakovice",
+				"OTEVRENO" : "po-pá 6:20-18:15; so 6:20-15:30; ne 7:35-18:00",
+				"CENA" : "jednotná cena 8 Kč"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 14.537110099000074, 50.106667798000046 ]
+			},
+			"properties" : {
+				"OBJECTID" : 244,
+				"ADRESA" : " ",
+				"OTEVRENO" : "po-pá 7-20 h; so-ne 8-19 h",
+				"CENA" : "5/10 Kč"
+			}
+		}
+	]
+}

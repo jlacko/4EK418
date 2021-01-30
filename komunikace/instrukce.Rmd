@@ -1,0 +1,77 @@
+---
+title: "4EK418 – příprava prostředí"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align="center")
+```
+
+Kurs *Mapy, geodata a prostorová ekonometrie v R* proběhne z praktických důvodů on line formou, což je určitá komplikace, a vyžaduje ve srovnání s učebnami na VŠE zvýšené nároky na prostředí.
+
+V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.0.3 a RStudio 1.4 - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto jsou verze, kterou budu používat při screencastu.
+
+Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to uděláte vykopírováním a spuštěním kódu níže.
+
+```{r instalace-packagi, eval = F}
+# toto potřebuju:
+required = c("czso", "dplyr", "ggplot2", "giscoR", "gtools", "hereR",
+             "htmltools", "knitr", "leaflet", "lwgeom", "mapview", 
+             "nngeo","osmdata", "raster", "RCzechia", "readr", "remotes",
+             "rmapshaper", "rmarkdown", "scales", "sf", "spdep", 
+             "tidygeocoder", "tidyr", "tidyverse")
+# toto mám:
+installed = installed.packages()[, "Package"]
+
+# a tedy rozdíl stahnu z CRANu...
+install.packages(setdiff(required, installed))
+```
+
+Instalace balíčků by měla proběhnout bez větších složitostí - zejména v prostředí Windows, kde jsou k dispozici předkompilované binárky - ale komplikace se dopředu nedají zcela vyloučit.
+
+Budu proto rád, když si instalaci provedete v klidu a v předstihu, a nebudeme muset problematické balíčky řešit za pochodu. Pokud byste přesto narazili, prosím kontaktujte mě prostřednictvím Teams a vyřešíme to společně.
+
+Jeden balíček, který použijeme v posledním dni kurzu, není v současné době na CRANu; pro jeho instalaci je třeba použít buď `{devtoools}` nebo `{remotes}`.
+
+V prostředí Windows bude instalace vyžadovat RTools, nejsnáze je nainstalujete pomocí `installr::install.Rtools()`.
+
+```{r instalace-rgeoda, eval = F}
+install.packages("installr") # v prostředí Windows
+installr::install.Rtools() # balíček vývojových nástrojů pro Windows
+# balíček rgeoda; aktuálně není na CRAN
+remotes::install_github(repo = "lixun910/rgeoda",
+                        ref = "v0.0.6")
+```
+
+Dále bude potřeba, abyste měli funkční git - ve Windows prostředí je k tomu asi nejsnazší použít funkci `installr::install.git()` a potvrdit nabízené volby (defaulty dávají smysl).
+
+V prostředí Linuxu a jemu podobných OS budete muset nainstalovat git [vlastní cestou](https://github.com/git-guides/install-git).
+
+```{r instalace-gitu, eval = F}
+install.packages("installr") # pokud nemáte z předchozího kroku...
+installr::install.git() 
+```
+
+Když budete mít git funkční tak prosím v rámci RStudia založte nový projekt metodou z hlavní nabídky `File >> New Project >> Version Control >> Git`, a coby cestu k repozitáři zadáte [`https://github.com/jlacko/4EK418.git`](https://github.com/jlacko/4EK418.git).
+
+![](images/new-project.png)
+
+![](images/clone-git.png)
+
+Vyklonováním získáte aktivní projekt, do kterého budu vkládat kurzovné materiály. Snadno si jej aktualizujete příkazem Pull na záložce Git (modrá šipka směrem dolů). Zatím je to prázdná schránka, ale až začneme tak budou materiály doplněny.
+
+![](images/Screenshot%20from%202021-01-25%2012-18-49.png)
+
+Nakonec, jako ne povinnou, ale velmi doporučenou, aktivitu proveďte registraci na [developer.here.com](https://developer.here.com/). HERE je platforma věnující se mapování a navigaci (dříve známá jako Nokia Maps) a s jejím API pracuje balíček `{hereR}`. Registrace je zdarma, a do jejich free tieru 250 tisíc dotazů měsíčně se vejdete s velkou rezervou - ale pro práci s `{hereR}` budete potřebovat vlastní API klíč.
+
+![](images/create-api-key.png)
+
+API klíč získáte tak, že v rámci platformy vygenereujete projekt - já ten svůj nazval hereR podle balíčku `{hereR}`, ale není to podmínka - a poté zvolíte Create API key; standardně je skrytý za hvězdičkami, ukázat jde přes ikonu očička (a COPY ho zkopíruje do schránky; to je nejpraktičtější).
+
+Na použití klíče dojde třetí den kurzu, takže tento krok tolik nespěchá.
+
+Budu sen na vás v pondělí těšit
+
+Jindra Lacko
