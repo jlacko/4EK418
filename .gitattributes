@@ -1,0 +1,4 @@
+# html je dokumentace, ne skutečný svět
+# ==============
+*.html linguist-documentation
+*_files/* linguist-documentation
