@@ -40,3 +40,6 @@ vignettes/*.pdf
 
 # xmlko páč velký jak cyp
 data/20201003_ST_UVOH.xml
+
+# Libre Office locky
+.~lock*
