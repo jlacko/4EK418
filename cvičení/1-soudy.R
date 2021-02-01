@@ -11,5 +11,5 @@ soudy <- data.frame(
 
 # nápověda:
 # - všechny obce jsou v RCzechia::obce_polygony()
-# - Svitava & Svratka jsou v RCzechia::reky("Brno)
+# - Svitava & Svratka jsou v RCzechia::reky("Brno")
 # - při kreslení polygonu nezapomeňte zakázat výplň / fill = NA

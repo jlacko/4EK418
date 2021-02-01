@@ -5,11 +5,6 @@
 
 library(tidyverse) # protože dplyr, ggplot2 a spol.
 
-# podkladová data - tabulka naděje dožití 
-
-prehled %>%
-select(dataset_id, title)
-
 # metadata tabulky
 czso::czso_get_table_schema("130140")
 
