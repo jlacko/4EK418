@@ -3,6 +3,12 @@ library(sf)
 library(dplyr)
 library(RCzechia)
 
+# raw verze z ČUZK; rozbalená by byla moc velká pro GitHub
+if(!file.exists("./data/20201003_ST_UVOH.xml")) {
+  unzip("./data/20201003_ST_UVOH.xml.zip",
+         exdir = "./data")
+} 
+
 okrsky <- st_read("./data/20201003_ST_UVOH.xml") %>% 
    st_set_geometry("OriginalniHranice") %>% 
    select(-DefinicniBod) %>%  # okrsky mají dvě geometrie, tato se nehodí
