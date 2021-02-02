@@ -1,5 +1,5 @@
-# toto je zaražený kolík
+# Řešení "neřešených" příkladů
 
-Zatím zde je jen kvůli legitimní adresářové struktuře; postupně se zde budou objevovat řešení příkladů ze sekce cvičení.
+Postupně se zde budou objevovat řešení příkladů z adresáře ./cvičení.
 
 
