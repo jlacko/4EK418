@@ -16,13 +16,9 @@ Repozitář a podkladové materiály ke kurzu 1. až 4. února 2021 na VŠE Prah
 * `/cvičení` - "neřešené" příklady
 * `/data` - podkladová data pro řešené a neřešené příklady
 * `/komunikace` - komunikační materiály ke kurzu (včetně návodu pro nastavení prostředí!)
-* `/prez` - prezentace, ve formátu Libre Office Impress a pdf
+* `/prez` - prezentace, ve formátu Libre Office Impress (odp) a Adobe Acrobat (pdf)
 * `/qgis` - vzorový GIS projekt
 * `/R` - "řešené"" příklady
 * `/řešení` - řešení "neřešených" příkladů
 
-V tuto chvíli jsou nahrané první dva dny kurzu; další budou následovat průběžně.
-
-Řešení "neřešených" příkladů budu doplňovat vždy den zpátky (nebo večer po kurzu).
-
-Jindra Lacko
+V tuto chvíli jsou materiály kurzu v principu kompletní.
