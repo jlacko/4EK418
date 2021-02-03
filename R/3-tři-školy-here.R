@@ -64,7 +64,5 @@ iso_skoly %>%
    st_drop_geometry() %>%  # už jí nepotřebuju...
    group_by(skola) %>% 
    tally() %>%  # sečíst řádky
-   arrange(desc(n)) %>% 
-   View()
-
+   arrange(desc(n)) 
 

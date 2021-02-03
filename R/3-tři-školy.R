@@ -86,7 +86,7 @@ voronoi <- skoly %>%
    st_union() %>% 
    st_voronoi(envelope = st_geometry(praha)) %>% 
    st_collection_extract(type = "POLYGON") %>% # vytahnout objekty typu polygon
-#   st_intersection(st_geometry(praha)) %>% # oříznout zvnějšku na Prahu
+   st_intersection(st_geometry(praha)) %>% # oříznout zvnějšku na Prahu
    st_as_sf()
 
 obrazek +
