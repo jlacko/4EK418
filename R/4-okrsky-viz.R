@@ -74,7 +74,7 @@ absolutne <- ggplot() +
    theme(legend.text.align = 1,
          legend.title.align = 1/2)
 
-relativne
+absolutne
 
 stredobody <- ggplot() +
    geom_sf(data = st_set_geometry(stc_okrsky, "stredobod"), pch = 4, color = "red", alpha = 1/2) +
