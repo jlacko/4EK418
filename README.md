@@ -21,4 +21,6 @@ Repozitář a podkladové materiály ke kurzu 1. až 4. února 2021 na VŠE Prah
 * `/R` - "řešené"" příklady
 * `/řešení` - řešení "neřešených" příkladů
 
-V tuto chvíli jsou materiály kurzu v principu kompletní.
+<hr>
+
+Kurz již proběhl, materiály jsou finální.
