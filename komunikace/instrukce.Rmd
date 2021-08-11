@@ -9,9 +9,11 @@ output:
 knitr::opts_chunk$set(echo = TRUE, fig.align="center")
 ```
 
-Kurs *Mapy, geodata a prostorová ekonometrie v R* proběhne z praktických důvodů on line formou, což je určitá komplikace, a vyžaduje ve srovnání s učebnami na VŠE zvýšené nároky na prostředí.
+Kurs *Mapy, geodata a prostorová ekonometrie v R* proběhne s největší pravděpodobností prezenční formou, což klade o něco menší nároky na prostředí nežli vzdálená forma přes Týmsy.
 
-V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.0.3 a RStudio 1.4 - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto jsou verze, kterou budu používat při screencastu.
+Pokud budete chtít procházet kód a úlohy na vlastním technickém prostředí, což velmi doporučuji, tak budete muset splnit několik technických kroků; postupujte přitom podle návodu níže.
+
+V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.1.1 a RStudio 1.4 - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto jsou verze, kterou budu používat při prezentaci.
 
 Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to uděláte vykopírováním a spuštěním kódu níže.
 
@@ -20,7 +22,7 @@ Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to udělá
 required = c("czso", "dplyr", "ggplot2", "giscoR", "gtools", "hereR",
              "htmltools", "knitr", "leaflet", "lwgeom", "mapview", 
              "nngeo","osmdata", "raster", "RCzechia", "readr", "remotes",
-             "rmapshaper", "rmarkdown", "scales", "sf", "spdep", 
+             "rgeoda", "rmapshaper", "rmarkdown", "scales", "sf", "spdep", 
              "tidygeocoder", "tidyr", "tidyverse")
 # toto mám:
 installed = installed.packages()[, "Package"]
@@ -31,19 +33,7 @@ install.packages(setdiff(required, installed))
 
 Instalace balíčků by měla proběhnout bez větších složitostí - zejména v prostředí Windows, kde jsou k dispozici předkompilované binárky - ale komplikace se dopředu nedají zcela vyloučit.
 
-Budu proto rád, když si instalaci provedete v klidu a v předstihu, a nebudeme muset problematické balíčky řešit za pochodu. Pokud byste přesto narazili, prosím kontaktujte mě prostřednictvím Teams a vyřešíme to společně.
-
-Jeden balíček, který použijeme v posledním dni kurzu, není v současné době na CRANu; pro jeho instalaci je třeba použít buď `{devtoools}` nebo `{remotes}`.
-
-V prostředí Windows bude instalace vyžadovat RTools, nejsnáze je nainstalujete pomocí `installr::install.Rtools()`.
-
-```{r instalace-rgeoda, eval = F}
-install.packages("installr") # v prostředí Windows
-installr::install.Rtools() # balíček vývojových nástrojů pro Windows
-# balíček rgeoda; aktuálně není na CRAN
-remotes::install_github(repo = "lixun910/rgeoda",
-                        ref = "v0.0.6")
-```
+Budu proto rád, když si instalaci provedete v klidu a v předstihu, a nebudeme muset problematické balíčky řešit za pochodu. 
 
 Dále bude potřeba, abyste měli funkční git - ve Windows prostředí je k tomu asi nejsnazší použít funkci `installr::install.git()` a potvrdit nabízené volby (defaulty dávají smysl).
 
@@ -71,7 +61,5 @@ Nakonec, jako ne povinnou, ale velmi doporučenou, aktivitu proveďte registraci
 API klíč získáte tak, že v rámci platformy vygenereujete projekt - já ten svůj nazval hereR podle balíčku `{hereR}`, ale není to podmínka - a poté zvolíte Create API key; standardně je skrytý za hvězdičkami, ukázat jde přes ikonu očička (a COPY ho zkopíruje do schránky; to je nejpraktičtější).
 
 Na použití klíče dojde třetí den kurzu, takže tento krok tolik nespěchá.
-
-Budu sen na vás v pondělí těšit
 
 Jindra Lacko

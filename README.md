@@ -1,10 +1,10 @@
 # 4EK418 Mapy, geodata a prostorová ekonometrie v R
 
-Repozitář a podkladové materiály ke kurzu 1. až 4. února 2021 na VŠE Praha.
+Repozitář a podkladové materiály ke kurzu 31. ledna až 3. února 2022 na VŠE Praha.
 
-### Očekávaná struktura kurzu:
+### Plánovaná struktura kurzu:
 
-1. den: seznámení s problematikou, kreslení
+1. den: seznámení s problematikou, kreslení map
 2. den: souřadnicové systémy, základní operace
 3. den: vlastní prostorové objekty
 4. den: pokročilé výpočty
@@ -23,4 +23,6 @@ Repozitář a podkladové materiály ke kurzu 1. až 4. února 2021 na VŠE Prah
 
 <hr>
 
-Kurz již proběhl, materiály jsou finální.
+Budu se těšit
+
+Jindra Lacko
