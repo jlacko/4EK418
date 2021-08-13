@@ -9,7 +9,6 @@
 
 ### Volební výsledky
 * výsledky krajských voleb 2020 po okrscích (kz6p.csv) / Český statistický úřad - https://volby.cz/opendata/kz2020/kz2020_opendata.htm
-* shapefile volebních okrsků (20201003_ST_UVOH.xml.zip) / CC-BY 4.0 Český úřad zeměměřický a katastrální / platné k 3. 10. 2020; v původní nerozbalené verzi protože velikost
 
 ### Vlastní pozorování:
 * cena benzínu (czech-oil-gc.rds) / převzato ze stránek https://benzin.impuls.cz / platné k 10. 7. 2018
