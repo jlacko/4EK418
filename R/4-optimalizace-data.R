@@ -22,7 +22,7 @@ prazske_pocty <- inner_join(casti, pocty, by = c("KOD" = "uzkod"))
 ggplot() +
    geom_sf(data = prazske_pocty, aes(fill = obyvatel))
 
-# interpolace obyvatel přes plochu městskáých částí
+# interpolace obyvatel přes plochu městských částí
 grid$obyvatel <- st_interpolate_aw(x = prazske_pocty["obyvatel"],
                                 to = st_geometry(grid),
                                 extensive = T) %>% 
@@ -50,8 +50,8 @@ ggplot() +
 
 # interpolace lůžek přes plochu městskáých částí
 grid$luzka <- st_interpolate_aw(x = prazska_luzka["kapacita"],
-                                   to = st_geometry(grid),
-                                   extensive = T) %>% 
+                                to = st_geometry(grid),
+                                extensive = T) %>% 
    pull(kapacita)
 
 
@@ -62,38 +62,14 @@ nir <- raster("./data/nir_prg-2018-06-30.tif") # near infrared kanál
 ndvi <- (nir - red) / (nir + red) # standardní index
 
 # vizuální kontrola / ggplot nemá rád rastry!
-mod_ndvim <- ndvi %>%  
-   as("SpatialPixelsDataFrame") %>% # sp data formát (pozor!)
-   as_tibble()
-
-
-ggplot() +
-   geom_raster(data = mod_ndvim, aes(x=x, y=y, fill=layer), alpha=1) +
-   scale_fill_gradientn(colors = rev(terrain.colors(7)),
-                        limits = c(0, 1), 
-                        name = "NDVI") +
-   coord_equal() +
-   theme_void() +
-   theme(axis.title.y = element_blank(), 
-         axis.title.x = element_blank(),
-         legend.position = "bottom",
-         legend.text.align = 1) +
-   coord_sf(datum = NULL)
+plot(ndvi) # base R plot / metoda z {raster}
 
 # vlastní nápočet
-grid$vegetation <- 0 # inicializace nulou
-
-
-for (i in grid$id) { # iterace přes řádky gridu
-   
-   bunka <- grid$geometry[i] %>%  # i-tá buňka v gridu
-      st_transform(crs = ndvi@crs@projargs) %>% # transformovaná do crs rasteru
-      as("Spatial") # jako sp objekt = fuuuj! :)
-   
-   grid$vegetation[i] <- crop(ndvi, bunka) %>% # index uvnitř buňky gridu ...
-      cellStats(stat = "mean") %>%  # ... zprůměrovaný,
-      na.omit() # sanitizované NaN
-}
+grid$vegetation <- exactextractr::exact_extract(
+   x = ndvi, # zdrojový rastr
+   y = grid, # cílové polygony
+   fun = "mean" # transformační funkce (normalizuje nestejné plochy)
+   ) 
 
 # vizuální kontrola
 ggplot() + # plot vegetation index

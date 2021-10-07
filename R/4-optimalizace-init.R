@@ -2,6 +2,7 @@
 # krok 1 - stažení hospod, vytvoření mřížky
 
 library(raster) # před dplyr, kolize na select
+library(exactextractr) # pro sečtení rastru přes vektorové polygony
 library(RCzechia)
 library(osmdata)
 library(ggplot2)
