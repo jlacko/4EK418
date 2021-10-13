@@ -1,7 +1,6 @@
 library(sf)
 library(dplyr)
 library(giscoR)
-library(ggplot2)
 
 # všechny státy světa, jedna ku deseti milionům
 svet <- gisco_get_countries(resolution = "10")
@@ -15,8 +14,8 @@ sousedi <- sf::st_touches(lafrance,
                           svet, sparse = F)
 
 # zde je akce!
-sf::st_intersection(lafrance, svet[sousedi, ]) %>% # průsečík (jako čára, jsou to sousedi
+sf::st_intersection(lafrance, svet[sousedi, ], s2_model = "closed") %>% # průsečík jako čára; pozor na s2 model!
    mutate(delka = st_length(.)) %>% # nový sloupec: délka (hranice)
    select(soused = CNTR_NAME.1, delka) %>%  # výběr relevantních sloupců
-   st_drop_geometry() %>% # zahodím geometrii / z prostorového objektu obyčejný
+   st_drop_geometry() %>% # již jí nepotřebuji...
    arrange(desc(delka)) # pro přehled setřídit
