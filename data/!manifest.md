@@ -10,6 +10,11 @@
 ### Volební výsledky
 * výsledky krajských voleb 2020 po okrscích (kz6p.csv) / Český statistický úřad - https://volby.cz/opendata/kz2020/kz2020_opendata.htm
 
+### Registrace vozidel
+* druh registrovaných vozidel podle obce (obec_dr.csv) / Centrální registr vozidel 
+* číselník druhů vozidel (ciselnikyrzdruh.xls) / Centrální registr vozidel
+https://www.mdcr.cz/Statistiky/Silnicni-doprava/Centralni-registr-vozidel/Statistika-I-pol-2021-(k-30-06-2021)
+
 ### Vlastní pozorování:
 * cena benzínu (czech-oil-gc.rds) / převzato ze stránek https://benzin.impuls.cz / platné k 10. 7. 2018
 * základní žižkovská infrastruktura (žižkov.gpkg) / převzato z RUIAN (budovy) a OSM (points of interest)
