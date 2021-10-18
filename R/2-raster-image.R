@@ -1,0 +1,39 @@
+library(raster)
+library(dplyr)
+library(ggplot2)
+
+# zastavěná střední Evropa z Copernicusu - https://lcviewer.vito.be
+cesta <- "https://s3-eu-west-1.amazonaws.com/vito.landcover.global/v3.0.1/2019/E000N60/E000N60_PROBAV_LC100_global_v3.0.1_2019-nrt_BuiltUp-CoverFraction-layer_EPSG-4326.tif"
+           
+# cílový soubor včetně cesty (z důvodu velikosti není v gitu)
+stazeny_rastr <- "./data/builtup_2019.tif"
+
+# stažení právě jednou = pokud soubor existuje, download se přeskočí; pokud ne tak se stahne do /data
+if(!file.exists(stazeny_rastr)) curl::curl_download(url = cesta, destfile = stazeny_rastr)
+
+rok_2019 <- raster(stazeny_rastr)
+
+# statický náhled / base plot
+plot(rok_2019)
+
+cesko <- rok_2019 %>% # vezmu raster...
+  crop(RCzechia::republika()) %>%  # oříznu (nahrubo kolem republiky)
+  mask(RCzechia::republika()) # vymaskuju sousední státy
+
+# dynamický náhled / {mapview}
+mapview::mapview(cesko)
+
+# pomocný objekt / kraje
+kraje <- RCzechia::kraje()
+
+# přenos hodnoty z rasterového na vektorový objekt
+kraje$zastavenost <- exactextractr::exact_extract(
+  x = rok_2019, # zdrojový rastr
+  y = kraje, # cílové polygony
+  fun = "mean" # transformační funkce (normalizuje nestejné plochy)
+) 
+
+# náhled na transformované hodnoty
+ggplot(data = kraje, aes(fill = zastavenost)) +
+  geom_sf() +
+  scale_fill_gradient(trans = "log")
