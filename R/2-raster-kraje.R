@@ -1,4 +1,4 @@
-library(raster)
+library(raster, exclude = "select") # jinak konflikt s dplyr...
 library(dplyr)
 library(ggplot2)
 

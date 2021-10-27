@@ -1,4 +1,4 @@
-library(raster) # rasterová objekty; před dplyr, kolize na select
+library(raster, exclude = "select") # rasterová objekty; před dplyr, kolize na select
 library(sf) # vektorové objekty
 library(exactextractr) # pro sečtení rastru přes vektorové polygony
 library(dplyr)
