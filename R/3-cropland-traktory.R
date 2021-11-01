@@ -36,7 +36,11 @@ ggplot(data = obce, aes(fill = polelany)) +
 # načtení registru + srovnání češtiny
 obce_vozidla <- readr::read_csv2("./data/obec_dr.csv") %>% 
   mutate(obec = stringi::stri_encode(obec, from = "Windows-1250", to = "UTF-8"),
-         pou = stringi::stri_encode(pou, from = "Windows-1250", to = "UTF-8"))
+         pou = stringi::stri_encode(pou, from = "Windows-1250", to = "UTF-8"),
+         # srovnání terminologie s RCzechia::obce_polygony / aby se obce potkaly...
+         pou = ifelse(pou == "Hlavní město Praha", "Praha", pou), 
+         pou = ifelse(pou == "Jesenice (okres Rakovník)", "Jesenice", pou),
+         pou = ifelse(pou == "Jesenice (okres Praha-západ)", "Jesenice", pou))
 
 # kompletní číselník druhů strojů
 ciselnik_druhu <- readxl::read_excel("./data/ciselnikyrzdruh.xls", sheet = "Druh")
@@ -56,7 +60,7 @@ obce_vozidla <- obce_vozidla %>%
 
 # připojíme k obcím počty traktorů traktory
 obce <- obce %>% 
-  inner_join(obce_vozidla, by = c("NAZ_OBEC", "NAZ_POU")) %>% 
+  left_join(obce_vozidla, by = c("NAZ_OBEC", "NAZ_POU")) %>% 
   mutate(zelena_plocha = polelany / 100 * st_area(.))
 
 # konečně akce! :)
@@ -64,3 +68,17 @@ model <- lm(traktory ~ zelena_plocha,
    data = obce)
 
 summary(model)
+
+# rezidua do objektu obcí / aby šly mapovat
+obce$resids <- model$residuals
+
+ggplot(data = obce) +
+  geom_sf(aes(fill = resids), color = NA) +
+  scale_fill_viridis_c()
+  
+# deset největších úletů...
+obce %>% 
+  st_drop_geometry() %>% 
+  select(NAZ_OBEC, traktory, resids) %>% 
+  arrange(desc(resids)) %>% 
+  top_n(10)
