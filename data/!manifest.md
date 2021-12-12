@@ -1,8 +1,9 @@
 # Manifest dat a zdrojů
 
 ### Open Data města Prahy:
-* cenová mapa Prahy (SED_CenovaMapa_p.shp) / CC-BY-SA 4.0 datový podklad © IPR Praha / platné k 8. 1. 2020
+* cenová mapa Prahy (SED_CenovaMapa_p.shp) / CC-BY-SA 4.0 datový podklad © IPR Praha / platné k 7. 1. 2021
 * veřejné toalety (zachodky.json) / CC-BY-SA 4.0 datový podklad © IPR Praha / platné k 8. 11. 2019
+https://www.geoportalpraha.cz/cs/data/otevrena-data/seznam
 
 ### Natural Earth
 * řeky světa v měřítku 1:50m (ne_50m_rivers_lake_centerlines.shp) / public domain https://github.com/nvkelso/natural-earth-vector/blob/master/LICENSE.md
