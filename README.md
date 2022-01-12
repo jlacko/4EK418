@@ -2,7 +2,7 @@
 
 Repozitář a podkladové materiály ke kurzu 31. ledna až 3. února 2022 na VŠE Praha.
 
-![](https://www.jla-data.net/CZE/2017-09-14-shapefile-ceske-republiky_files/figure-html/census-1.png)
+<p style="text-align:center;"><img src="https://s3.eu-central-1.amazonaws.com/www.jla-data.net/img/4EK418-infrastruktura.png" alt="infrastruktura Žižkova"/></p>
 
 ### Plánovaná struktura kurzu:
 

@@ -38,8 +38,10 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# xmlko páč velký jak cyp
-data/20201003_ST_UVOH.xml
+# raster páč velký jak cyp
+data/cropland.tif
+data/builtup*.tif
+
 
 # Libre Office locky
 .~lock*

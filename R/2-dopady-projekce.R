@@ -7,7 +7,7 @@ library(RCzechia)
 
 cesko <- republika()
 
-# sférický výpočet
+# sférický výpočet / globus; nedává smysl na ploše (mapě, monitoru...)
 wgs84 <- st_transform(cesko, 4326)
 st_area(wgs84)
 
