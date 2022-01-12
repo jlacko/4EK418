@@ -13,7 +13,7 @@ Kurs *Mapy, geodata a prostorová ekonometrie v R* proběhne s největší pravd
 
 Pokud budete chtít procházet kód a úlohy na vlastním technickém prostředí, což velmi doporučuji, tak budete muset splnit několik technických kroků; postupujte přitom podle návodu níže.
 
-V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.1.1 a RStudio 1.4 - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto jsou verze, kterou budu používat při prezentaci.
+V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.1.2 a RStudio 2021.09.2 - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto je konfigurace, kterou budu používat při prezentaci.
 
 Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to uděláte vykopírováním a spuštěním kódu níže.
 
