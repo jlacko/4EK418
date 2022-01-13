@@ -58,7 +58,7 @@ obce_vozidla <- obce_vozidla %>%
   mutate(traktory = sum(c_across(where(is.numeric)))) %>%  # sečenem číselné hodnoty
   dplyr::select(NAZ_OBEC = obec, NAZ_POU = pou, traktory) # srovnání na sloupce z RCzechia::obce_polygony
 
-# připojíme k obcím počty traktorů traktory
+# připojíme k obcím počty traktorů
 obce <- obce %>% 
   left_join(obce_vozidla, by = c("NAZ_OBEC", "NAZ_POU")) %>% 
   mutate(zelena_plocha = polelany / 100 * st_area(.))
