@@ -21,7 +21,7 @@ moran.plot(stc_okrsky$STAN, sousedi)
 moran_mapa <- data.frame(localmoran(stc_okrsky$STAN, sousedi),
                          geometry = st_geometry(stc_okrsky)) %>% 
    st_as_sf() %>% 
-   mutate(materialita = gtools::stars.pval(`Pr.z...0.`)) 
+   mutate(materialita = gtools::stars.pval(`Pr.z....E.Ii..`)) 
    
 
 # vizuální přehled Moranova I
