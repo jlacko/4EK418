@@ -5,9 +5,8 @@ library(tidyverse)
 
 # datasety vztahující se k migraci
 czso::czso_get_catalogue() %>% 
-   filter(str_detect(keywords, "migrace")) %>% 
-   arrange(desc(end)) %>% 
-   View()
+   filter(str_detect(keywords_all, "migrace")) %>% 
+   arrange(desc(end)) 
 
 # stahnout data
 migrace <- czso::czso_get_table("130141r19")
@@ -19,7 +18,7 @@ migrace %>%
 
 # získat kraje a propojit s metrikou "Celkový přírůstek"
 podklad <- RCzechia::kraje("low") %>% 
-   inner_join(filter(migrace, vuk == "DEM0001" & vuzemi_cis == 100), # vybraná metrika
+   inner_join(migrace %>% filter(vuk == "DEM0001" & vuzemi_cis == 100), # vybraná metrika
               by = c("KOD_KRAJ" = "vuzemi_kod")) %>%  # kód kraje = kód území
    arrange(KOD_CZNUTS3)
 

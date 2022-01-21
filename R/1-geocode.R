@@ -28,7 +28,7 @@ skoly_sf <- skoly_souradnice %>%
 mapview::mapview(skoly_sf)
 
 # adresa s jistotou v zahraničí / geo_osm bere jako vstup textový vektor
-zahranici <- tidygeocoder::geo_osm("1600 Pennsylvania Avenue NW, Washington DC") %>% 
+zahranici <- tidygeocoder::geo("1600 Pennsylvania Avenue NW, Washington DC") %>% 
    sf::st_as_sf(coords = c("long", "lat"), crs = 4326)
 
 mapview::mapview(zahranici)
