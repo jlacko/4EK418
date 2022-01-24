@@ -95,7 +95,7 @@ obrazek +
 # 5) grid - mřížka očekávané velikosti přes Prahu
 
 grid <- st_make_grid(st_bbox(praha),
-                     cellsize = rep(1000, 2)) %>% 
+                     cellsize = c(1000, 1000)) %>% # tj. 1 × 1 kilometr
    st_as_sf()
 
 obrazek +

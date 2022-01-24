@@ -8,10 +8,9 @@ source("./R/4-digest-data-STČ.R")
 stc_okrsky <- stc_okrsky %>% 
    rmapshaper::ms_simplify(keep = 1/3)
 
-stc <- sf_to_geoda(stc_okrsky)
-queen_w <- queen_weights(stc)
+queen_w <- queen_weights(stc_okrsky)
 
-lisa <- local_moran(queen_w, stc_okrsky$STAN / stc_okrsky$celkem)
+lisa <- local_moran(queen_w, stc_okrsky["STAN"] / stc_okrsky["celkem"])
 
 stc_okrsky$cluster <- as.factor(lisa$GetClusterIndicators())
 levels(stc_okrsky$cluster) <- lisa$GetLabels()

@@ -74,3 +74,23 @@ ggplot() +
    geom_sf(data = filter(svet, CNTR_ID %in% c("CZ", "SK")), fill = NA, color = "gray45") +
    coord_sf(crs = st_crs("EPSG:3857"))
 
+# pro frajery za plusové body - ortho projekce / kosmonauti hledící na kouli...
+
+# projection string used for the polygons & ocean background
+crs_string <- "+proj=ortho +lon_0=10 +lat_0=40"
+
+# background for the globe - center buffered by earth radius
+ocean <- st_point(x = c(0,0)) %>%
+  st_buffer(dist = 6371000) %>%
+  st_sfc(crs = crs_string)
+
+viditelny_svet <- svet %>% 
+  st_intersection(ocean %>% st_transform(4326)) %>% # select visible area only
+  st_transform(crs = crs_string) # reproject to ortho
+
+ggplot(data = viditelny_svet) +
+  geom_sf(data = ocean, fill = "aliceblue", color = NA) + # background first
+  geom_sf(data = viditelny_svet, fill = "lightyellow", color = "gray45") +
+  geom_sf(data = glmd, fill = "red", color = "gray45") +
+  coord_sf(crs = crs_string) +
+  theme_void()

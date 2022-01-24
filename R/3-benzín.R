@@ -7,7 +7,7 @@ library(sf)
 benzin <- readRDS("./data/czech-oil-gc.rds") 
 
 dalnice <- RCzechia::silnice() %>% 
-   filter(TRIDA == "dálnice")
+   filter(TRIDA %in% c("Dálnice I. tř.", "Dálnice II. tř."))
 
 # vizuální kontrola
 mapview::mapview(dalnice)
