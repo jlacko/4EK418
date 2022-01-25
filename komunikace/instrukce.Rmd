@@ -21,7 +21,7 @@ Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to udělá
 # toto potřebuju:
 required = c("czso", "dplyr", "ggplot2", "giscoR", "gtools", "hereR",
              "htmltools", "knitr", "leaflet", "lwgeom", "mapview", "exactextractr",
-             "nngeo","osmdata", "raster", "rgdal", "RCzechia", "readr", "remotes",
+             "nngeo","osmdata", "raster", "RCzechia", "readr", "remotes",
              "rgeoda", "rmapshaper", "rmarkdown", "scales", "sf", "spdep", 
              "tidygeocoder", "tidyr", "tidyverse")
 # toto mám:
