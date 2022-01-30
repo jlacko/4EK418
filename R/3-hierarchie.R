@@ -1,8 +1,8 @@
 # sf × sfc × sfg - uchopení konceptu
-
+library(sf)
+library(dplyr)
 library(RCzechia)
 library(ggplot2)
-library(dplyr)
 
 # sf objekt = data + geometrie
 sf_objekt <- kraje("low")
