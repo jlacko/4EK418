@@ -14,7 +14,7 @@ https://www.geoportalpraha.cz/cs/data/otevrena-data/seznam
 ### Registrace vozidel
 * druh registrovaných vozidel podle obce (obec_dr.csv) / Centrální registr vozidel 
 * číselník druhů vozidel (ciselnikyrzdruh.xls) / Centrální registr vozidel
-https://www.mdcr.cz/Statistiky/Silnicni-doprava/Centralni-registr-vozidel/Statistika-I-pol-2021-(k-30-06-2021)
+https://www.mdcr.cz/Statistiky/Silnicni-doprava/Centralni-registr-vozidel/Statistika-II-pol-2021-(k-1-1-2022)
 
 ### Vlastní pozorování:
 * cena benzínu (czech-oil-gc.rds) / převzato ze stránek https://benzin.impuls.cz / platné k 10. 7. 2018
