@@ -1,0 +1,95 @@
+---
+title: "4EK418 závěrečná práce"
+output: html_document
+---
+```{r setup, echo = F}
+# nastavení defaultů pro markdown chunks; tyto prosím neměňte :)
+knitr::opts_chunk$set(echo = T, eval = T, message = F, warning = F, fig.width = 6, fig.height = 4, out.width="100%")
+```
+
+
+## Úkol první: Geokódování
+
+Toto je závěrečná práce z předmětu 4EK418; vaším prvním krokem je vybrat si svůj vlastní bod - počátek cesty.
+
+Můžete si vybrat některou z možností:
+
+- adresa v Praze
+- adresa jinde v České Republice
+- adresa mimo ČR, kdekoliv na světě
+
+Není důležité co je tímto bodem (místo narození? babička za kterou jste jezdili na prázdniny? vysněná dovolená?) ale je důležité aby toto místo bylo unikátní, jen a pouze vaše.
+
+V tomto kroku bod zaměřte - dohledejte jeho souřadnice a vypište je ve formátu `{sf}` balíčku.
+
+```{r geocode}
+
+library(sf)
+library(dplyr)
+
+dva_body <- data.frame(
+   druh = c("začátek",
+            "konec"),
+   adresa = c("___" , # vlastní bod - adresa 
+              "náměstí Winstona Churchilla 1938/4, Praha 3")) 
+
+print(dva_body) # očekává se ve formátu balíčku {sf}
+
+```
+
+## Úkol druhý: Zakreslení do mapy
+
+V tomto kroku zakreslete geokódované body do statické mapy; jako podklad zvolte:
+
+- pro adresu v Praze městské části Prahy
+- pro adresu jinde v ČR okresy
+- pro adresu mimo Česko státy světa (zvažte filtr pro přehlednost)
+
+Pro snazší orientaci dokreslete do mapy několik řek; v kontextu ČR zvažte `RCzechia::reky()`, v kontextu světa soubor `ne_50m_rivers_lake_centerlines.shp` použitý v rámci příkladů o řece Nilu (obsahuje 462 řek po světě).
+
+```{r visualize}
+
+plot(pressure)
+
+```
+
+## Úkol třetí: Vytvoření spojnice & jejího okolí
+
+V tomto kroku spojte oba body čárou, a vytvořte okolo čáry okolí (buffer) tak, aby platilo že okolí obsahuje na každou stranu jednu čtyřicetinu délky čáry.
+
+Buffer zakreslete do stejné mapy jako v předchozím kroku; věnujte přitom pozornost slučitelnosti jednotek (metry, stupně). Je možné, že budete muset převádět souřadnicové systémy ze zeměpisného do rovinného.
+
+```{r buffer}
+
+
+```
+
+## Úkol čtvrtý: Průsečíky a plocha
+
+Zjistěte průsečíky mezi okolím vaší čáry a podkladovými polygony (městské části / okresy / státy světa), a vystavte je jako tabulku setříděnou sestupně podle plochy průsečíku.
+
+V tuto chvíli již není relevantní prostorová informace - na výstupu se očekávají dva sloupce: jméno (části / okresu / státu) a plocha průsečíku.
+
+```{r intersection}
+
+
+```
+
+## Úkol pátý: Populace
+
+Doplňte do datového podkladu počet obyvatel. Z populace a velikosti dopočtěte hustotu obyvatelstva, a zakreslete jí jako kartogram (barevná intenzita výplně - fill - v rámci ggplot2 volání). Zvažte uplatnění transformace - třeba logaritmické? - pro vyhlazení extrémů. Může a nemusí být potřeba.
+
+V případě částí Prahy a okresů použijte data ze sčítání obyvatel z roku 2010 - uvažujte `czso::czso_get_table("SLDB-VYBER")` s tím, že části obcí jsou pod kódem územi 44, okresy pod kódem území 101. Pro zahraničí použijte jiný vhodný zdroj (nemusí být nutně přes balíček; klidně natvrdo číslem).
+
+
+```{r kartogram}
+
+
+```
+
+Spočtěte interpolací podle plochy (předpoklad konstatní hustoty zabydlení) počet obyvatel v okolí spojnice vašich dvou bodů a vypište jako číslo (prostorová informace není v tuto chvíli relevantní, ani žádoucí).
+
+```{r interpolace}
+
+
+```
