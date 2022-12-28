@@ -12,8 +12,8 @@ Repozitář a podkladové materiály ke kurzu během letního semestru 2022/2023
 4.  týden (2023-03-10): 
 5.  týden (2023-03-17):
 6.  týden (2023-03-24):
-*7.  týden (2023-03-31): Inovační týden*
-*8.  týden (2023-04-07): Velký Pátek*
+7.  týden (2023-03-31): *Inovační týden*
+8.  týden (2023-04-07): *Velký Pátek*
 9.  týden (2023-04-14):
 10. týden (2023-04-21):
 11. týden (2023-04-28):
