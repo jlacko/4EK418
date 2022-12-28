@@ -13,8 +13,9 @@ migrace <- czso::czso_get_table("130141r19")
 
 # přehled metrik a jejich kódů
 migrace %>% 
-   group_by(vuk, vuk_text) %>% 
-   summarise()
+  group_by(vuk, vuk_text) %>% 
+#  group_by(vuzemi_cis) %>% 
+  summarise(pocet = n()/8)
 
 # získat kraje a propojit s metrikou "Celkový přírůstek"
 podklad <- RCzechia::kraje("low") %>% 
