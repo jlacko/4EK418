@@ -1,6 +1,7 @@
 ---
 title: "4EK418 – příprava prostředí"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
@@ -13,7 +14,7 @@ Kurs *Mapy, geodata a prostorová ekonometrie v R* proběhne s největší pravd
 
 Pokud budete chtít procházet kód a úlohy na vlastním technickém prostředí, což velmi doporučuji, tak budete muset splnit několik technických kroků; postupujte přitom podle návodu níže.
 
-V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.1.2 a RStudio 2021.09.2 - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto je konfigurace, kterou budu používat při prezentaci.
+V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.2.2 a RStudio 2022.12.0+353 "Elsbeth Geranium" - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto je konfigurace, kterou budu používat při prezentaci.
 
 Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to uděláte vykopírováním a spuštěním kódu níže.
 
@@ -52,7 +53,7 @@ Když budete mít git funkční tak prosím v rámci RStudia založte nový proj
 
 Vyklonováním získáte aktivní projekt, do kterého budu vkládat kurzovné materiály. Snadno si jej aktualizujete příkazem Pull na záložce Git (modrá šipka směrem dolů). Zatím je to prázdná schránka, ale až začneme tak budou materiály doplněny.
 
-![](images/Screenshot%20from%202021-01-25%2012-18-49.png)
+![](images/screenshot-git.png)
 
 Nakonec, jako ne povinnou, ale velmi doporučenou, aktivitu proveďte registraci na [developer.here.com](https://developer.here.com/). HERE je platforma věnující se mapování a navigaci (dříve známá jako Nokia Maps) a s jejím API pracuje balíček `{hereR}`. Registrace je zdarma, a do jejich free tieru 250 tisíc dotazů měsíčně se vejdete s velkou rezervou - ale pro práci s `{hereR}` budete potřebovat vlastní API klíč.
 
@@ -60,6 +61,6 @@ Nakonec, jako ne povinnou, ale velmi doporučenou, aktivitu proveďte registraci
 
 API klíč získáte tak, že v rámci platformy vygenereujete projekt - já ten svůj nazval hereR podle balíčku `{hereR}`, ale není to podmínka - a poté zvolíte Create API key; standardně je skrytý za hvězdičkami, ukázat jde přes ikonu očička (a COPY ho zkopíruje do schránky; to je nejpraktičtější).
 
-Na použití klíče dojde třetí den kurzu, takže tento krok tolik nespěchá.
+Na použití klíče dojde v druhé polovině kurzu, takže tento krok tolik nespěchá.
 
 Jindra Lacko
