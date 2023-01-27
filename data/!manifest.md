@@ -1,7 +1,7 @@
 # Manifest dat a zdrojů
 
 ### Open Data města Prahy:
-* cenová mapa Prahy (SED_CenovaMapa_p.shp) / CC-BY-SA 4.0 datový podklad © IPR Praha / platné k 7. 1. 2021
+* cenová mapa Prahy (SED_CenovaMapa_p.shp) / CC-BY-SA 4.0 datový podklad © IPR Praha / platné k 13. 1. 2022
 * veřejné toalety (zachodky.json) / CC-BY-SA 4.0 datový podklad © IPR Praha / platné k 8. 11. 2019
 https://www.geoportalpraha.cz/cs/data/otevrena-data/seznam
 
@@ -14,7 +14,7 @@ https://www.geoportalpraha.cz/cs/data/otevrena-data/seznam
 ### Registrace vozidel
 * druh registrovaných vozidel podle obce (obec_dr.csv) / Centrální registr vozidel 
 * číselník druhů vozidel (ciselnikyrzdruh.xls) / Centrální registr vozidel
-https://www.mdcr.cz/Statistiky/Silnicni-doprava/Centralni-registr-vozidel/Statistika-II-pol-2021-(k-1-1-2022)
+https://www.mdcr.cz/Statistiky/Silnicni-doprava/Centralni-registr-vozidel/Statistika-II-pol-2022-(k-1-1-2023)
 
 ### Vlastní pozorování:
 * cena benzínu (czech-oil-gc.rds) / převzato ze stránek https://benzin.impuls.cz / platné k 10. 7. 2018
