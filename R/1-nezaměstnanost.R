@@ -18,24 +18,24 @@ prehled %>%
    select(dataset_id, title)
 
 # metadata tabulky za rok 2020
-czso::czso_get_table_schema("250169r21")
+czso::czso_get_table_schema("250169r22")
 
 # tabulka po obcích za rok 2020
-nezam_21 <- czso::czso_get_table("250169r21")
+nezam_22 <- czso::czso_get_table("250169r22")
 
 # orientace podle období
-nezam_21 %>% 
+nezam_22 %>% 
    group_by(rok, mesic, obdobi) %>% 
    tally()
 
 # orientace podle typu metriky
-nezam_21 %>% 
+nezam_22 %>% 
    group_by(vuk, vuk_text) %>% 
    tally()
 
 # metrika pro mapování - uchazeči za říjen
-metrika <- nezam_21 %>% 
-   filter(obdobi == "20211031" & vuk == "NEZ0007")
+metrika <- nezam_22 %>% 
+   filter(obdobi == "20221031" & vuk == "NEZ0007")
 
 # podklad pro mapu - propojení prostorové a datové složky
 chrt_src <- obce %>% 
@@ -50,7 +50,7 @@ ggplot(chrt_src) +
    geom_sf(data = RCzechia::republika(), fill = NA) +
    scale_fill_gradient(trans = "log10") +
    labs(title = "Počet uchazečů o práci v obci",
-        subtitle = "stav k říjnu 2021")
+        subtitle = "stav k říjnu 2022")
 
 # mapview - jednoduchý interaktivní
 library(mapview)
@@ -63,7 +63,7 @@ library(leaflet)
 # definice palety / mapování hodnot na barvy
 pal <- leaflet::colorBin(palette = "RdYlBu",
                          domain = log10(chrt_src$hodnota),
-                         bins = 5)
+                         bins = 7)
 
 leaflet::leaflet(data = chrt_src) %>% 
    leaflet::addProviderTiles("CartoDB.Positron") %>% 
