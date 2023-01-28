@@ -11,6 +11,12 @@ https://www.geoportalpraha.cz/cs/data/otevrena-data/seznam
 ### Volební výsledky
 * výsledky krajských voleb 2020 po okrscích (kz6p.csv) / Český statistický úřad - https://volby.cz/opendata/kz2020/kz2020_opendata.htm
 
+### Soudní okresy 1930
+* 330 soudních okresů pro Čechy a Moravu, včetně výsledků sčítání lidu roku 1930 (1930_census.gpkg) / 
+„Tento výstup vznikl v rámci řešení projektu číslo DF12P01OVV033 Zpřístupnění historických prostorových a statistických dat v prostředí GIS řešeného v rámci programu Aplikovaného výzkumu a vývoje národní a kulturní identity (NAKI), jehož poskytovatel je Ministerstvo kultury České republiky.“
+http://www.historickygis.cz/
+
+
 ### Registrace vozidel
 * druh registrovaných vozidel podle obce (obec_dr.csv) / Centrální registr vozidel 
 * číselník druhů vozidel (ciselnikyrzdruh.xls) / Centrální registr vozidel
