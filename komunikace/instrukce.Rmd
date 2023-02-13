@@ -2,8 +2,9 @@
 title: "4EK418 – příprava prostředí"
 output:
   pdf_document: default
-  html_document:
-    df_print: paged
+  header-includes:
+    - \newcommand{\bcenter}{\begin{center}}
+    - \newcommand{\ecenter}{\end{center}}
 ---
 
 ```{r setup, include=FALSE}
@@ -20,13 +21,13 @@ Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to udělá
 
 ```{r instalace-packagi, eval = F}
 # toto potřebuju:
-required = c("czso", "dplyr", "ggplot2", "giscoR", "gtools", "hereR",
-             "htmltools", "knitr", "leaflet", "lwgeom", "mapview", "exactextractr",
-             "nngeo", "osmdata", "raster", "RCzechia", "readr", "remotes",
-             "rgeoda", "rmapshaper", "rmarkdown", "scales", "sf", "spdep", 
-             "tidygeocoder", "tidyr", "tidyverse")
+required <- c("czso", "dplyr", "ggplot2", "giscoR", "gtools", "hereR",
+              "htmltools", "knitr", "leaflet", "lwgeom", "mapview", "exactextractr",
+              "nngeo", "osmdata", "raster", "RCzechia", "readr", "remotes",
+              "rgeoda", "rmapshaper", "rmarkdown", "scales", "sf", "spdep",
+              "tidygeocoder", "tidyr", "tidyverse")
 # toto mám:
-installed = installed.packages()[, "Package"]
+installed <- installed.packages()[, "Package"]
 
 # a tedy rozdíl stahnu z CRANu...
 install.packages(setdiff(required, installed))
@@ -45,19 +46,35 @@ install.packages("installr") # pokud nemáte z předchozího kroku...
 installr::install.git() 
 ```
 
-Když budete mít git funkční tak prosím v rámci RStudia založte nový projekt metodou z hlavní nabídky `File >> New Project >> Version Control >> Git`, a coby cestu k repozitáři zadáte [`https://github.com/jlacko/4EK418.git`](https://github.com/jlacko/4EK418.git).
+\newpage
 
-![](images/new-project.png)
+Když budete mít git funkční tak prosím v rámci RStudia založte nový projekt metodou z hlavní nabídky `File >> New Project >> Version Control >> Git`, a coby cestu k repozitáři zadáte [`https://github.com/jlacko/4EK418.git`](https://github.com/jlacko/4EK418.git). 
 
-![](images/clone-git.png)
+\bcenter
+
+![](images/new-project.png){width=500px}
+
+![](images/clone-git.png){width=500px}
+
+\ecenter
 
 Vyklonováním získáte aktivní projekt, do kterého budu vkládat kurzovné materiály. Snadno si jej aktualizujete příkazem Pull na záložce Git (modrá šipka směrem dolů). Zatím je to prázdná schránka, ale až začneme tak budou materiály doplněny.
 
-![](images/screenshot-git.png)
+\bcenter
+
+![](images/screenshot-git.png){width=500px}
+
+\ecenter
+
+\newpage
 
 Nakonec, jako ne povinnou, ale velmi doporučenou, aktivitu proveďte registraci na [developer.here.com](https://developer.here.com/). HERE je platforma věnující se mapování a navigaci (dříve známá jako Nokia Maps) a s jejím API pracuje balíček `{hereR}`. Registrace je zdarma, a do jejich free tieru 250 tisíc dotazů měsíčně se vejdete s velkou rezervou - ale pro práci s `{hereR}` budete potřebovat vlastní API klíč.
 
-![](images/create-api-key.png)
+\bcenter
+
+![](images/create-api-key.png){width=500px}
+
+\ecenter
 
 API klíč získáte tak, že v rámci platformy vygenereujete projekt - já ten svůj nazval hereR podle balíčku `{hereR}`, ale není to podmínka - a poté zvolíte Create API key; standardně je skrytý za hvězdičkami, ukázat jde přes ikonu očička (a COPY ho zkopíruje do schránky; to je nejpraktičtější).
 
