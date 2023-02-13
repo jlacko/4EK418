@@ -10,7 +10,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE, fig.align="center")
 ```
 
-Kurs *Mapy, geodata a prostorová ekonometrie v R* proběhne s největší pravděpodobností prezenční formou, což klade o něco menší nároky na prostředí nežli vzdálená forma přes Týmsy.
+Kurs *Mapy, geodata a prostorová ekonometrie v R* proběhne prezenční formou, což klade o něco menší nároky na prostředí nežli vzdálená forma přes Týmsy.
 
 Pokud budete chtít procházet kód a úlohy na vlastním technickém prostředí, což velmi doporučuji, tak budete muset splnit několik technických kroků; postupujte přitom podle návodu níže.
 
