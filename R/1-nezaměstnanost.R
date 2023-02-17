@@ -17,25 +17,25 @@ prehled %>%
    filter(str_detect(title, "nezam")) %>% 
    select(dataset_id, title)
 
-# metadata tabulky za rok 2020
-czso::czso_get_table_schema("250169r22")
+# metadata tabulky za rok 2023
+czso::czso_get_table_schema("250169r23")
 
-# tabulka po obcích za rok 2020
-nezam_22 <- czso::czso_get_table("250169r22")
+# tabulka po obcích za rok 2023
+nezam_23 <- czso::czso_get_table("250169r23")
 
 # orientace podle období
-nezam_22 %>% 
+nezam_23 %>% 
    group_by(rok, mesic, obdobi) %>% 
    tally()
 
 # orientace podle typu metriky
-nezam_22 %>% 
+nezam_23 %>% 
    group_by(vuk, vuk_text) %>% 
    tally()
 
 # metrika pro mapování - uchazeči za říjen
-metrika <- nezam_22 %>% 
-   filter(obdobi == "20221031" & vuk == "NEZ0007")
+metrika <- nezam_23 %>% 
+   filter(obdobi == "20230131" & vuk == "NEZ0007")
 
 # podklad pro mapu - propojení prostorové a datové složky
 chrt_src <- obce %>% 
@@ -50,7 +50,7 @@ ggplot(chrt_src) +
    geom_sf(data = RCzechia::republika(), fill = NA) +
    scale_fill_gradient(trans = "log10") +
    labs(title = "Počet uchazečů o práci v obci",
-        subtitle = "stav k říjnu 2022")
+        subtitle = "stav k lednu 2023")
 
 # mapview - jednoduchý interaktivní
 library(mapview)
@@ -66,10 +66,11 @@ pal <- leaflet::colorBin(palette = "RdYlBu",
                          bins = 7)
 
 leaflet::leaflet(data = chrt_src) %>% 
-   leaflet::addProviderTiles("CartoDB.Positron") %>% 
-   leaflet::addPolygons(fillColor = ~pal(log10(chrt_src$hodnota)),
-               stroke = NA,
-               label = ~hodnota)
+  leaflet::addProviderTiles("CartoDB.Positron") %>% 
+  leaflet::addPolygons(fillColor = ~pal(log10(chrt_src$hodnota)),
+                       stroke = NA,
+                       fillOpacity = 2/3,
+                       label = ~hodnota) 
 
 # poznámka: když chci leaflet uložit, tak htmlwidgets::saveWidget(leaflet, "soubor", selfcontained = T)
 
