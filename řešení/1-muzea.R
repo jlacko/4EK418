@@ -13,6 +13,18 @@ muzea <- data.frame(
 # - při kreslení polygonu nezapomeňte zakázat výplň / fill = NA
 
 library(dplyr)
+library(sf)
+library(tidygeocoder)
+library(ggplot2)
 
 stredocesky_kraj <- RCzechia::kraje() %>% 
   filter(KOD_CZNUTS3 == "CZ020")
+
+muzea_sf <- muzea %>% 
+  geocode(address = "adresa") %>% 
+  sf::st_as_sf(coords = c("long", "lat"), crs = 4326) 
+
+ggplot() +
+  geom_sf(data = stredocesky_kraj, fill = "cornflowerblue") +
+  geom_sf(data = muzea_sf, color = "red", pch = 4)
+

@@ -33,7 +33,7 @@ nezam_23 %>%
    group_by(vuk, vuk_text) %>% 
    tally()
 
-# metrika pro mapování - uchazeči za říjen
+# metrika pro mapování - uchazeči za leden
 metrika <- nezam_23 %>% 
    filter(obdobi == "20230131" & vuk == "NEZ0007")
 
