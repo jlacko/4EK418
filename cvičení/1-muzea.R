@@ -11,8 +11,3 @@ muzea <- data.frame(
 # - všechny kraje jsou v RCzechia::kraje()
 # - geocode z tidygeocoder potřebuje konverzi st_as_sf
 # - při kreslení polygonu nezapomeňte zakázat výplň / fill = NA
-
-library(dplyr)
-
-stredocesky_kraj <- RCzechia::kraje() %>% 
-  filter(KOD_CZNUTS3 == "CZ020")
