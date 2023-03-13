@@ -25,7 +25,7 @@ search_res <- opq(bbox = "Praha") %>%
 hopsody <- search_res$osm_points %>%  
    filter(!is.na(amenity)) %>%  # pouze platné
    select(name) %>% 
-   filter(t(st_intersects(obrys, . , sparse = F))) # jen ty uvnitř hranic / ne jen bboxu
+   subset(st_intersects(., obrys, sparse = F)) # jen ty uvnitř hranic / ne jen bboxu
 
 
 # vizuální overview
