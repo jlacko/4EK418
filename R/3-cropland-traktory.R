@@ -34,10 +34,9 @@ ggplot(data = obce, aes(fill = polelany)) +
                        name = "zemědělská plocha\n(v % z celkové)")
 
 # načtení registru + srovnání češtiny
-obce_vozidla <- readr::read_csv2("./data/obec_dr.csv") %>% 
-  mutate(obec = stringi::stri_encode(obec, from = "Windows-1250", to = "UTF-8"),
-         pou = stringi::stri_encode(pou, from = "Windows-1250", to = "UTF-8"),
-         # srovnání terminologie s RCzechia::obce_polygony / aby se obce potkaly...
+obce_vozidla <- readr::read_csv2("./data/obec_dr.csv", 
+                                locale = readr::locale(encoding = "UTF-16")) %>% 
+  mutate(# srovnání terminologie s RCzechia::obce_polygony / aby se obce potkaly...
          pou = ifelse(pou == "Hlavní město Praha", "Praha", pou), 
          pou = ifelse(pou == "Jesenice (okres Rakovník)", "Jesenice", pou),
          pou = ifelse(pou == "Jesenice (okres Praha-západ)", "Jesenice", pou))
