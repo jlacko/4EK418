@@ -9,7 +9,7 @@ source("./R/4-okrsky-viz.R")
 
 # vlastní moran
 sousedi <- stc_okrsky %>% 
-   poly2nb(queen = T) %>% 
+   poly2nb(queen = F) %>% 
    nb2listw()
 
 moran.test(stc_okrsky$STAN, sousedi)
