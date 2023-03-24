@@ -40,8 +40,8 @@ class(coll)
 
 coll_data <- coll %>% 
    st_as_sf() %>% 
-   mutate(kraj = c("liberecký",
-                   "středočeský"))
+   mutate(kraj = c("ústecký",
+                   "praha"))
 
 coll_data
 
@@ -51,4 +51,4 @@ plot(coll_data)
 
 # něco úplně jiného...
 
-st_drop_geometry(sf_objekt)
+st_drop_geometry(coll_data)
