@@ -14,7 +14,7 @@ vltava <- reky("Praha") %>%
 skoly <- data.frame(
    skola = c("VŠE", "Matfyz", "Přfuk"),
    adresa = c(
-      "náměstí Winstona Churchilla 1938/4, Praha 3",
+      "náměstí Winstona Churchilla 1938/4, Praha",
       "Malostranské náměstí 2, Malá Strana",
       "Albertov 6, Praha 2"
    )) %>%
