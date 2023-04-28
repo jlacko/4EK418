@@ -33,7 +33,10 @@ ggplot(data = moran_mapa) +
    theme_void() +
    labs(title = "Lokální Moranovo I",
         subtitle = "kladná hodnota = okrsek je obklopen sobě podobnými") +
-   theme(plot.margin = unit(rep(.5, 4), "cm"))
+   theme(plot.margin = unit(rep(.5, 4), "cm"),
+         legend.text.align = 1,
+         legend.title.align = 1/2)
+
 
 # Materialita lokálního Moranovo I
 ggplot(data = moran_mapa) +
@@ -45,7 +48,9 @@ ggplot(data = moran_mapa) +
    theme_void() +
    labs(title = "Lokální Moranovo I",
         fill = "materialita\nLocal Moran") +
-   theme(plot.margin = unit(rep(.5, 4), "cm"))
+   theme(plot.margin = unit(rep(.5, 4), "cm"),
+         legend.text.align = 1,
+         legend.title.align = 1/2)
 
 
 # Getis-Ord Gi*
@@ -68,8 +73,9 @@ ggplot(data = gord_mapa) +
    labs(title = "Lokální Getis-Ord",
         subtitle = "vysoká absolutní hodnota = cluster; znamínko = znamínko",
         fill = "Getis-Ord *") +
-   theme(plot.margin = unit(rep(.5, 4), "cm"))
-
+   theme(plot.margin = unit(rep(.5, 4), "cm"),
+         legend.text.align = 1,
+         legend.title.align = 1/2)
 
 # Materialita Gi*
 ggplot(data = gord_mapa) +
@@ -81,4 +87,6 @@ ggplot(data = gord_mapa) +
    theme_void() +
    labs(title = "Lokální Getis-Ord",
         fill = "materialita\nGetis-Ord *") +
-   theme(plot.margin = unit(rep(.5, 4), "cm"))
+   theme(plot.margin = unit(rep(.5, 4), "cm"),
+         legend.text.align = 1,
+         legend.title.align = 1/2)

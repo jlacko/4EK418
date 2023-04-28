@@ -30,7 +30,7 @@ pavel_relativne <- ggplot() +
                         limits = c(0, 1),
                         labels = scales::label_percent()) +
    labs(fill = "podíl\nPetra Pavla",
-        title = "Prezidentské volby 2022") +
+        title = "Prezidentské volby 2023") +
    theme_void() +
    theme(legend.text.align = 1,
          legend.title.align = 1/2)
@@ -48,7 +48,7 @@ babis_relativne <- ggplot() +
                        limits = c(0, 1),
                        labels = scales::label_percent()) +
   labs(fill = "podíl\nAndreje Babiše",
-       title = "Prezidentské volby 2022") +
+       title = "Prezidentské volby 2023") +
   theme_void() +
   theme(legend.text.align = 1,
         legend.title.align = 1/2)
@@ -62,10 +62,10 @@ pavel_absolutne <- ggplot() +
    geom_sf(data = obrysKraje, fill = NA, color = "gray40", size = .75) +
    scale_fill_continuous(low = "white",
                          high = scales::muted("blue"),
-                         limits = c(0, 800),
+                  #       limits = c(0, 800),
                          labels = scales::label_comma()) +
    labs(fill = "hlasy pro\nPetra Pavla",
-        title = "Prezidentské volby 2022") +
+        title = "Prezidentské volby 2023") +
    theme_void() +
    theme(legend.text.align = 1,
          legend.title.align = 1/2)
@@ -76,7 +76,7 @@ stredobody <- ggplot() +
    geom_sf(data = st_set_geometry(clean_data, "stredobod"), pch = 4, color = "red", alpha = 1/2) +
    geom_sf(data = podklad, fill = NA, color = "gray60", size = .25) +
    geom_sf(data = obrysKraje, fill = NA, color = "gray40", size = .75) +
-   labs(title = "Prezidentské volby 2022",
+   labs(title = "Prezidentské volby 2023",
         subtitle = "středové body okrsků") +
    theme_void() 
 

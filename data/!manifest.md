@@ -17,7 +17,6 @@ https://www.geoportalpraha.cz/cs/data/otevrena-data/seznam
 „Tento výstup vznikl v rámci řešení projektu číslo DF12P01OVV033 Zpřístupnění historických prostorových a statistických dat v prostředí GIS řešeného v rámci programu Aplikovaného výzkumu a vývoje národní a kulturní identity (NAKI), jehož poskytovatel je Ministerstvo kultury České republiky.“
 http://www.historickygis.cz/
 
-
 ### Registrace vozidel
 * druh registrovaných vozidel podle obce (obec_dr.csv) / Centrální registr vozidel 
 * číselník druhů vozidel (ciselnikyrzdruh.xls) / Centrální registr vozidel
