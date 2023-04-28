@@ -6,7 +6,7 @@ clean_data <- clean_data %>%
   st_transform(5514) # ve světě ing. Křováka je výpočet svižnější
 
 # 330 soudních okresů První republiky jako geojson
-census <- st_read("./data/1930_census.geojson") 
+census <- st_read("./data/1930_census.gpkg") 
 
 # přenést aktuální volební výsledky na historická data
 census$babis <- st_interpolate_aw(x = clean_data["babis"],
