@@ -1,0 +1,93 @@
+library(spdep)
+library(dplyr)
+library(sf)
+library(purrr)
+library(ggplot2)
+
+# podklad okresů - společný všude
+okresy <- RCzechia::okresy("low")
+
+# obecná jednořádková vizualizační fce
+zprava <- function(sousedi) {
+  
+ chart_source <-  okresy %>%  
+   # zafiltruje okresy na ty, které jsou sousedy v objektu sousedi
+   slice(pluck(sousedi$neighbours, which(okresy$KOD_LAU1 == "CZ0642"))) %>%
+   # doplní sloupec s vahou sousedství
+   mutate(vaha = pluck(sousedi$weights, which(okresy$KOD_LAU1 == "CZ0642"))) %>% 
+   mutate(vaha = vaha / sum(vaha)) # přeškálovat, aby součet byl 100%
+  
+  
+  ggplot(data = chart_source) +
+    geom_sf() +
+    geom_sf_label(aes(label = scales::percent(round(vaha, 2)))) +
+    geom_sf(data = st_centroid(okresy[which(okresy$KOD_LAU1 == "CZ0642"), ]), color= "red", pch = 4) +
+    theme_void()
+  
+}
+
+# metoda královna - stačí 1 bod; očekává polygony
+
+queen_hoods <- st_geometry(okresy) %>% 
+  poly2nb(queen = T) %>% # queen váhy
+  nb2listw(zero.policy = T) 
+
+zprava(queen_hoods)
+
+# metoda věž - potřebuju 2 sousední body (1 je málo); očekává polygony
+
+rook_hoods <- st_geometry(okresy) %>% 
+  poly2nb(queen = F) %>% # rook weights / není queen
+  nb2listw(zero.policy = T) 
+
+zprava(rook_hoods)
+
+# metoda nejbližší sousedé / pozor na parametr "kolik sousedů"; očekává body
+
+knn_hoods <- st_geometry(okresy) %>% 
+  st_centroid() %>% 
+  knearneigh(k = 3) %>% # tři nejblizší body (vždy 3)
+  knn2nb() %>% 
+  nb2listw(zero.policy = T) 
+
+zprava(knn_hoods)
+
+# metoda sousedé vymezeni vzdáleností / pozor na parametry "od" a "do"; očekává body
+
+distance_hoods <- st_geometry(okresy) %>% 
+  st_centroid() %>%
+  dnearneigh(d1 = 0, d2 = 50) %>% # vzdálenost nula až 50 Km
+  nb2listw(zero.policy = T) 
+
+zprava(distance_hoods)
+
+# technika úpravy vah / platí nezávisle na technice určení sousedství
+
+# vstup = seznam sousedství; nemusí být nutně podle vzdáleností
+nblist <- st_geometry(okresy) %>% 
+  st_centroid() %>%
+  dnearneigh(d1 = 0, d2 = 50) # vzdálenost nula až 50 Km
+  
+idw_hoods <- nb2listw(nblist,
+                      zero.policy = T)
+
+# váhy jsou standardní součást listw objektu, ale já si jí přepíšu vlastní hodnotou (muhehe...)
+idw_hoods$weights <- nbdists(nblist, st_coordinates(st_centroid(okresy))) %>% 
+  lapply(function(x) 1/x) # převrácená hodnota vzdáleností
+
+zprava(idw_hoods)
+
+# alternativa - převážení královny podle pana Newtona
+
+nblist <- st_geometry(okresy) %>%  
+  poly2nb(queen = T) # seznam queen sousedství polygonů okresů
+
+idwq_hoods <- nb2listw(nblist,
+                       zero.policy = T)
+
+# váhy jsou standardní součást, ale přepíšu jí novou hodnotou
+idwq_hoods$weights <- nbdists(nblist, st_coordinates(st_centroid(okresy))) %>% 
+  lapply(function(x) 1/(x^2)) # převrácená hodnota *druhé mocniny* vzdálenosti - jako gravitace...
+
+zprava(idwq_hoods)
+
