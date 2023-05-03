@@ -1,26 +1,26 @@
 library(spdep)
 library(dplyr)
 library(sf)
-library(purrr)
+library(purrr) # protože pluck = tahání prvku z listu
 library(ggplot2)
 
 # podklad okresů - společný všude
 okresy <- RCzechia::okresy("low")
 
-# obecná jednořádková vizualizační fce
+# obecná jednořádková vizualizační fce; očekává vstup ve formátu listw
 zprava <- function(sousedi) {
   
  chart_source <-  okresy %>%  
-   # zafiltruje okresy na ty, které jsou sousedy v objektu sousedi
+   # zafiltruje okresy na ty, které jsou sousedy města Brna v objektu sousedi
    slice(pluck(sousedi$neighbours, which(okresy$KOD_LAU1 == "CZ0642"))) %>%
-   # doplní sloupec s vahou sousedství
+   # doplní sloupec s vahou sousedství vůči městu Brnu
    mutate(vaha = pluck(sousedi$weights, which(okresy$KOD_LAU1 == "CZ0642"))) %>% 
    mutate(vaha = vaha / sum(vaha)) # přeškálovat, aby součet byl 100%
   
   
   ggplot(data = chart_source) +
     geom_sf() +
-    geom_sf_label(aes(label = scales::percent(round(vaha, 2)))) +
+    geom_sf_label(aes(label = scales::percent(vaha, accuracy = 1))) +
     geom_sf(data = st_centroid(okresy[which(okresy$KOD_LAU1 == "CZ0642"), ]), color= "red", pch = 4) +
     theme_void()
   
