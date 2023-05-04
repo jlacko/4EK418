@@ -27,3 +27,6 @@ https://www.mdcr.cz/Statistiky/Silnicni-doprava/Centralni-registr-vozidel/Statis
 * základní žižkovská infrastruktura (žižkov.gpkg) / převzato z RUIAN (budovy) a OSM (points of interest)
 * snímek Prahy v červeném a infračerveném spektru (nir_prg-2018-06-30.tif a red_prg-2018-06-30.tif) / Contains modified Copernicus Sentinel data 2018 - https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice
 * Kapacity hromadných ubytovacích zařízení v okresech a obvodech Prahy (CRU02_2012_2017.csv) / Český statistický úřad - https://www.czso.cz/csu/czso/podminky_pro_vyuzivani_a_dalsi_zverejnovani_statistickych_udaju_csu
+
+### Sčítání lidu 2021
+* Vyjíždějící do zaměstnání a školy podle hlavního dopravního prostředku (sldb2021_vyjizdka_vsichni_prostredek_pohlavi.csv) / Český statistický úřad - https://www.czso.cz/csu/czso/vysledky-scitani-2021-otevrena-data
