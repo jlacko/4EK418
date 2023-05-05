@@ -21,8 +21,8 @@ obrysKraje <- kraje() %>% # pro tlustou čáru kolem kraje na mapě
 # vizuální overview
 pavel_relativne <- ggplot() +
    geom_sf(data = clean_data, aes(fill = pavel / celkem), color = NA, alpha = 2/3) +
-   geom_sf(data = podklad, fill = NA, color = "gray60", size = .25) +
-   geom_sf(data = obrysKraje, fill = NA, color = "gray40", size = .75) +
+   geom_sf(data = podklad, fill = NA, color = "gray60", linewidth = .25) +
+   geom_sf(data = obrysKraje, fill = NA, color = "gray40", linewidth = .75) +
    scale_fill_gradient2(low = scales::muted("red"),
                         high = scales::muted("green"),
                         mid = "white",
@@ -39,8 +39,8 @@ pavel_relativne
 
 babis_relativne <- ggplot() +
   geom_sf(data = clean_data, aes(fill = babis / celkem), color = NA, alpha = 2/3) +
-  geom_sf(data = podklad, fill = NA, color = "gray60", size = .25) +
-  geom_sf(data = obrysKraje, fill = NA, color = "gray40", size = .75) +
+  geom_sf(data = podklad, fill = NA, color = "gray60", linewidth = .25) +
+  geom_sf(data = obrysKraje, fill = NA, color = "gray40", linewidth = .75) +
   scale_fill_gradient2(low = scales::muted("red"),
                        high = scales::muted("green"),
                        mid = "white",
@@ -58,8 +58,8 @@ babis_relativne
 
 pavel_absolutne <- ggplot() +
    geom_sf(data = clean_data, aes(fill = pavel), color = NA, alpha = 2/3) +
-   geom_sf(data = podklad, fill = NA, color = "gray60", size = .25) +
-   geom_sf(data = obrysKraje, fill = NA, color = "gray40", size = .75) +
+   geom_sf(data = podklad, fill = NA, color = "gray60", linewidth = .25) +
+   geom_sf(data = obrysKraje, fill = NA, color = "gray40", linewidth = .75) +
    scale_fill_continuous(low = "white",
                          high = scales::muted("blue"),
                   #       limits = c(0, 800),
@@ -74,8 +74,8 @@ pavel_absolutne
 
 stredobody <- ggplot() +
    geom_sf(data = st_set_geometry(clean_data, "stredobod"), pch = 4, color = "red", alpha = 1/2) +
-   geom_sf(data = podklad, fill = NA, color = "gray60", size = .25) +
-   geom_sf(data = obrysKraje, fill = NA, color = "gray40", size = .75) +
+   geom_sf(data = podklad, fill = NA, color = "gray60", linewidth = .25) +
+   geom_sf(data = obrysKraje, fill = NA, color = "gray40", linewidth = .75) +
    labs(title = "Prezidentské volby 2023",
         subtitle = "středové body okrsků") +
    theme_void() 

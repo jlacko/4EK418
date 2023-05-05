@@ -14,10 +14,8 @@ zprava <- function(sousedi) {
    # zafiltruje okresy na ty, které jsou sousedy města Brna v objektu sousedi
    slice(pluck(sousedi$neighbours, which(okresy$KOD_LAU1 == "CZ0642"))) %>%
    # doplní sloupec s vahou sousedství vůči městu Brnu
-   mutate(vaha = pluck(sousedi$weights, which(okresy$KOD_LAU1 == "CZ0642"))) %>% 
-   mutate(vaha = vaha / sum(vaha)) # přeškálovat, aby součet byl 100%
-  
-  
+   mutate(vaha = pluck(sousedi$weights, which(okresy$KOD_LAU1 == "CZ0642"))) 
+ 
   ggplot(data = chart_source) +
     geom_sf() +
     geom_sf_label(aes(label = scales::percent(vaha, accuracy = 1))) +
@@ -73,7 +71,9 @@ idw_hoods <- nb2listw(nblist,
 
 # váhy jsou standardní součást listw objektu, ale já si jí přepíšu vlastní hodnotou (muhehe...)
 idw_hoods$weights <- nbdists(nblist, st_coordinates(st_centroid(okresy))) %>% 
-  lapply(function(x) 1/x) # převrácená hodnota vzdáleností
+  lapply(function(x) 1/x)  %>% # převrácená hodnota vzdáleností
+  lapply(function(x) x/sum(x)) # standardizovat matici na řádkový součet 1
+
 
 zprava(idw_hoods)
 
@@ -87,7 +87,8 @@ idwq_hoods <- nb2listw(nblist,
 
 # váhy jsou standardní součást, ale přepíšu jí novou hodnotou
 idwq_hoods$weights <- nbdists(nblist, st_coordinates(st_centroid(okresy))) %>% 
-  lapply(function(x) 1/(x^2)) # převrácená hodnota *druhé mocniny* vzdálenosti - jako gravitace...
+  lapply(function(x) 1/(x^2)) %>%  # převrácená hodnota *druhé mocniny* vzdálenosti - jako gravitace...
+  lapply(function(x) x/sum(x)) # standardizovat matici na řádkový součet 1
 
 zprava(idwq_hoods)
 
