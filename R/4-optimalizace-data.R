@@ -2,7 +2,7 @@
 # krok 2 - obohacení mřížky daty
 
 
-# obyvatelé pražských částí (opavkování :)
+# obyvatelé pražských částí (opakování :)
 
 # prostorová data pražských částí
 casti <- RCzechia::casti() %>% 

@@ -14,12 +14,20 @@ sof_model <- lm(data = grid, barcount ~ obyvatel + luzka + vegetation)
 
 summary(sof_model)
 
+# interpretace: 1 hospodu uživí
+1 / sof_model$coefficients["obyvatel"]
+1 / sof_model$coefficients["luzka"]
+
 # poissonův model
 poi_model <- glm(data = grid, barcount ~ obyvatel + luzka + vegetation, 
                  family = "poisson")
 
 summary(poi_model)
 
+# srovnání modelů
+AIC(bl_model)
+AIC(sof_model)
+AIC(poi_model)
 
 # příprava dat pro graf -----
 resids <- sof_model$residuals # extract residuals from model
