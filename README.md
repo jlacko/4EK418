@@ -1,6 +1,6 @@
 # 4EK418 Mapy, geodata a prostorová ekonometrie v R
 
-Repozitář a podkladové materiály ke kurzu během zimního semestru 2022/2023 na VŠE Praha.
+Repozitář a podkladové materiály ke kurzu během zimního semestru 2023/2024 na VŠE Praha.
 
 <p style="text-align:center;"><img src="https://s3.eu-central-1.amazonaws.com/www.jla-data.net/img/4EK418-infrastruktura.png" alt="infrastruktura Žižkova"/></p>
 
