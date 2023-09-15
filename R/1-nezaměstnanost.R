@@ -35,7 +35,7 @@ nezam_23 %>%
 
 # metrika pro mapování - uchazeči za leden
 metrika <- nezam_23 %>% 
-   filter(obdobi == "20230131" & vuk == "NEZ0007")
+   filter(obdobi == "20230831" & vuk == "NEZ0007")
 
 # podklad pro mapu - propojení prostorové a datové složky
 chrt_src <- obce %>% 
@@ -50,7 +50,7 @@ ggplot(chrt_src) +
    geom_sf(data = RCzechia::republika(), fill = NA) +
    scale_fill_gradient(trans = "log10") +
    labs(title = "Počet uchazečů o práci v obci",
-        subtitle = "stav k lednu 2023")
+        subtitle = "stav k srpnu 2023")
 
 # mapview - jednoduchý interaktivní
 library(mapview)

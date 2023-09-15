@@ -15,7 +15,7 @@ Kurs *Mapy, geodata a prostorová ekonometrie v R* proběhne prezenční formou,
 
 Pokud budete chtít procházet kód a úlohy na vlastním technickém prostředí, což velmi doporučuji, tak budete muset splnit několik technických kroků; postupujte přitom podle návodu níže.
 
-V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.2.2 a RStudio 2022.12.0+353 "Elsbeth Geranium" - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto je konfigurace, kterou budu používat při prezentaci.
+V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.3.1 a RStudio 2023.06.0+421 "Mountain Hydrangea" - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto je konfigurace, kterou budu používat při prezentaci.
 
 Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to uděláte vykopírováním a spuštěním kódu níže.
 
@@ -68,7 +68,7 @@ Vyklonováním získáte aktivní projekt, do kterého budu vkládat kurzovné m
 
 \newpage
 
-Nakonec, jako ne povinnou, ale velmi doporučenou, aktivitu proveďte registraci na [developer.here.com](https://developer.here.com/). HERE je platforma věnující se mapování a navigaci (dříve známá jako Nokia Maps) a s jejím API pracuje balíček `{hereR}`. Registrace je zdarma, a do jejich free tieru 250 tisíc dotazů měsíčně se vejdete s velkou rezervou - ale pro práci s `{hereR}` budete potřebovat vlastní API klíč.
+Nakonec, jako ne povinnou, ale velmi doporučenou, aktivitu proveďte registraci na [platform.here.com](https://platform.here.com/). HERE je platforma věnující se mapování a navigaci (dříve známá jako Nokia Maps) a s jejím API pracuje balíček `{hereR}`. Registrace je zdarma, a do jejich free tieru 30 tisíc dotazů měsíčně se vejdete s velkou rezervou - ale pro práci s `{hereR}` budete potřebovat vlastní API klíč.
 
 \bcenter
 
