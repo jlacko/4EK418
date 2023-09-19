@@ -12,7 +12,7 @@ czso::czso_get_table_schema("130140")
 
 # Naděje dožití v okresech a správních obvodech ORP při narození
 raw_hope <- czso::czso_get_table("130140") %>% 
-   filter(casref_do == as.Date("2020-12-31 UTC") & # poslední řez
+   filter(casref_do == as.Date("2021-12-31 UTC") & # poslední řez
           vek_kod == "400000600001000" ) # při narození
 
 # nápověda:
@@ -27,6 +27,7 @@ podklad_okresy <- RCzechia::okresy() %>%
 
 ggplot(data = podklad_okresy) +
   geom_sf(aes(fill = hodnota), color = NA) +
+  geom_sf_text(aes(label = round(hodnota, 1)), color = "gray90") +
   facet_wrap(~pohlavi_txt)
 
 # ORP / n = 206
