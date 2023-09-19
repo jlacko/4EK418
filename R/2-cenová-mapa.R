@@ -19,7 +19,7 @@ nejdrazsi <- mapa %>%
 
 # podat zprávu (interaktivně)
 leaflet(data = nejdrazsi) %>% 
-   addProviderTiles("Stamen.Toner") %>% 
+   addProviderTiles("CartoDB.Positron") %>% 
    addPolygons(fillColor = "goldenrod",
                stroke = F,
                fillOpacity = 1/2,
