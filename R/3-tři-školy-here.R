@@ -18,7 +18,7 @@ skoly <- data.frame(
       "Albertov 6, Praha 2"
    )) %>%
    tidygeocoder::geocode(address = adresa,
-                         method = "osm") %>%
+                         method = "here") %>%
    sf::st_as_sf(coords = c("long", "lat"), crs = 4326) 
 
 
@@ -41,7 +41,7 @@ her_isolines <- hereR::isoline(poi = skoly,
                                range = 60 * 10, # jednotky = vteřiny!
                                range_type = "time")
 
-# co jsme dostali? pozor: jediný multipolygon! (= ne tři samostatné)
+# co jsme dostali? 
 her_isolines
 
 # vizuální kontrola
@@ -49,11 +49,10 @@ mapview::mapview(her_isolines)
 
 
 # z jednoho polygonu za všechy >> 3 jednotlivé podle školy
-iso_skoly <- her_isolines %>% 
-   st_geometry() %>% 
-   st_cast("POLYGON") %>% # předpoklad: polygony jsou spojité
-   st_as_sf() %>% # sfc pro join nestačí; třeba sf
-   st_join(skoly)
+iso_skoly <- her_isolines %>%
+  st_geometry() %>%
+  st_as_sf() %>% 
+  st_join(skoly)
    
 # vizuální kontrola
 mapview::mapview(iso_skoly, zcol = "skola")

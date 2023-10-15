@@ -1,9 +1,10 @@
 # Manifest dat a zdrojů
 
 ### Open Data města Prahy:
-* cenová mapa Prahy (SED_CenovaMapa_p.shp) / CC-BY-SA 4.0 datový podklad © IPR Praha / platné k 13. 1. 2022
-* veřejné toalety (zachodky.json) / CC-BY-SA 4.0 datový podklad © IPR Praha / platné k 8. 11. 2019
+* cenová mapa Prahy (SED_CenovaMapa_p.shp) / CC-BY-SA 4.0 datový podklad © IPR Praha / platné k 2022-01-13
+* veřejné toalety (zachodky.json) / CC-BY-SA 4.0 datový podklad © IPR Praha / platné k 2019-11-08
 https://www.geoportalpraha.cz/cs/data/otevrena-data/seznam
+* měření kvality ovzduší / golemio-AQ.geojson / výstup z API Golemio https://api.golemio.cz/docs/openapi/#/%F0%9F%8C%A6%20Air%20Quality%20(v2) platný k 2023-10-15
 
 ### Natural Earth
 * řeky světa v měřítku 1:50m (ne_50m_rivers_lake_centerlines.shp) / public domain https://github.com/nvkelso/natural-earth-vector/blob/master/LICENSE.md
@@ -23,7 +24,7 @@ http://www.historickygis.cz/
 https://www.mdcr.cz/Statistiky/Silnicni-doprava/Centralni-registr-vozidel/Statistika-II-pol-2022-(k-1-1-2023)
 
 ### Vlastní pozorování:
-* cena benzínu (czech-oil-gc.rds) / převzato ze stránek https://benzin.impuls.cz / platné k 10. 7. 2018
+* cena benzínu (czech-oil-gc.rds) / převzato ze stránek https://benzin.impuls.cz / platné k 2018-07-10
 * základní žižkovská infrastruktura (žižkov.gpkg) / převzato z RUIAN (budovy) a OSM (points of interest)
 * snímek Prahy v červeném a infračerveném spektru (nir_prg-2018-06-30.tif a red_prg-2018-06-30.tif) / Contains modified Copernicus Sentinel data 2018 - https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice
 * Kapacity hromadných ubytovacích zařízení v okresech a obvodech Prahy (CRU02_2012_2017.csv) / Český statistický úřad - https://www.czso.cz/csu/czso/podminky_pro_vyuzivani_a_dalsi_zverejnovani_statistickych_udaju_csu

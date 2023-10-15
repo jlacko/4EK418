@@ -25,9 +25,16 @@ skoly <- data.frame(
 
 # uložíme pro budoucí použití
 obrazek <- ggplot() +
-   geom_sf(data = praha, fill = NA, color = "gray40") +
-   geom_sf(data = skoly, aes(shape = skola), color = "goldenrod2", size = 4) +
-   geom_sf(data = vltava, color = "steelblue") +
+   geom_sf(data = praha, 
+           fill = NA, 
+           color = "gray30",
+           linewidth = 1) +
+   geom_sf(data = skoly, 
+           aes(shape = skola), 
+           color = "goldenrod2", size = 4) +
+   geom_sf(data = vltava, 
+           color = "steelblue",
+           linewidth = 2) +
    theme_void() +
    theme(legend.position = "bottom") +
    labs(shape = "Univerzita:")
@@ -41,7 +48,9 @@ buffer <- skoly %>%
    st_buffer(dist = 1000) # Křovák je v metrech = 1 kilometřík
 
 obrazek +
-   geom_sf(data = buffer, fill = NA, color = "red")
+   geom_sf(data = buffer, 
+           fill = NA, 
+           color = "red")
 
 
 # 2) convex hull okolo škol
@@ -59,7 +68,9 @@ class(hull)
 
 # spojíme s obrázkem
 obrazek +
-   geom_sf(data = hull, fill = NA, color = "red") 
+   geom_sf(data = hull, 
+           fill = NA, 
+           color = "red") 
 
 # alternativa
 alt_hull <- buffer %>% 
@@ -68,7 +79,9 @@ alt_hull <- buffer %>%
    st_as_sf()
 
 obrazek +
-   geom_sf(data = alt_hull, fill = NA, color = "red") 
+   geom_sf(data = alt_hull, 
+           fill = NA, 
+           color = "red") 
 
 
 # 3) centroidy (od polygonů k bodům)
@@ -77,8 +90,14 @@ stred_prahy <- st_centroid(praha)
 stred_hullu <- st_centroid(hull)
 
 obrazek +
-   geom_sf(data = stred_prahy, color = "red", pch = 3, size = 3) +
-   geom_sf(data = stred_hullu, color = "blue", pch = 3, size = 3)
+   geom_sf(data = stred_prahy, 
+           color = "red", 
+           pch = 3, 
+           size = 3) +
+   geom_sf(data = stred_hullu, 
+           color = "blue", 
+           pch = 3, 
+           size = 3)
 
 
 # 4) voroného polygony kolem bodů (od bodů ke ploše)
@@ -90,7 +109,9 @@ voronoi <- skoly %>%
    st_as_sf()
 
 obrazek +
-   geom_sf(data = voronoi, fill = NA, color = "red") 
+   geom_sf(data = voronoi, 
+           fill = NA, 
+           color = "red") 
 
 # 5) grid - mřížka očekávané velikosti přes Prahu
 
@@ -99,7 +120,9 @@ grid <- st_make_grid(st_bbox(praha),
    st_as_sf()
 
 obrazek +
-   geom_sf(data = grid, fill = NA, color = alpha("gray50", .1))
+   geom_sf(data = grid, 
+           fill = NA, 
+           color = "gray60")
 
 # alternativa
 
@@ -109,16 +132,27 @@ alt_grid <- st_make_grid(st_bbox(praha),
    st_as_sf()
 
 obrazek +
-   geom_sf(data = alt_grid, fill = NA, color = alpha("gray50", .1))
+   geom_sf(data = alt_grid, 
+           fill = NA, 
+           color = "gray50")
 
 
 # síla gridu: sousedství / nástroj pro modelování "přetékání" veličiny mezi sousedy
 
 bunka <- alt_grid[248, ] # vcelku náhodně vybraná buňka
 
-sousedi <- alt_grid[unlist(st_touches(bunka, alt_grid)), ]  # sousedi buňky buňky
+sousedi <- bunka %>% # sousedi buňky buňky
+  st_touches(alt_grid) %>% 
+  unlist()   
 
 obrazek +
-   geom_sf(data = alt_grid, fill = NA, color = alpha("gray50", .1)) +
-   geom_sf(data = bunka, fill = "red", color = alpha("gray50", .1)) +
-   geom_sf(data = sousedi, fill = "cornflowerblue", color = alpha("gray50", .1), alpha = 4/5)
+   geom_sf(data = alt_grid, 
+           fill = NA, 
+           color = "gray60") +
+   geom_sf(data = bunka, 
+           fill = "red", 
+           color = "gray60") +
+   geom_sf(data = alt_grid[sousedi, ], 
+           fill = "cornflowerblue", 
+           color = "gray60", 
+           alpha = 4/5)
