@@ -34,11 +34,12 @@ kraje$zastavenost <- exactextractr::exact_extract(
 ) 
 
 # náhled na transformované hodnoty
-ggplot(data = kraje, aes(fill = zastavenost, label = round(zastavenost))) +
+ggplot(data = kraje, aes(fill = zastavenost, label = signif(zastavenost, 2))) +
   geom_sf(lwd = 1/3) +
   scale_fill_viridis_c(name = "zastavěná plocha\n(v % z celkové)") +
   geom_sf_text(color = ifelse(kraje$KOD_CZNUTS3 == "CZ010", "#440154FF", "white")) +
   labs(title = "Zastavěnost krajů ČR v roce 2019",
        caption = "© Copernicus Service Information 2019") +
   theme(axis.title = element_blank(),
+        legend.title.align = 1/2,
         plot.caption = element_text(face = "italic"))
