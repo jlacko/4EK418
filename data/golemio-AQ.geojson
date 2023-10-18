@@ -1,1 +1,705 @@
-{"type": "FeatureCollection", "features": [{"geometry": {"coordinates": [14.380116, 50.084385], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 12.9}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 3.9}, "type": "PM10"}]}, "id": "ABREA", "name": "Praha 6-B\u0159evnov", "updated_at": "2023-10-15T19:45:03.434Z", "district": "praha-6"}, "type": "Feature"}, {"geometry": {"coordinates": [14.44365, 50.108845], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 16.8}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 13.4}, "type": "PM10"}, {"averaged_time": {"averaged_hours": "3", "value": 4.6}, "type": "PM2_5"}]}, "id": "AHOLA", "name": "Praha 7-Hole\u0161ovice", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-7"}, "type": "Feature"}, {"geometry": {"coordinates": [14.51745, 50.03017], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 14.5}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 3.5}, "type": "PM10"}]}, "id": "ACHOA", "name": "Praha 4-Chodov", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-11"}, "type": "Feature"}, {"geometry": {"coordinates": [14.442049, 50.094238], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 24}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 7.4}, "type": "PM10"}]}, "id": "AKALA", "name": "Praha 8-Karl\u00edn", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-8"}, "type": "Feature"}, {"geometry": {"coordinates": [14.467578, 50.122189], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 13.1}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 45.8}, "type": "O3"}, {"averaged_time": {"averaged_hours": "3", "value": 9.2}, "type": "PM10"}]}, "id": "AKOBA", "name": "Praha 8-Kobylisy", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-8"}, "type": "Feature"}, {"geometry": {"coordinates": [14.430673, 50.072388], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 16.1}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 5.3}, "type": "PM10"}, {"averaged_time": {"averaged_hours": "3", "value": 2.9}, "type": "PM2_5"}]}, "id": "ALEGA", "name": "Praha 2-Legerova (hot spot)", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-2"}, "type": "Feature"}, {"geometry": {"coordinates": [14.257226, 50.107086], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 9.7}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 42.2}, "type": "O3"}, {"averaged_time": {"averaged_hours": "3", "value": 4.9}, "type": "PM10"}, {"averaged_time": {"averaged_hours": "3", "value": 5.7}, "type": "PM2_5"}]}, "id": "ALERA", "name": "Leti\u0161t\u011b Praha", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-6"}, "type": "Feature"}, {"geometry": {"coordinates": [14.445933, 50.007305], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 9.9}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 51.7}, "type": "O3"}, {"averaged_time": {"averaged_hours": "3", "value": 3.9}, "type": "PM10"}, {"averaged_time": {"averaged_hours": "3", "value": 2.4}, "type": "PM2_5"}, {"averaged_time": {"averaged_hours": "3", "value": 6.9}, "type": "SO2"}]}, "id": "ALIBA", "name": "Praha 4-Libu\u0161", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-12"}, "type": "Feature"}, {"geometry": {"coordinates": [14.53782, 50.062298], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 25}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 5}, "type": "PM10"}]}, "id": "APRUA", "name": "Praha 10-Pr\u016fmyslov\u00e1", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-15"}, "type": "Feature"}, {"geometry": {"coordinates": [14.42922, 50.088066], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 19.8}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 4}, "type": "PM10"}]}, "id": "AREPA", "name": "Praha 1-n. Republiky", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-1"}, "type": "Feature"}, {"geometry": {"coordinates": [14.309583, 50.030514], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 6.9}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 3.9}, "type": "PM10"}, {"averaged_time": {"averaged_hours": "3", "value": 3.4}, "type": "PM2_5"}]}, "id": "ARERA", "name": "Praha 5-\u0158eporyje", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-reporyje"}, "type": "Feature"}, {"geometry": {"coordinates": [14.442692, 50.081482], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 17.8}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 43.6}, "type": "O3"}, {"averaged_time": {"averaged_hours": "3", "value": 3.2}, "type": "PM10"}, {"averaged_time": {"averaged_hours": "3", "value": 6.3}, "type": "PM2_5"}, {"averaged_time": {"averaged_hours": "3", "value": 5.9}, "type": "SO2"}]}, "id": "ARIEA", "name": "Praha 2-Riegrovy sady", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-2"}, "type": "Feature"}, {"geometry": {"coordinates": [14.472661, 50.07515], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 8.7}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 5.1}, "type": "PM10"}, {"averaged_time": {"averaged_hours": "3", "value": 2.3}, "type": "PM2_5"}]}, "id": "ASROA", "name": "Praha 10-\u0160rob\u00e1rova", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-10"}, "type": "Feature"}, {"geometry": {"coordinates": [14.331413, 50.046131], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 47.4}, "type": "O3"}, {"averaged_time": {"averaged_hours": "3", "value": 9.4}, "type": "PM10"}, {"averaged_time": {"averaged_hours": "3", "value": 3.9}, "type": "PM2_5"}]}, "id": "ASTOA", "name": "Praha 5-Stod\u016flky", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-13"}, "type": "Feature"}, {"geometry": {"coordinates": [14.384639, 50.12653], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 49.4}, "type": "O3"}, {"averaged_time": {"averaged_hours": "3", "value": 4.6}, "type": "PM10"}]}, "id": "ASUCA", "name": "Praha 6-Suchdol", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-lysolaje"}, "type": "Feature"}, {"geometry": {"coordinates": [14.446152, 50.066429], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 20.2}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 8.8}, "type": "PM10"}]}, "id": "AVRSA", "name": "Praha 10-Vr\u0161ovice", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-10"}, "type": "Feature"}, {"geometry": {"coordinates": [14.503096, 50.11108], "type": "Point"}, "properties": {"measurement": {"AQ_hourly_index": "1A", "components": [{"averaged_time": {"averaged_hours": "3", "value": 27.8}, "type": "NO2"}, {"averaged_time": {"averaged_hours": "3", "value": 34.3}, "type": "O3"}, {"averaged_time": {"averaged_hours": "3", "value": 4.3}, "type": "PM10"}]}, "id": "AVYNA", "name": "Praha 9-Vyso\u010dany", "updated_at": "2023-10-15T19:45:03.435Z", "district": "praha-9"}, "type": "Feature"}]}
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    14.380116,
+                    50.084385
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 12.9
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 3.9
+                            },
+                            "type": "PM10"
+                        }
+                    ]
+                },
+                "id": "ABREA",
+                "name": "Praha 6-B\u0159evnov",
+                "updated_at": "2023-10-15T19:45:03.434Z",
+                "district": "praha-6"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.44365,
+                    50.108845
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 16.8
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 13.4
+                            },
+                            "type": "PM10"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 4.6
+                            },
+                            "type": "PM2_5"
+                        }
+                    ]
+                },
+                "id": "AHOLA",
+                "name": "Praha 7-Hole\u0161ovice",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-7"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.51745,
+                    50.03017
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 14.5
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 3.5
+                            },
+                            "type": "PM10"
+                        }
+                    ]
+                },
+                "id": "ACHOA",
+                "name": "Praha 4-Chodov",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-11"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.442049,
+                    50.094238
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 24
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 7.4
+                            },
+                            "type": "PM10"
+                        }
+                    ]
+                },
+                "id": "AKALA",
+                "name": "Praha 8-Karl\u00edn",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-8"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.467578,
+                    50.122189
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 13.1
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 45.8
+                            },
+                            "type": "O3"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 9.2
+                            },
+                            "type": "PM10"
+                        }
+                    ]
+                },
+                "id": "AKOBA",
+                "name": "Praha 8-Kobylisy",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-8"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.430673,
+                    50.072388
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 16.1
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 5.3
+                            },
+                            "type": "PM10"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 2.9
+                            },
+                            "type": "PM2_5"
+                        }
+                    ]
+                },
+                "id": "ALEGA",
+                "name": "Praha 2-Legerova (hot spot)",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.257226,
+                    50.107086
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 9.7
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 42.2
+                            },
+                            "type": "O3"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 4.9
+                            },
+                            "type": "PM10"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 5.7
+                            },
+                            "type": "PM2_5"
+                        }
+                    ]
+                },
+                "id": "ALERA",
+                "name": "Leti\u0161t\u011b Praha",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-6"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.445933,
+                    50.007305
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 9.9
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 51.7
+                            },
+                            "type": "O3"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 3.9
+                            },
+                            "type": "PM10"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 2.4
+                            },
+                            "type": "PM2_5"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 6.9
+                            },
+                            "type": "SO2"
+                        }
+                    ]
+                },
+                "id": "ALIBA",
+                "name": "Praha 4-Libu\u0161",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-12"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.53782,
+                    50.062298
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 25
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 5
+                            },
+                            "type": "PM10"
+                        }
+                    ]
+                },
+                "id": "APRUA",
+                "name": "Praha 10-Pr\u016fmyslov\u00e1",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-15"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.42922,
+                    50.088066
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 19.8
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 4
+                            },
+                            "type": "PM10"
+                        }
+                    ]
+                },
+                "id": "AREPA",
+                "name": "Praha 1-n. Republiky",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.309583,
+                    50.030514
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 6.9
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 3.9
+                            },
+                            "type": "PM10"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 3.4
+                            },
+                            "type": "PM2_5"
+                        }
+                    ]
+                },
+                "id": "ARERA",
+                "name": "Praha 5-\u0158eporyje",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-reporyje"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.442692,
+                    50.081482
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 17.8
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 43.6
+                            },
+                            "type": "O3"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 3.2
+                            },
+                            "type": "PM10"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 6.3
+                            },
+                            "type": "PM2_5"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 5.9
+                            },
+                            "type": "SO2"
+                        }
+                    ]
+                },
+                "id": "ARIEA",
+                "name": "Praha 2-Riegrovy sady",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.472661,
+                    50.07515
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 8.7
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 5.1
+                            },
+                            "type": "PM10"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 2.3
+                            },
+                            "type": "PM2_5"
+                        }
+                    ]
+                },
+                "id": "ASROA",
+                "name": "Praha 10-\u0160rob\u00e1rova",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-10"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.331413,
+                    50.046131
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 47.4
+                            },
+                            "type": "O3"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 9.4
+                            },
+                            "type": "PM10"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 3.9
+                            },
+                            "type": "PM2_5"
+                        }
+                    ]
+                },
+                "id": "ASTOA",
+                "name": "Praha 5-Stod\u016flky",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-13"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.384639,
+                    50.12653
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 49.4
+                            },
+                            "type": "O3"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 4.6
+                            },
+                            "type": "PM10"
+                        }
+                    ]
+                },
+                "id": "ASUCA",
+                "name": "Praha 6-Suchdol",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-lysolaje"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.446152,
+                    50.066429
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 20.2
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 8.8
+                            },
+                            "type": "PM10"
+                        }
+                    ]
+                },
+                "id": "AVRSA",
+                "name": "Praha 10-Vr\u0161ovice",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-10"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.503096,
+                    50.11108
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "measurement": {
+                    "AQ_hourly_index": "1A",
+                    "components": [
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 27.8
+                            },
+                            "type": "NO2"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 34.3
+                            },
+                            "type": "O3"
+                        },
+                        {
+                            "averaged_time": {
+                                "averaged_hours": "3",
+                                "value": 4.3
+                            },
+                            "type": "PM10"
+                        }
+                    ]
+                },
+                "id": "AVYNA",
+                "name": "Praha 9-Vyso\u010dany",
+                "updated_at": "2023-10-15T19:45:03.435Z",
+                "district": "praha-9"
+            },
+            "type": "Feature"
+        }
+    ]
+}

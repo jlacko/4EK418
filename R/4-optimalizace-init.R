@@ -1,7 +1,7 @@
 # optimalizace sítě pražských hospod
 # krok 1 - stažení hospod, vytvoření mřížky
 
-library(raster, exclude = "select") # jinak konflikt s dplyr...
+library(terra) 
 library(exactextractr) # pro sečtení rastru přes vektorové polygony
 library(RCzechia)
 library(osmdata)

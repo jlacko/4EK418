@@ -1,4 +1,4 @@
-library(raster, exclude = "select") # jinak konflikt s dplyr...
+library(terra) # jinak konflikt s dplyr...
 library(dplyr)
 library(ggplot2)
 
@@ -11,7 +11,7 @@ stazeny_rastr <- "./data/builtup_2019.tif"
 # stažení právě jednou = pokud soubor existuje, download se přeskočí; pokud ne tak se stahne do /data
 if(!file.exists(stazeny_rastr)) curl::curl_download(url = cesta, destfile = stazeny_rastr)
 
-rok_2019 <- raster(stazeny_rastr)
+rok_2019 <- rast(stazeny_rastr)
 
 # statický náhled / base plot
 plot(rok_2019)
@@ -21,7 +21,7 @@ cesko <- rok_2019 %>% # vezmu raster...
   mask(RCzechia::republika()) # vymaskuju sousední státy
 
 # dynamický náhled / {mapview}
-mapview::mapview(cesko)
+mapview::mapview(cesko, maxBytes = 5 * 1024^2)
 
 # pomocný objekt / kraje
 kraje <- RCzechia::kraje()

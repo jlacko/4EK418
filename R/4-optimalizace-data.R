@@ -56,13 +56,13 @@ grid$luzka <- st_interpolate_aw(x = prazska_luzka["kapacita"],
 
 
 # vegetace jako raster
-red <- raster("./data/red_prg-2018-06-30.tif") # červený kanál
-nir <- raster("./data/nir_prg-2018-06-30.tif") # near infrared kanál
+red <- rast("./data/red_prg-2018-06-30.tif") # červený kanál
+nir <- rast("./data/nir_prg-2018-06-30.tif") # near infrared kanál
 
 ndvi <- (nir - red) / (nir + red) # standardní index
 
 # vizuální kontrola / ggplot nemá rád rastry!
-plot(ndvi) # base R plot / metoda z {raster}
+plot(ndvi) # base R plot / metoda z {terra}
 
 # vlastní nápočet
 grid$vegetation <- exactextractr::exact_extract(

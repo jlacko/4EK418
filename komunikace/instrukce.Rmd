@@ -21,11 +21,11 @@ Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to udělá
 
 ```{r instalace-packagi, eval = F}
 # toto potřebuju:
-required <- c("czso", "dplyr", "ggplot2", "giscoR", "gtools", "hereR",
+required <- c("czso", "dplyr", "ggplot2", "giscoR", "gtools", "gstat", "hereR",
               "htmltools", "knitr", "leaflet", "lwgeom", "mapview", "exactextractr",
-              "nngeo", "osmdata", "raster", "RCzechia", "readr", "remotes",
-              "rgeoda", "rmapshaper", "rmarkdown", "scales", "sf", "spdep",
-              "tidygeocoder", "tidyr", "tidyverse")
+              "nngeo", "osmdata", "RCzechia", "readr", "remotes",
+              "rgeoda", "rmapshaper", "rmarkdown", "scales", "sf", "spdep", "stars",
+              "terra", "tidygeocoder", "tidyr", "tidyverse")
 # toto mám:
 installed <- installed.packages()[, "Package"]
 

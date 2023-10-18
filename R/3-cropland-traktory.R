@@ -1,4 +1,4 @@
-library(raster, exclude = "select") # rasterová objekty; před dplyr, kolize na select
+library(terra) # rasterové objekty
 library(sf) # vektorové objekty
 library(exactextractr) # pro sečtení rastru přes vektorové polygony
 library(dplyr)
@@ -14,8 +14,14 @@ stazeny_rastr <- "./data/cropland.tif"
 if(!file.exists(stazeny_rastr)) curl::curl_download(url = cesta, destfile = stazeny_rastr)
 
 # pracovní objekty
-polelany <- raster(stazeny_rastr)
-obce <- RCzechia::obce_polygony()
+polelany <- rast(stazeny_rastr)
+
+obce <- RCzechia::obce_polygony() %>% 
+  # srovnat názvy obcí s pověřenou působností aby se potkaly s traktory
+  mutate(NAZ_POU = case_when(NAZ_POU == "Jesenice" & KOD_LAU1 == "CZ020A" ~ "Jesenice (okres Praha-západ)",
+                             NAZ_POU == "Jesenice" & KOD_LAU1 == "CZ020C" ~ "Jesenice (okres Rakovník)", 
+                             KOD_LAU1 == "CZ0100" ~  "Hlavní město Praha",
+                             TRUE ~ NAZ_POU))
 
 # úvodní orientace / ggplot2 s rasterem moc nekamarádí; base R je jistější
 plot(polelany)
@@ -35,11 +41,7 @@ ggplot(data = obce, aes(fill = polelany)) +
 
 # načtení registru + srovnání češtiny
 obce_vozidla <- readr::read_csv2("./data/obec_dr.csv", 
-                                locale = readr::locale(encoding = "UTF-16")) %>% 
-  mutate(# srovnání terminologie s RCzechia::obce_polygony / aby se obce potkaly...
-         pou = ifelse(pou == "Hlavní město Praha", "Praha", pou), 
-         pou = ifelse(pou == "Jesenice (okres Rakovník)", "Jesenice", pou),
-         pou = ifelse(pou == "Jesenice (okres Praha-západ)", "Jesenice", pou))
+                                locale = readr::locale(encoding = "UTF-16")) 
 
 # kompletní číselník druhů strojů
 ciselnik_druhu <- readxl::read_excel("./data/ciselnikyrzdruh.xls", sheet = "Druh")
