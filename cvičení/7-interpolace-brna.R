@@ -14,8 +14,11 @@ brno <- st_read("./data/brno-AQ.gpkg")
 svobodak <- tidygeocoder::geo("náměstí Svobody, Brno") %>% 
   sf::st_as_sf(coords = c("long", "lat"), crs = 4326) 
 
-# cele brno
-brno_stars <- RCzechia::obce_polygony() %>% 
-  filter(NAZ_OBEC == "Brno") %>% 
+# cele Brno
+brno <- RCzechia::obce_polygony() %>% 
+  filter(NAZ_OBEC == "Brno")
+
+# pixely po Brně
+brno_stars <- brno %>% 
   st_bbox() %>% 
   st_as_stars(dx = 500)
