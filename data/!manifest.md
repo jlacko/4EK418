@@ -4,7 +4,10 @@
 * cenová mapa Prahy (SED_CenovaMapa_p.shp) / CC-BY-SA 4.0 datový podklad © IPR Praha / platné k 2022-01-13
 * veřejné toalety (zachodky.json) / CC-BY-SA 4.0 datový podklad © IPR Praha / platné k 2019-11-08
 https://www.geoportalpraha.cz/cs/data/otevrena-data/seznam
-* měření kvality ovzduší / golemio-AQ.geojson / výstup z API Golemio https://api.golemio.cz/docs/openapi/#/%F0%9F%8C%A6%20Air%20Quality%20(v2) platný k 2023-10-15
+* měření kvality ovzduší (golemio-AQ.geojson) / výstup z API Golemio https://api.golemio.cz/docs/openapi/#/%F0%9F%8C%A6%20Air%20Quality%20(v2) platný k 2023-10-15
+
+### Open Data města Brna:
+* Data o kvalitě ovzduší ze stanic na území města Brna (brno-AQ.gpkg) / CC-BY 4.0 Statutární město Brno / https://data.brno.cz/datasets/mestobrno::kvalita-ovzdu%C5%A1%C3%AD-air-quality/about
 
 ### Natural Earth
 * řeky světa v měřítku 1:50m (ne_50m_rivers_lake_centerlines.shp) / public domain https://github.com/nvkelso/natural-earth-vector/blob/master/LICENSE.md
