@@ -2,7 +2,7 @@ library(sf)
 library(dplyr)
 library(spdep)
 
-pocet <- 484 # 484 = 25^2
+pocet <- 484 # 484 = 22^2
 
 objekt <- RCzechia::republika() %>% 
   st_make_grid(n = sqrt(pocet)) %>% # čtverec o hraně sqrt(n) = n buněk celkem
