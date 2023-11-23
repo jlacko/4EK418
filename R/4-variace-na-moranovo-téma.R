@@ -24,6 +24,14 @@ objekt$nahodne <- runif(n = nrow(objekt))
 
 plot(objekt["nahodne"])
 
+# fake autokorelované - simulace podle variogramu
+fake_model <- gstat::gstat(formula = z~1, dummy = TRUE, beta = 1/2,
+                           model = gstat::vgm(1/5,"Exp", 7), nmax = 7) 
+objekt$autokorelovane <- predict(fake_model, st_centroid(objekt), nsim = 1) %>% 
+  pull(sim1) 
+
+plot(objekt["autokorelovane"])
+
 # matice vah
 wahy <- objekt %>% 
   st_geometry() %>% 
@@ -34,6 +42,7 @@ wahy <- objekt %>%
 sum(objekt$nizke)
 sum(objekt$liche)
 sum(objekt$nahodne)
+sum(objekt$autokorelovane)
 
 # Moranův test pro nízká čísla
 moran.test(objekt$nizke, wahy, alternative = "two.sided")
@@ -43,3 +52,6 @@ moran.test(objekt$liche, wahy, alternative = "two.sided")
 
 # Moranův test pro skutečně náhodná čísla
 moran.test(objekt$nahodne, wahy, alternative = "two.sided")
+
+# Moranův test pro fake korelovaná čísla
+moran.test(objekt$autokorelovane, wahy, alternative = "two.sided")
