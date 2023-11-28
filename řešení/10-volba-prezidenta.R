@@ -29,7 +29,23 @@ rm(raw_data) # už nejsou potřeba...
 
 # úkol no. 1 - závisí podíl hlasů pro AB na počtu hlasů v obci?
 
+babis_model <- lm(data = clean_data, pct_babis ~ celkem)
+summary(babis_model)
+
 # úkol no. 2 - jak vypadají rezidua? obrázek v mapě
+
+clean_data$resids <- babis_model$residuals
+
+plot(clean_data["resids"])
 
 # úkol no. 3 - jsou splněny podmínky OLS?
 
+library(spdep)
+
+# objekt prostorových vah v maximálním defaultu
+vahy <- clean_data %>% 
+  poly2nb() %>% 
+  nb2listw()
+
+ # vlastní Moranův test
+moran.test(clean_data$resids, listw = vahy, alternative = "two.sided")

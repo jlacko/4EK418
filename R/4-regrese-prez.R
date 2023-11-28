@@ -29,5 +29,18 @@ podklad_regrese <- census %>%
   st_drop_geometry() 
 
 # podat zprávu...
-lm(data = podklad_regrese, pct_babis ~ pct_nemci) %>% 
-  summary()
+model_babis_nemci <- lm(data = podklad_regrese, pct_babis ~ pct_nemci)
+
+summary(model_babis_nemci)
+
+census$rezidua <- model_babis_nemci$residuals
+
+plot(census["rezidua"])
+
+library(spdep)
+
+vahy <- census %>% 
+  poly2nb(queen = F) %>% 
+  nb2listw(zero.policy = T)
+
+moran.test(census$rezidua, listw = vahy, alternative = "two.sided")
