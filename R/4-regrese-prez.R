@@ -6,7 +6,10 @@ clean_data <- clean_data %>%
   st_transform(5514) # ve světě ing. Křováka je výpočet svižnější
 
 # 330 soudních okresů První republiky jako geojson
-census <- st_read("./data/1930_census.gpkg") 
+census <- RCzechia::historie("okresy_1930") %>% 
+  select(nemci = 47,
+         vsichni = `počet obyvatel přítomných`) %>% 
+  st_transform(5514)
 
 # přenést aktuální volební výsledky na historická data
 census$babis <- st_interpolate_aw(x = clean_data["babis"],
@@ -22,7 +25,7 @@ census$celkem <- st_interpolate_aw(x = clean_data["celkem"],
 # spočítat regresi / podíl Babiše odvislý od podílu Německé národnosti
 podklad_regrese <- census %>% 
   mutate(pct_babis = babis / celkem,
-         pct_nemci = o_nar_nem / o_po) %>% 
+         pct_nemci = nemci / vsichni) %>% 
   st_drop_geometry() 
 
 # podat zprávu...
