@@ -1,0 +1,180 @@
+---
+title: "Seminární práce 4EK418"
+author: "Jindra Lacko"
+format: 
+  html:
+    self-contained: true
+toc: true
+execute: 
+  eval: true
+  echo: true
+  message: false
+  warning: false
+---
+
+## Úkol první: Geokódování (10b)
+
+Toto je závěrečná práce z předmětu 4EK418; vaším prvním krokem je vybrat si svůj vlastní bod - počátek cesty.
+
+Vyberte libovolné místo v České republice. Není důležité co je tímto bodem (místo narození? babička za kterou jste jezdili na prázdniny? vysněná dovolená?) ale je důležité aby toto místo bylo unikátní, jen a pouze vaše. Z praktických důvodů bude lepší, když toto místo nebude úplně u hranic - budete pracovat s jeho okolím, když bude celé okolí v ČR, tak se vám budou výstupy snáze interpretovat.
+
+V tomto kroku bod zaměřte - dohledejte jeho souřadnice a vypište je ve formátu `{sf}` balíčku.
+
+```{r geocode}
+# tady budiž geokódování - čekám výstup jako objekt typu bod (POINT)
+```
+
+## Úkol druhý: Zakreslení do mapy (10b)
+
+V tomto kroku zakreslete geokódované body do statické mapy. V mapě ukažte kromě vámi zvoleného bodu také naši drahou Alma Mater / GPS: 50°5′3.12″ N, 14°26′27.96″ E
+
+Pro snazší orientaci dokreslete do mapy několik řek dle vlastního výběru.
+
+```{r visualize}
+# tady budiž obrázek, bohatší nežli teď...
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(spdep)
+library(sf)
+
+ekonomka <- data.frame(misto = "ekonomka",
+                       geo = "POINT (14.44116 50.08427)") %>% 
+  st_as_sf(wkt = "geo", crs = 4326)
+
+ggplot() +
+  geom_sf(data = RCzechia::republika()) +
+  geom_sf(data = ekonomka, pch = 4, color = "red") +
+  theme_void()
+
+```
+
+## Úkol třetí: Vytvoření okolí vlastního a zadaného bodu (10b)
+
+Okolo *vlastního* bodu vytvořte okolí (buffer) s obvodem rovným polovině vzdálenosti mezi vlastním a zadaným bodem, okolo *zadaného* bodu (VŠE) vytvořte okolí 25 kilometrů. Oba buffery spojte do jednoho polygonu.
+
+Buffery a spojený polygon zakreslete do stejné mapy jako v předchozím kroku; věnujte přitom pozornost slučitelnosti jednotek (metry, stupně). Je možné, že budete muset převádět souřadnicové systémy ze zeměpisného do rovinného.
+
+```{r buffer}
+# tady budiž dva buffery a jeden convex hull
+
+ggplot() +
+  geom_sf(data = RCzechia::republika()) +
+  geom_sf(data = ekonomka, pch = 4, color = "red") +
+  theme_void()
+```
+
+## Úkol čtvrtý: Průsečíky a plocha (10b)
+
+Zjistěte, kolik obcí České repoubliky alespoň částečně obsaženo ve velkém spojeném polygonu + kolik z nich je v něm celou svojí plochou. Spočtěte obce + vypište celkovou plochu obou typů průsečíku:
+
+```{r intersection}
+# tady budiž výpis data framu - geometrie mě už nezajímá!
+```
+
+## Úkol pátý: Populace (10b)
+
+Dopočtěte počet obyvatel spojeného polygonu a jeho doplňku (České republiky s vyříznutým polygonem). Zobrazte na mapě - řeky už nepotřebujeme - jako relativní údaj (hustotu / lidi na km²).
+
+```{r kartogram}
+# tady budiž hustota v hezčím obrázku
+
+ggplot() +
+  geom_sf(data = RCzechia::republika()) +
+  geom_sf(data = ekonomka, pch = 4, color = "red") +
+  theme_void()
+```
+
+## Úkol šestý: Zemědělská půda (10b)
+
+Spočtěte průměrný podíl zemědělské půdy ve vašem polygonu a zbytkové části ČR; zakreslete do mapy jako relativní číslo (nezatížené rozdílem ploch) a krátce diskutujte.
+
+```{r rastr}
+# tady budiž ornice v hezčím obrázku
+
+ggplot() +
+  geom_sf(data = RCzechia::republika()) +
+  geom_sf(data = ekonomka, pch = 4, color = "red") +
+  theme_void()
+```
+
+## Úkol sedmý: Volební výsledky (20b)
+
+Z voleb na začátku roku 2023 známe volební výsledky Danuše Nerudové v prvním kole; podíl hlasů pro Danuši máte v mapce.
+
+Uvažte, zda jsou hlasy pro Danuši prostorově korelované + sestavte model (lineární, tj. `stats::lm()`) závislosti podílu hlasů pro paní DN a velikosti obce (uvažujme celkový počet hlasů v obci jako proxy pro počet obvyvate). Jak se mění podpora paní Danuše v závislosti na velikosti obce? Krátce komentujte.
+
+```{r danuse}
+raw_data <- read_csv2("../data/pet1.csv",
+                      col_types = cols(OBEC = col_character(),
+                                       OKRSEK = col_character())) %>% 
+  filter(OPRAVA == "0") %>% 
+  mutate(OBEC = as.character(OBEC), # klíče v RCzechia jsou vždy text
+         OKRSEK = as.character(OKRSEK),
+         pavel = HLASY_04,
+         nerudova = HLASY_06,
+         babis = HLASY_07,
+         zbytek = PL_HL_CELK - pavel - nerudova - babis,
+         celkem = PL_HL_CELK) %>% 
+  filter(KOLO == 1)
+
+clean_data <- RCzechia::volebni_okrsky("low") %>% 
+  mutate(OBEC = coalesce(MomcKod, ObecKod)) %>% # mor na ty vaše rody!!!
+  rename(OKRSEK = Cislo) %>% 
+  inner_join(raw_data, by = c("OBEC", "OKRSEK")) %>% 
+  group_by(OBEC) %>%  # tj. okres
+  summarize(pct_danuse = sum(nerudova, na.rm = T) / sum(celkem),
+            celkem = sum(celkem)) 
+
+rm(raw_data) # už nejsou potřeba...
+
+ggplot() +
+  geom_sf(data = RCzechia::republika()) +
+  geom_sf(data = clean_data, aes(fill = pct_danuse), color = NA) +
+  scale_fill_viridis_c(labels = scales::label_percent()) +
+  labs(title = "První kolo prezidentské volby a paní Danuše",
+       fill = "podpora") +
+  theme_void()
+
+```
+## Úkol osmý: Prostorová statistika (20b)
+
+Ze sčítání lidu v roce 2021 máme k dispozici publikovaný výstup o dojížďce do zaměstnání podle druhu dopravy. Níže uvedený kód z této statistiky vybírá součet za muže a ženy (tj. bez rozdílu pohlaví) v úrovni detailu ORP.
+
+Vezměte v potaz pouze ty dojížděče, kteří dojíždějí dopravním prostředkem "jízdní kolo" (dopravní prostředek číslo 7) / viz. kód níže.
+
+Dojížděče dělíme na 3 skupiny:
+
+-   dojíždí na kole (cyklista_TRUE)
+-   dojíždí jinak (cyklista_FALSE)
+-   nedojíždí (cyklista_NA)
+
+Ověřte, zda je podíl cyklistů v prostoru náhodně rozložen (= zda pro něj existuje prostorová autokorelace).
+
+Pokuste se podíl dojížděčů na kole vysvětlit pomocí nadmořské výšky panující v ORP polygonu; uvažujte dodaný raster `nadmorska_vyska`. Při extrakci hodnot z rasteru na ORP vyberte vhodnou agregační funkci, a svůj výběr zdůvodněte. 
+
+Vlastní model uvažujte lineární, i.e. `stats::lm()`. O výsledku podejte zprávu.
+
+```{r nuda-je}
+library(terra)
+
+# data ze staťáku...
+secteni_cyklisti <- read_csv("../data/sldb2021_vyjizdka_vsichni_prostredek_pohlavi.csv") %>% 
+  filter(uzemi_cis == 65 & is.na(pohlavi_kod)) %>% 
+  mutate(cyklista = prostredek_kod == 7) %>% 
+  group_by(uzemi_kod, uzemi_txt, cyklista) %>% 
+  summarize(pocet = sum(hodnota)) %>% 
+  tidyr::pivot_wider(names_from = cyklista, 
+                     values_from = pocet, 
+                     names_prefix = "cyklista_")
+
+# ... náhled na data;
+head(secteni_cyklisti)
+
+# pozor, tento řádek stahne z netu soubor o 72 mega...
+nadmorska_vyska <- RCzechia::vyskopis(format = "actual", 
+                                      cropped = F) 
+
+# pro info: zde raster jako obrázek
+plot(nadmorska_vyska)
+```
