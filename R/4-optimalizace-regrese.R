@@ -9,8 +9,8 @@ summary(bl_model)
 # interpretace: 1 hospodu uživí
 1 / bl_model$coefficients["obyvatel"]
 
-# sofistikovanějíší model - tři veličiny
-sof_model <- lm(data = grid, barcount ~ obyvatel + luzka + vegetation)
+# sofistikovanějíší model - dvě veličiny (místňáck + lufťáci)
+sof_model <- lm(data = grid, barcount ~ obyvatel + luzka)
 
 summary(sof_model)
 
@@ -18,7 +18,12 @@ summary(sof_model)
 1 / sof_model$coefficients["obyvatel"]
 1 / sof_model$coefficients["luzka"]
 
-# poissonův model
+# ještě sofistikovanějíší model - tři veličiny (místňáci, lufťáci, parky)
+jsof_model <- lm(data = grid, barcount ~ obyvatel + luzka + vegetation)
+
+summary(jsof_model)
+
+# poissonův model - co takhle zkusit něco jiného??
 poi_model <- glm(data = grid, barcount ~ obyvatel + luzka + vegetation, 
                  family = "poisson")
 
@@ -27,11 +32,12 @@ summary(poi_model)
 # srovnání modelů
 AIC(bl_model)
 AIC(sof_model)
+AIC(jsof_model)
 AIC(poi_model)
 
 # příprava dat pro graf -----
-resids <- sof_model$residuals # extract residuals from model
-predikce <- sof_model$fitted.values # předpovědi z modelu
+resids <- jsof_model$residuals # extract residuals from model
+predikce <- jsof_model$fitted.values # předpovědi z modelu
 
 grid <- grid %>% # ... attach them to grid
    cbind(resids) %>% 

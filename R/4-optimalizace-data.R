@@ -22,7 +22,7 @@ prazske_pocty <- inner_join(casti, pocty, by = c("KOD" = "uzkod"))
 ggplot() +
    geom_sf(data = prazske_pocty, aes(fill = obyvatel))
 
-# interpolace obyvatel přes plochu městských částí
+# interpolace obyvatel přes plochu městských částí do gridu
 grid$obyvatel <- st_interpolate_aw(x = prazske_pocty["obyvatel"],
                                 to = st_geometry(grid),
                                 extensive = T) %>% 
@@ -46,13 +46,17 @@ prazska_luzka <- left_join(casti, luzka, by = c("KOD" = "uzemi_kod")) %>%
 
 # vizuální kontrola
 ggplot() +
-   geom_sf(data = prazska_luzka, aes(fill = kapacita))
+  geom_sf(data = prazska_luzka, aes(fill = kapacita))
 
-# interpolace lůžek přes plochu městskáých částí
+# interpolace lůžek přes plochu městskáých částí do gridu
 grid$luzka <- st_interpolate_aw(x = prazska_luzka["kapacita"],
                                 to = st_geometry(grid),
                                 extensive = T) %>% 
    pull(kapacita)
+
+# vizuální kontrola
+ggplot() +
+  geom_sf(data = grid, aes(fill = luzka))
 
 
 # vegetace jako raster
