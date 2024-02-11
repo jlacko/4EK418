@@ -15,7 +15,7 @@ Kurs *Mapy, geodata a prostorová ekonometrie v R* proběhne prezenční formou,
 
 Pokud budete chtít procházet kód a úlohy na vlastním technickém prostředí, což velmi doporučuji, tak budete muset splnit několik technických kroků; postupujte přitom podle návodu níže.
 
-V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.3.1 a RStudio 2023.06.0+421 "Mountain Hydrangea" - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto je konfigurace, kterou budu používat při prezentaci.
+V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.3.2 a RStudio 2023.12.1+402 "Ocean Storm" - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto je konfigurace, kterou budu používat při prezentaci.
 
 Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to uděláte vykopírováním a spuštěním kódu níže.
 
@@ -23,7 +23,7 @@ Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to udělá
 # toto potřebuju:
 required <- c("czso", "dplyr", "ggplot2", "giscoR", "gtools", "gstat", "hereR",
               "htmltools", "knitr", "leaflet", "lwgeom", "mapview", "exactextractr",
-              "nngeo", "osmdata", "RCzechia", "readr", "remotes",
+              "nngeo", "osmdata", "RCzechia", "readr", "remotes", "geojsonsf",
               "rgeoda", "rmapshaper", "rmarkdown", "scales", "sf", "spdep", "stars",
               "terra", "tidygeocoder", "tidyr", "tidyverse")
 # toto mám:
