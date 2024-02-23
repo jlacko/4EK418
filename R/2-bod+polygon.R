@@ -11,8 +11,13 @@ ekonomka <- RCzechia::geocode("náměstí Winstona Churchilla 1938, Praha 3")
 st_join(okrsky, ekonomka) # ke všem okrskům doplí informace o ekonomce
 st_join(ekonomka, okrsky) # k jedné ekonomce doplní informace o okrsku
 
-# varianta s filtrací / join, který *není* levý (not left = inner; don't ask why)
+# varianta s filtrací / ten join, který *není* levý (not left = inner; don't ask me why)
 vysledek <- st_join(okrsky, ekonomka, left = F)
 
 # ukázaná platí...
 mapview::mapview(vysledek)
+
+# alternativa: prostorový filtr - sf::st_filter()
+
+st_filter(okrsky, ekonomka) %>% 
+  mapview::mapview()
