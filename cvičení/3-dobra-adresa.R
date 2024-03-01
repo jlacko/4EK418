@@ -14,7 +14,7 @@ banky <- data.frame(
       "Radlická 333, Praha",
       "Náměstí Junkových 1, Praha",
       "Olbrachtova 62, Praha"
-   ))  
+   )) 
 
 # oficiální cenová mapa města Prahy
 ceny <- st_read("./data/SED_CenovaMapa_p.shp") 
@@ -28,12 +28,12 @@ ceny <- st_read("./data/SED_CenovaMapa_p.shp")
 # za bonusové body: zvažte v leafletu callu použít icon = ~ favicons[banka] :)
 favicons <- iconList(
    "ČSOB" = makeIcon(
-      iconUrl = "https://www.csob.cz/pui-theme-psp/images/pui/csob/favicons/favicon.ico",
+      iconUrl = "https://www.csob.cz/o/pui-theme-pw-ng/images/pui/csob/favicons/favicon.ico",
       iconWidth = 25,
       iconHeight = 25
    ),
    "KB" = makeIcon(
-      iconUrl = "https://www.kb.cz/favicon.ico",
+      iconUrl = "https://www.kb.cz/img/favicon/favicon-32x32.png",
       iconWidth = 25,
       iconHeight = 25
    ),
