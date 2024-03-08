@@ -8,7 +8,7 @@ okrsky <- RCzechia::volebni_okrsky("low") # low resolution objekty jsou svižně
 ekonomka <- RCzechia::geocode("náměstí Winstona Churchilla 1938, Praha 3")
 
 # na pořadí záleží!
-st_join(okrsky, ekonomka) # ke všem okrskům doplí informace o ekonomce
+st_join(okrsky, ekonomka) # ke všem okrskům doplní informace o ekonomce
 st_join(ekonomka, okrsky) # k jedné ekonomce doplní informace o okrsku
 
 # varianta s filtrací / ten join, který *není* levý (not left = inner; don't ask me why)

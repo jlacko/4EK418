@@ -9,7 +9,7 @@ zachody <- st_read('./data/zachodky.json')
 ctvrti <- RCzechia::casti() %>% 
    filter(NAZ_OBEC == 'Praha')
 
-vysledek <- st_join(ctvrti, zachody, left = F) %>% 
+vysledek <- st_join(ctvrti, zachody) %>% 
    st_drop_geometry() %>%  # prostorovu složku už nepotřebuju
    group_by(NAZEV) %>% # podle názvů....
    tally() %>%  # ...sečtu řádky

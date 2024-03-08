@@ -9,7 +9,7 @@ praha <- kraje() %>%
 
 reka <- reky("Praha")
 
-ekonomka <- geo_osm(address = "náměstí Winstona Churchilla 1938/4, 130 00 Praha") %>% 
+ekonomka <- geo(address = "náměstí Winstona Churchilla 1938/4, 130 00 Praha") %>% 
    st_as_sf(coords = c("long", "lat"), crs = 4326)
 
 ggplot() +

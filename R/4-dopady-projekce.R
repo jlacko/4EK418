@@ -33,6 +33,7 @@ vysledek <- c("wgs84" = st_area(wgs84),
               "mollweide" = st_area(mollweide),
               "web_mercator" = st_area(web_mercator))
 
-sort(vysledek)
+sort(vysledek) %>% 
+  units::set_units("km2")
 
 sort(vysledek) / vysledek["krovak"]
