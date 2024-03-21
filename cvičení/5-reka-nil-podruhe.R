@@ -10,8 +10,8 @@ staty_sveta <- gisco_get_countries(resolution = "60")
 
 # řeka Nil, jedna ku 50 milionům
 reka_nil <- st_read("./data/ne_50m_rivers_lake_centerlines.shp") %>% 
-   filter(name_en %in% c("Nile", "White Nile")) %>% 
-   summarise() # spojení do jednoho objektu (jeden Nil!)
+  filter(name_en %in% c("Nile", "White Nile", "Rosetta Branch")) %>% 
+  summarise() # spojení do jednoho objektu (jeden Nil!)
 
 # nápověda:pozor na falešného přítele!:
 # - sf::st_intersection() vrací geometrii / průsečík
