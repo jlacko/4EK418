@@ -6,20 +6,28 @@ library(sf)
 
 benzin <- readRDS("./data/czech-oil-gc.rds") 
 
-dalnice <- RCzechia::silnice() %>% 
-   filter(TRIDA %in% c("Dálnice I. tř.", "Dálnice II. tř."))
+mapview::mapview(benzin)
 
+# Američanům nenaléváme...
+benzin <- st_filter(benzin, republika())
+
+mapview::mapview(benzin)
+
+dalnice <- RCzechia::silnice() %>%
+  filter(TRIDA %in% c("Dálnice I. tř.", "Dálnice II. tř.")) %>% 
+  st_union()
+  
 # vizuální kontrola
 mapview::mapview(dalnice)
 
+
+# blízkost jako boolean / kategorická veličina
+
 okoli_dalnic <- dalnice %>% 
-   st_transform(5514) %>% # křovák, protože buffer v metrech
-   st_union() %>% 
-   st_buffer(2500) %>% 
-   st_transform(4326) # zpět do bezpečí WGS84
+   st_buffer(units::set_units(2.5, "km"))
 
 # vizuální kontrola
-mapview::mapview(okoli_dalnic)
+mapview::mapview(okoli_dalnic, fgb = F)
 
 # doplnění benzínu o info o dálnici
 benzin$blizko <- st_intersects(benzin, okoli_dalnic, sparse = F)[, 1]
@@ -28,6 +36,26 @@ benzin$blizko <- st_intersects(benzin, okoli_dalnic, sparse = F)[, 1]
 mapview::mapview(benzin, zcol = "blizko")
 
 # mám data - dál už "jenom statistika" :)
-model <- lm(data = benzin, formula = cena ~ blizko)
+model_kategoricky <- lm(data = benzin, formula = cena ~ blizko)
 
-summary(model)
+summary(model_kategoricky)
+
+
+# vzdálenost jako spojitá veličina
+
+benzin$vzdalenost <- st_distance(benzin, dalnice)[, 1] %>% 
+  units::drop_units()
+
+library(ggplot2)
+
+ggplot(benzin) +
+  geom_point(aes(x = vzdalenost, y = cena), alpha = 1/3)
+
+
+model_spojity <- lm(data = benzin, formula = cena ~ vzdalenost)
+
+summary(model_spojity)
+
+# který z modelů mám radši?
+summary(model_spojity)["r.squared"]
+summary(model_kategoricky)["r.squared"]
