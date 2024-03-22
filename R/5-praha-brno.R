@@ -12,6 +12,8 @@ okoli <- mesta %>%
    st_buffer(125000) %>% # 125 kilometrů kolem obou měst
    st_transform(4326) # WGS84 kamarádí s IT světem
 
+mapview::mapview(okoli)
+
 # výpočet průsečíku okolí Brna a Prahy
 spolecne <- st_intersection(okoli[1, ],
                             okoli[2, ])

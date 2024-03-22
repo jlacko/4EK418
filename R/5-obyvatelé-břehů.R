@@ -15,11 +15,14 @@ praha <- kraje() %>%
 # řeka Vltava
 reka <- reky("Praha")
 
+plot(st_geometry(praha))
+plot(reka, add = T)
+
 # Praha říznutá na půlky
 pulky <- praha %>% 
    st_geometry() %>% 
    lwgeom::st_split(reka) %>% # polygon říznutý čárou
-   st_cast() %>%  # z geometrycollection na polygony
+   st_collection_extract("POLYGON") %>%  # z geometrycollection na polygony
    st_as_sf() %>%  # z sfc na sf objekt
    mutate(breh = c("pravy", "levy")) # idčka polygonů
 
