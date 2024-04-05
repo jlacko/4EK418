@@ -21,3 +21,5 @@ okresy_1930 <- RCzechia::historie("okresy_1930") %>%
   select(metrika_vysvetlujici)
 
 plot(okresy_1930["metrika_vysvetlujici"])
+
+# pro přenos metrik uvažujte sf::st_interpolate_aw(); věnujte pozornost argumentu extensive
