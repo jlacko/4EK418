@@ -27,10 +27,22 @@ plot(objekt["nahodne"])
 # fake autokorelované - simulace podle variogramu
 fake_model <- gstat::gstat(formula = z~1, dummy = TRUE, beta = 1/2,
                            model = gstat::vgm(1/5,"Exp", 7), nmax = 7) 
+
 objekt$autokorelovane <- predict(fake_model, st_centroid(objekt), nsim = 1) %>% 
   pull(sim1) 
 
 plot(objekt["autokorelovane"])
+
+
+# reálně autokorelované - nadmořská výška
+objekt$nad_morem <- exactextractr::exact_extract(
+  x = RCzechia::vyskopis(format = 'actual',
+                         cropped = F), # výškopis Česka
+  y = objekt, 
+  fun = "max" 
+) 
+
+plot(objekt["nad_morem"])
 
 # matice vah
 wahy <- objekt %>% 
@@ -43,6 +55,7 @@ sum(objekt$nizke)
 sum(objekt$liche)
 sum(objekt$nahodne)
 sum(objekt$autokorelovane)
+max(objekt$nad_morem) # počet nedává smysl, ale Sněžku známe...
 
 # Moranův test pro nízká čísla
 moran.test(objekt$nizke, wahy, alternative = "two.sided")
@@ -55,3 +68,6 @@ moran.test(objekt$nahodne, wahy, alternative = "two.sided")
 
 # Moranův test pro fake korelovaná čísla
 moran.test(objekt$autokorelovane, wahy, alternative = "two.sided")
+
+# Moranův test pro reálně autokorelovaná čísla
+moran.test(objekt$nad_morem, wahy, alternative = "two.sided")
