@@ -4,6 +4,8 @@ library(spdep)
 
 pocet <- 484 # 484 = 22^2
 
+set.seed(1234) # opakovatelnost runifů
+
 objekt <- RCzechia::republika() %>% 
   st_make_grid(n = sqrt(pocet)) %>% # čtverec o hraně sqrt(n) = n buněk celkem
   st_as_sf() %>% 
@@ -25,8 +27,8 @@ objekt$nahodne <- runif(n = nrow(objekt))
 plot(objekt["nahodne"])
 
 # fake autokorelované - simulace podle variogramu
-fake_model <- gstat::gstat(formula = z~1, dummy = TRUE, beta = 1/2,
-                           model = gstat::vgm(1/5,"Exp", 7), nmax = 7) 
+fake_model <- gstat::gstat(formula = z ~ 1, dummy = TRUE, beta = 1/2,
+                           model = gstat::vgm(1/8,"Exp", 7), nmax = 7) 
 
 objekt$autokorelovane <- predict(fake_model, st_centroid(objekt), nsim = 1) %>% 
   pull(sim1) 
@@ -36,8 +38,7 @@ plot(objekt["autokorelovane"])
 
 # reálně autokorelované - nadmořská výška
 objekt$nad_morem <- exactextractr::exact_extract(
-  x = RCzechia::vyskopis(format = 'actual',
-                         cropped = F), # výškopis Česka
+  x = terra::scale(RCzechia::vyskopis(format = 'actual', cropped = F), center = 545),
   y = objekt, 
   fun = "max" 
 ) 
@@ -55,12 +56,12 @@ sum(objekt$nizke)
 sum(objekt$liche)
 sum(objekt$nahodne)
 sum(objekt$autokorelovane)
-max(objekt$nad_morem) # počet nedává smysl, ale Sněžku známe...
+sum(objekt$nad_morem) 
 
-# Moranův test pro nízká čísla
+# Moranův test pro nízká vs. vysoká čísla
 moran.test(objekt$nizke, wahy, alternative = "two.sided")
 
-# Moranův test pro lichá čísla
+# Moranův test pro lichá vs. sudá čísla
 moran.test(objekt$liche, wahy, alternative = "two.sided")
 
 # Moranův test pro skutečně náhodná čísla
