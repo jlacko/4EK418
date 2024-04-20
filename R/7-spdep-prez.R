@@ -4,7 +4,7 @@
 library(spdep)
 
 # načíst data o STČ, včetně pomocných grafických objektů ----
-source("./R/4-okrsky-prez-viz.R")
+source("./R/7-okrsky-prez-viz.R")
 
 
 # vlastní moran

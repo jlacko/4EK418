@@ -25,3 +25,16 @@ leaflet() %>%
 
 # pro porovnání sousedství uvažujte setdiff.nb() + objekt s nejvíce rozdíly má největší hodnotu lengths()
 
+# sousedi šachové královny
+queen_hoods <- karolina %>% 
+  poly2nb()
+
+# sousedi šachové věže
+rook_hoods <- karolina %>% 
+  poly2nb(queen = F)
+
+# rozdíly sousedů
+rozdily <- setdiff.nb(queen_hoods, rook_hoods)
+
+# sousedi hrabství královny Šarloty
+karolina$NAME[queen_hoods[karolina$NAME == "Mecklenburg"][[1]]]

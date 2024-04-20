@@ -4,7 +4,7 @@ library(RCzechia)
 library(tidyverse)
 
 # načíst data o STČ ----
-source("./R/4-digest-data-prez.R")
+source("./R/7-digest-data-prez.R")
 
 clean_data <- clean_data %>% 
    st_transform(crs = 5514) %>% # systém inž. Křováka
