@@ -1,0 +1,174 @@
+---
+title: "Seminární práce 4EK418"
+author: "Jindra Lacko"
+format: 
+  html:
+    self-contained: true
+toc: true
+execute: 
+  eval: true
+  echo: true
+  message: false
+  warning: false
+figures:
+  fig-width: 1000
+  fig-heigt: 800
+---
+
+## Úkol první: Geokódování (10b)
+
+Toto je závěrečná práce z předmětu 4EK418; vaším prvním krokem je vybrat si svůj vlastní bod - počátek cesty.
+
+Vyberte libovolné místo v České republice. Není důležité co je tímto bodem (místo narození? babička za kterou jste jezdili na prázdniny? vysněná dovolená?) ale je důležité aby toto místo bylo unikátní, jen a pouze vaše. Z praktických důvodů bude lepší, když toto místo nebude úplně u hranic - budete pracovat s jeho okolím, když bude celé okolí v ČR, tak se vám budou výstupy snáze interpretovat.
+
+V tomto kroku bod zaměřte - dohledejte jeho souřadnice a vypište je ve formátu `{sf}` balíčku. Prosím opravdu geokódujte, za zadání bodu natvrdo body nejsou (a je to hloupá ztráta).
+
+```{r geocode}
+# tady budiž geokódování - čekám výstup jako objekt typu bod (POINT)
+```
+
+## Úkol druhý: Zakreslení do mapy (10b)
+
+V tomto kroku zakreslete geokódované body do statické mapy. V mapě ukažte kromě vámi zvoleného bodu také naši drahou Alma Mater / GPS: 50°5′3.12″ N, 14°26′27.96″ E
+
+Pro snazší orientaci dokreslete do mapy několik řek dle vlastního výběru.
+
+```{r visualize}
+# tady budiž obrázek, bohatší nežli teď...
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(spdep)
+library(sf)
+
+ekonomka <- data.frame(misto = "ekonomka",
+                       geo = "POINT (14.44116 50.08427)") %>% 
+  st_as_sf(wkt = "geo", crs = 4326)
+
+ggplot() +
+  geom_sf(data = RCzechia::republika()) +
+  geom_sf(data = ekonomka, pch = 4, color = "red") +
+  theme_void()
+
+```
+
+## Úkol třetí: Vytvoření okolí vlastního a zadaného bodu (10b)
+
+Okolo *vlastního* bodu vytvořte okolí (buffer) s obvodem rovným polovině vzdálenosti mezi vlastním a zadaným bodem, okolo *zadaného* bodu (VŠE) vytvořte okolí 25 kilometrů. Oba buffery spojte do jednoho polygonu.
+
+Buffery a spojený polygon zakreslete do stejné mapy jako v předchozím kroku; věnujte přitom pozornost slučitelnosti jednotek (metry, stupně). Je možné, že budete muset převádět souřadnicové systémy ze zeměpisného do rovinného.
+
+```{r buffer}
+# tady budiž dva buffery a jeden convex hull
+
+ggplot() +
+  geom_sf(data = RCzechia::republika()) +
+  geom_sf(data = ekonomka, pch = 4, color = "red") +
+  theme_void()
+```
+
+## Úkol čtvrtý: Průsečíky a plocha (10b)
+
+Zjistěte, kolik obcí České repoubliky alespoň částečně obsaženo ve velkém spojeném polygonu + kolik z nich je v něm celou svojí plochou. Spočtěte obce + vypište celkovou plochu obou typů průsečíku:
+
+```{r intersection}
+# tady budiž výpis data framu - geometrie mě už nezajímá!
+```
+
+## Úkol pátý: Populace (10b)
+
+Dopočtěte počet obyvatel:
+
+- spojeného polygonu 
+- jeho doplňku (České republiky s vyříznutým polygonem)
+
+Zobrazte na mapě - řeky už nepotřebujeme - jako relativní údaj (hustotu / lidi na km²). 
+
+```{r kartogram}
+# tady budiž hustota v hezčím obrázku
+
+ggplot() +
+  geom_sf(data = RCzechia::republika()) +
+  geom_sf(data = ekonomka, pch = 4, color = "red") +
+  theme_void()
+```
+
+## Úkol šestý: Zemědělská půda (10b)
+
+Spočtěte průměrný podíl zemědělské půdy ve vašem polygonu a zbytkové části ČR; zakreslete do mapy jako relativní číslo (nezatížené rozdílem ploch) a krátce diskutujte - jak se hodnoty liší, co rozdíl může vysvětlit?
+
+```{r rastr}
+# tady budiž ornice v hezčím obrázku
+
+ggplot() +
+  geom_sf(data = RCzechia::republika()) +
+  geom_sf(data = ekonomka, pch = 4, color = "red") +
+  theme_void()
+```
+
+## Úkol sedmý: Prostorová interpolace (20b)
+
+Z portálu ČHMÚ [známe historická měření](https://www.chmi.cz/historicka-data/pocasi/denni-data/data-ze-stanic-site-RBCN) meteorologických a klimatických veličin.
+
+Ze známých hodnot průměrné denní teploty na Nový rok 2000 (Y2K anyone?) interpolujte teplotu ve "vašem" bodě.
+
+Dále využijte model k vykreslení mapy průměrné teploty v Česku; uvažujte přitom objekt `cil_interpolace`. Vytkněte mi, co při interpolaci teploty *pouze ze zeměpisných souřadnic* zanedbávám?
+
+```{r pocasi}
+# průměrná teplota na Nový rok 2000
+y2k <- read_csv("../data/y2k_teplota.csv") %>% 
+  st_as_sf(coords = c("delka", "sirka"), crs = 4326)
+
+# cíl interpolace
+cil_interpolace <- st_make_grid(RCzechia::republika(),
+                                what = "centers",
+                                n = 80)
+
+# základní orientace
+ggplot() +
+  geom_sf(data = RCzechia::republika()) +
+  geom_sf(data = cil_interpolace, pch = 4, color = "gray75") +
+  geom_sf_label(data = y2k, aes(label = teplota)) +
+  theme_void()
+```
+## Úkol osmý: Prostorová statistika (20b)
+
+Ze sčítání lidu v roce 2021 máme k dispozici publikovaný výstup o dojížďce do zaměstnání podle druhu dopravy. Níže uvedený kód z této statistiky vybírá součet za muže a ženy (tj. bez rozdílu pohlaví) v úrovni detailu ORP.
+
+Vezměte v potaz pouze ty dojížděče, kteří dojíždějí dopravním prostředkem "jízdní kolo" (dopravní prostředek číslo 7) / viz. kód níže.
+
+Dojížděče dělíme na 3 skupiny:
+
+-   dojíždí na kole (cyklista_TRUE)
+-   dojíždí jinak (cyklista_FALSE)
+-   nedojíždí (cyklista_NA)
+
+Ověřte, zda je podíl cyklistů v prostoru náhodně rozložen (= zda pro něj existuje prostorová autokorelace).
+
+Pokuste se podíl dojížděčů na kole vysvětlit pomocí nadmořské výšky panující v ORP polygonu; uvažujte dodaný raster `nadmorska_vyska`. Při extrakci hodnot z rasteru na ORP vyberte vhodnou agregační funkci, a svůj výběr zdůvodněte. 
+
+Vlastní model uvažujte lineární, i.e. `stats::lm()`. O výsledku podejte zprávu.
+
+```{r nuda-je}
+library(terra)
+
+# data ze staťáku...
+secteni_cyklisti <- read_csv("../data/sldb2021_vyjizdka_vsichni_prostredek_pohlavi.csv") %>% 
+  filter(uzemi_cis == 65 & is.na(pohlavi_kod)) %>% 
+  mutate(cyklista = prostredek_kod == 7) %>% 
+  group_by(uzemi_kod, uzemi_txt, cyklista) %>% 
+  summarize(pocet = sum(hodnota)) %>% 
+  tidyr::pivot_wider(names_from = cyklista, 
+                     values_from = pocet, 
+                     names_prefix = "cyklista_")
+
+# ... náhled na data;
+head(secteni_cyklisti)
+
+# pozor, tento řádek stahne z netu soubor o 72 mega...
+nadmorska_vyska <- RCzechia::vyskopis(format = "actual", 
+                                      cropped = F) 
+
+# pro info: zde raster jako obrázek
+plot(nadmorska_vyska)
+```

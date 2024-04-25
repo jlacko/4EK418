@@ -129,3 +129,30 @@ obrazek +
   scale_fill_viridis_c() +
   labs(title = "Znečištění vzduchu v Praze",
        fill = "PM 10") 
+
+
+# pro ilustraci: variogram který se chová hezky :)
+rnet_lnd <- readRDS(url("https://github.com/saferactive/saferactive/releases/download/0.1.1/rnet_lnd_1pcnt.Rds"))
+
+# hezčí variogram už asi nebude...
+vgram_kola_raw <- variogram(bicycle~1, rnet_lnd, cutoff = 7500)
+
+vgram_kola_fit <- fit.variogram(vgram_kola_raw, vgm(model = "Exp", nuggett = 1000, range = 5000))
+
+plot(vgram_kola_raw, model = vgram_kola_fit)
+
+# obálka - touto ořízneme cílový rastar
+obalka <- concaveman::concaveman(rnet_lnd)
+
+# grid - sem budeme modelovat
+grid <- st_bbox(rnet_lnd) %>%
+  st_as_stars(dx = 250, dy = 250) %>% 
+  st_crop(obalka)
+
+# vlastní kriging
+rnet_krige <- krige(bicycle~1, rnet_lnd, grid, vgram_kola_fit, nmax = 30)
+
+# o výsledku podat zprávu
+mapview::mapview(rnet_krige)
+  
+
