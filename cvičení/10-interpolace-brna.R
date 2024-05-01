@@ -25,3 +25,5 @@ brno_mesto <- RCzechia::obce_polygony() %>%
 brno_stars <- brno_mesto %>% 
   st_bbox() %>% 
   st_as_stars(dx = 500)
+
+
