@@ -9,7 +9,7 @@ summary(bl_model)
 # interpretace: 1 hospodu uživí
 1 / bl_model$coefficients["obyvatel"]
 
-# sofistikovanějíší model - dvě veličiny (místňáck + lufťáci)
+# sofistikovanějíší model - dvě veličiny (místňáci + lufťáci)
 sof_model <- lm(data = grid, barcount ~ obyvatel + luzka)
 
 summary(sof_model)
@@ -41,6 +41,8 @@ testZeroInflation(sim_poi)
 zinb_model <- glmmTMB(formula = barcount ~ obyvatel + luzka + vegetation,
                       zi= ~ obyvatel + luzka + vegetation,
                       family = nbinom2, data = grid)
+
+summary(zinb_model)
 
 sim_zinb <- simulateResiduals(fittedModel = zinb_model, n = 10000)
 testDispersion(sim_zinb)
