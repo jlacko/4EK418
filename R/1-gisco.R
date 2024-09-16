@@ -17,7 +17,7 @@ orisky <- gisco_get_nuts(
 
 # Varšava v Polsku, Vídeň v Rakousku
 mesta <- orisky %>% 
-  filter(FID %in% c("PL911", "AT130"))
+  filter(geo %in% c("PL911", "AT130"))
 
 # vizuální kontrola
 mapview::mapview(mesta)

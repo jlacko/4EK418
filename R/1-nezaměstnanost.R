@@ -17,25 +17,24 @@ prehled %>%
    filter(str_detect(title, "nezam")) %>% 
    select(dataset_id, title)
 
-# metadata tabulky za rok 2023
-czso::czso_get_table_schema("250169r23")
-
-# tabulka po obcích za rok 2023
-nezam_23 <- czso::czso_get_table("250169r23")
+# tabulka po obcích za rok 2024
+nezam_24 <- readr::read_csv("./data/OD_NEZ01_2024090911065306.CSV")
 
 # orientace podle období
-nezam_23 %>% 
+nezam_24 %>% 
    group_by(rok, mesic, obdobi) %>% 
    tally()
 
 # orientace podle typu metriky
-nezam_23 %>% 
+nezam_24 %>% 
    group_by(vuk, vuk_text) %>% 
    tally()
 
-# metrika pro mapování - uchazeči za leden
-metrika <- nezam_23 %>% 
-   filter(obdobi == "20230831" & vuk == "NEZ0007")
+# metrika pro mapování - uchazeči za srpen
+metrika <- nezam_24 %>% 
+  filter(obdobi == "20240831" & vuk == "NEZ0007") %>% 
+  mutate(uzemi_kod = as.character(uzemi_kod))
+
 
 # podklad pro mapu - propojení prostorové a datové složky
 chrt_src <- obce %>% 

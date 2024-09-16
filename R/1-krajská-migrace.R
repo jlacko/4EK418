@@ -49,7 +49,7 @@ ggplot() +
                                    size = 20),
          plot.subtitle = element_text(hjust = 1/2,
                                       size = 15),
-         legend.position = c(92/100, 87/100), 
+         legend.position.inside = c(92/100, 87/100), 
          plot.margin = unit(rep(.5, 4), "cm"),
-         legend.text.align = 1,
-         legend.title.align = 1/2)
+         legend.text = element_text(1),
+         legend.title = element_text(1/2))

@@ -16,11 +16,6 @@ https://www.geoportalpraha.cz/cs/data/otevrena-data/seznam
 * výsledky krajských voleb 2020 po okrscích (kz6p.csv) / Český statistický úřad - https://volby.cz/opendata/kz2020/kz2020_opendata.htm
 * výsledky prezidentských voleb 2023 po okrscích (pet1.csv) / Český statistický úřad - https://www.volby.cz/opendata/prez2023nss/prez2023nss_opendata.htm
 
-### Soudní okresy 1930
-* 330 soudních okresů pro Čechy a Moravu, včetně výsledků sčítání lidu roku 1930 (1930_census.gpkg) / 
-„Tento výstup vznikl v rámci řešení projektu číslo DF12P01OVV033 Zpřístupnění historických prostorových a statistických dat v prostředí GIS řešeného v rámci programu Aplikovaného výzkumu a vývoje národní a kulturní identity (NAKI), jehož poskytovatel je Ministerstvo kultury České republiky.“
-http://www.historickygis.cz/
-
 ### Registrace vozidel
 * druh registrovaných vozidel podle obce (obec_dr.csv) / Centrální registr vozidel 
 * číselník druhů vozidel (ciselnikyrzdruh.xls) / Centrální registr vozidel
@@ -34,3 +29,6 @@ https://www.mdcr.cz/Statistiky/Silnicni-doprava/Centralni-registr-vozidel/Statis
 
 ### Sčítání lidu 2021
 * Vyjíždějící do zaměstnání a školy podle hlavního dopravního prostředku (sldb2021_vyjizdka_vsichni_prostredek_pohlavi.csv) / Český statistický úřad - https://www.czso.cz/csu/czso/vysledky-scitani-2021-otevrena-data
+
+### Nezaměstnanost v roce 2024:
+* Uchazeči o zaměstnání dosažitelní a podíl nezaměstnaných osob podle obcí / (OD_NEZ01_2024090911065306.CSV) / Český statistický úřad - https://www.czso.cz/csu/czso/podminky_pro_vyuzivani_a_dalsi_zverejnovani_statistickych_udaju_csu
