@@ -15,17 +15,20 @@ Kurs *Mapy, geodata a prostorová ekonometrie v R* proběhne prezenční formou,
 
 Pokud budete chtít procházet kód a úlohy na vlastním technickém prostředí, což velmi doporučuji, tak budete muset splnit několik technických kroků; postupujte přitom podle návodu níže.
 
-V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.3.2 a RStudio 2023.12.1+402 "Ocean Storm" - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto je konfigurace, kterou budu používat při prezentaci.
+V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.4.1 (2024-06-14) "Race for Your Life" a RStudio 2024.04.1+748 "Chocolate Cosmos" Release (2024-05-07) for Ubuntu Jammy - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto je konfigurace, kterou budu používat při prezentaci.
 
 Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to uděláte vykopírováním a spuštěním kódu níže.
 
 ```{r instalace-packagi, eval = F}
 # toto potřebuju:
-required <- c("czso", "dplyr", "ggplot2", "giscoR", "gtools", "gstat", "hereR",
-              "htmltools", "knitr", "leaflet", "lwgeom", "mapview", "exactextractr",
-              "nngeo", "osmdata", "RCzechia", "readr", "remotes", "geojsonsf",
-              "rgeoda", "rmapshaper", "rmarkdown", "scales", "sf", "spdep", "stars",
-              "terra", "tidygeocoder", "tidyr", "tidyverse")
+required <- c("czso", "DHARMa", "dplyr", "exactextractr",
+              "geojsonsf", "ggplot2", "giscoR", "glmmTMB",
+              "gstat", "gtools", "hereR", "htmltools", "knitr",
+              "leaflet", "lwgeom", "mapview", "nngeo",
+              "osmdata", "RCzechia", "readr", "remotes",
+              "rgeoda", "rmapshaper", "rmarkdown", "scales",
+              "sf", "spdep", "stars", "terra", "tidygeocoder",
+              "tidyr", "tidyverse")
 # toto mám:
 installed <- installed.packages()[, "Package"]
 
