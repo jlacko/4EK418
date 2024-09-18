@@ -32,9 +32,8 @@ nezam_24 %>%
 
 # metrika pro mapování - uchazeči za srpen
 metrika <- nezam_24 %>% 
-  filter(obdobi == "20240831" & vuk == "NEZ0007") %>% 
+  filter(obdobi == "20240831" & vuk == "NEZ0004") %>% 
   mutate(uzemi_kod = as.character(uzemi_kod))
-
 
 # podklad pro mapu - propojení prostorové a datové složky
 chrt_src <- obce %>% 
@@ -47,9 +46,9 @@ plot(chrt_src["hodnota"])
 ggplot(chrt_src) +
    geom_sf(aes(fill = hodnota), color = NA) +
    geom_sf(data = RCzechia::republika(), fill = NA) +
-   scale_fill_gradient(trans = "log10") +
-   labs(title = "Počet uchazečů o práci v obci",
-        subtitle = "stav k srpnu 2023")
+   scale_fill_gradient() +
+   labs(title = "Podíl nezaměstnaných osob (%)",
+        subtitle = "stav k srpnu 2024")
 
 # mapview - jednoduchý interaktivní
 library(mapview)
