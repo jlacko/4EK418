@@ -77,7 +77,7 @@ ggplot() +
 # pro frajery za plusové body - ortho projekce / kosmonauti hledící na kouli...
 
 # projection string used for the polygons & ocean background
-crs_string <- "+proj=ortho +lon_0=10 +lat_0=40"
+crs_string <- "+proj=ortho +lon_0=14 +lat_0=50"
 
 # background for the globe - center buffered by earth radius
 ocean <- st_point(x = c(0,0)) %>%
@@ -89,8 +89,8 @@ viditelny_svet <- svet %>%
   st_transform(crs = crs_string) # reproject to ortho
 
 ggplot(data = viditelny_svet) +
-  geom_sf(data = ocean, fill = "aliceblue", color = NA) + # background first
-  geom_sf(data = viditelny_svet, fill = "lightyellow", color = "gray45") +
+  geom_sf(data = ocean, fill = "deepskyblue", color = NA) + # background first
+  geom_sf(data = viditelny_svet, fill = "khaki", color = "gray45") +
   geom_sf(data = glmd, fill = "red", color = "gray45") +
   coord_sf(crs = crs_string) +
   theme_void()

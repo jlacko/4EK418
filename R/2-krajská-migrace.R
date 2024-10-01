@@ -13,7 +13,11 @@ migrace <- czso::czso_get_table("130141r19")
 
 # přehled metrik a jejich kódů
 migrace %>% 
-#  group_by(vuk, vuk_text) %>% 
+  group_by(vuk, vuk_text) %>% 
+  summarise(pocet = n())
+
+# přehled územního členění
+migrace %>% 
   group_by(vuzemi_cis) %>% 
   summarise(pocet = n()/8) # dělím osmi, protože 8 metrik (VUK_TEXT)
 
@@ -42,14 +46,13 @@ ggplot() +
                         labels = scales::number_format()) +
    theme_void() +
    labs(title = "Migrace po krajích",
-        subtitle = "za rok 2018",
+        subtitle = "za rok 2019",
         fill = "Migrační\nsaldo",
         caption = "zdroj dat: ČSÚ via {czso}") +
    theme(plot.title = element_text(hjust = 1/2,
                                    size = 20),
          plot.subtitle = element_text(hjust = 1/2,
                                       size = 15),
-         legend.position.inside = c(92/100, 87/100), 
          plot.margin = unit(rep(.5, 4), "cm"),
-         legend.text = element_text(1),
-         legend.title = element_text(1/2))
+         legend.text = element_text(hjust = 1),
+         legend.title = element_text(hjust = 1/2))
