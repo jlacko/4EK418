@@ -9,5 +9,12 @@ cesta <- "https://s3-eu-west-1.amazonaws.com/vito.landcover.global/v3.0.1/2019/E
 # cílový soubor včetně cesty (z důvodu velikosti není v gitu)
 stazeny_rastr <- "./data/cropland.tif"
 
+# stažení právě jednou = pokud soubor existuje, download se přeskočí; pokud ne tak se stahne do /data
+if(!file.exists(stazeny_rastr)) curl::curl_download(url = cesta, destfile = stazeny_rastr)
+
+# pracovní objekty
+polelany <- rast(stazeny_rastr)
+
 # vizuální overview
-plot(stazeny_rastr)
+plot(polelany)
+
