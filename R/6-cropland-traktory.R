@@ -62,6 +62,7 @@ obce_vozidla <- obce_vozidla %>%
 # připojíme k obcím počty traktorů
 obce <- obce %>% 
   left_join(obce_vozidla, by = c("NAZ_OBEC", "NAZ_POU")) %>% 
+  mutate(traktory = coalesce(traktory, 0)) %>%  # coalesce na nulu aby nebyl prázdný řádek
   mutate(zelena_plocha = polelany / 100 * st_area(.))
 
 # konečně akce! :)
