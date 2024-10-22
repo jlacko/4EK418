@@ -8,7 +8,7 @@ library(rmapshaper)
 hranice <- republika()
 
 # vizuální kontrola
-plot(st_geometry(hranice));
+plot(st_geometry(hranice))
 
 # zjednodušení / Fukov must go!
 simple_hranice <- rmapshaper::ms_simplify(hranice,

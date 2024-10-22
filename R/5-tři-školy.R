@@ -58,14 +58,7 @@ obrazek +
 hull <- skoly %>% 
    st_union() %>% 
    st_convex_hull() 
-   
-class(hull)
-
-hull <- hull %>% 
-   st_as_sf()
-
-class(hull)
-
+ 
 # spojíme s obrázkem
 obrazek +
    geom_sf(data = hull, 
