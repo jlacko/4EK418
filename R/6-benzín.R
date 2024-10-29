@@ -15,7 +15,7 @@ mapview::mapview(benzin)
 
 dalnice <- RCzechia::silnice() %>%
   filter(TRIDA %in% c("Dálnice I. tř.", "Dálnice II. tř.")) %>% 
-  st_union()
+  summarize()
   
 # vizuální kontrola
 mapview::mapview(dalnice)
@@ -24,10 +24,12 @@ mapview::mapview(dalnice)
 # blízkost jako boolean / kategorická veličina
 
 okoli_dalnic <- dalnice %>% 
-   st_buffer(units::set_units(2.5, "km"))
+  st_transform(5514) %>% # protočím přes Křováka kvůli jasnější definici vzdálenosti
+  st_buffer(units::set_units(2.5, "km")) %>% 
+  st_transform(4326)
 
 # vizuální kontrola
-mapview::mapview(okoli_dalnic, fgb = F)
+mapview::mapview(okoli_dalnic)
 
 # doplnění benzínu o info o dálnici
 benzin$blizko <- st_intersects(benzin, okoli_dalnic, sparse = F)[, 1]
