@@ -4,10 +4,19 @@ library(sf)
 library(ggplot2)
 
 # podklad okresů - společný všude
-okresy <- RCzechia::okresy("low")
+okresy <- RCzechia::okresy("low") %>% 
+  st_transform(5514)
 
 # obecná jednořádková vizualizační fce; očekává vstup ve formátu listw
-zprava <- function(sousedi) {
+celek <- function(sousedi) {
+  
+  plot(st_geometry(RCzechia::republika()) %>% st_transform(5514))
+  plot(sousedi, st_geometry(okresy), col = "gray75", pch = 19, add = T)
+   
+}
+
+
+detail <- function(sousedi) {
   
  chart_source <-  okresy %>%  
    # zafiltruje okresy na ty, které jsou sousedy města Brna v objektu sousedi
@@ -31,7 +40,9 @@ queen_hoods <- st_geometry(okresy) %>%
   poly2nb(queen = T) %>% # queen váhy
   nb2listw(zero.policy = T) 
 
-zprava(queen_hoods)
+# vizualizace celku
+celek(queen_hoods)
+detail(queen_hoods)
 
 # metoda věž - potřebuju 2 sousední body (1 je málo); očekává polygony
 
@@ -39,7 +50,8 @@ rook_hoods <- st_geometry(okresy) %>%
   poly2nb(queen = F) %>% # rook weights / není queen
   nb2listw(zero.policy = T) 
 
-zprava(rook_hoods)
+celek(rook_hoods)
+detail(rook_hoods)
 
 # metoda nejbližší sousedé / pozor na parametr "kolik sousedů"; očekává body
 
@@ -49,23 +61,25 @@ knn_hoods <- st_geometry(okresy) %>%
   knn2nb() %>% 
   nb2listw(zero.policy = T) 
 
-zprava(knn_hoods)
+celek(knn_hoods)
+detail(knn_hoods)
 
 # metoda sousedé vymezeni vzdáleností / pozor na parametry "od" a "do"; očekává body
 
 distance_hoods <- st_geometry(okresy) %>% 
   st_centroid() %>%
-  dnearneigh(d1 = 0, d2 = 50) %>% # vzdálenost nula až 50 Km
+  dnearneigh(d1 = 0, d2 = 50000) %>% # vzdálenost nula až 50 Km
   nb2listw(zero.policy = T) 
 
-zprava(distance_hoods)
+celek(distance_hoods)
+detail(distance_hoods)
 
 # technika úpravy vah / platí nezávisle na technice určení sousedství
 
 # vstup = seznam sousedství; nemusí být nutně podle vzdáleností
 nblist <- st_geometry(okresy) %>% 
   st_centroid() %>%
-  dnearneigh(d1 = 0, d2 = 50) # vzdálenost nula až 50 Km
+  dnearneigh(d1 = 0, d2 = 50) # vzdálenost nula až 50
   
 idw_hoods <- nb2listw(nblist,
                       zero.policy = T)
@@ -76,7 +90,7 @@ idw_hoods$weights <- nbdists(nblist, st_coordinates(st_centroid(okresy))) %>%
   lapply(function(x) x/sum(x)) # standardizovat matici na řádkový součet 1
 
 
-zprava(idw_hoods)
+detail(idw_hoods)
 
 # alternativa - převážení královny podle pana Newtona
 
@@ -91,7 +105,7 @@ idwq_hoods$weights <- nbdists(nblist, st_coordinates(st_centroid(okresy))) %>%
   lapply(function(x) 1/(x^2)) %>%  # převrácená hodnota *druhé mocniny* vzdálenosti - jako gravitace...
   lapply(function(x) x/sum(x)) # standardizovat matici na řádkový součet 1
 
-zprava(idwq_hoods)
+detail(idwq_hoods)
 
 
 # technika úpravy vah poměrem délky společné hranice
