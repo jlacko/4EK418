@@ -28,7 +28,7 @@ plot(objekt["nahodne"])
 
 # fake autokorelované - simulace podle variogramu
 fake_model <- gstat::gstat(formula = z ~ 1, dummy = TRUE, beta = 1/2,
-                           model = gstat::vgm(1/8,"Exp", 7), nmax = 7) 
+                           model = gstat::vgm(1/7,"Exp", 5), nmax = 4) 
 
 objekt$autokorelovane <- predict(fake_model, st_centroid(objekt), nsim = 1) %>% 
   pull(sim1) 
@@ -72,3 +72,29 @@ moran.test(objekt$autokorelovane, wahy, alternative = "two.sided")
 
 # Moranův test pro reálně autokorelovaná čísla
 moran.test(objekt$nad_morem, wahy, alternative = "two.sided")
+
+# Monte Carlo nad náhodnými čísly
+mc_random <- moran.mc(objekt$nahodne, wahy, nsim = 999, alternative = "two.sided")
+
+mc_random
+
+hist(mc_random$res)
+abline(v = mc_random$statistic, col = "red")
+
+# Monte Carlo nad fake autokorelovanými čísly
+mc_fake <- moran.mc(objekt$autokorelovane, wahy, nsim = 999, alternative = "two.sided")
+
+mc_fake
+
+hist(mc_fake$res)
+abline(v = mc_fake$statistic, col = "red")
+
+# Monte Carlo nad reálnými čísly
+mc_sudety <- moran.mc(objekt$nad_morem, wahy, nsim = 999, alternative = "two.sided")
+
+mc_sudety
+
+hist(mc_sudety$res)
+abline(v = mc_sudety$statistic, col = "red")
+
+
