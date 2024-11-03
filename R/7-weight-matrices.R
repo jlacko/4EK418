@@ -79,7 +79,7 @@ detail(distance_hoods)
 # vstup = seznam sousedství; nemusí být nutně podle vzdáleností
 nblist <- st_geometry(okresy) %>% 
   st_centroid() %>%
-  dnearneigh(d1 = 0, d2 = 50) # vzdálenost nula až 50
+  dnearneigh(d1 = 0, d2 = 50000) # vzdálenost nula až 50
   
 idw_hoods <- nb2listw(nblist,
                       zero.policy = T)
@@ -140,4 +140,4 @@ distances <- lapply(distances, function(x) x/sum(x))
 # přepsat původní váhy upravenými  
 borderline_hoods$weights <- distances 
 
-zprava(borderline_hoods)
+detail(borderline_hoods)
