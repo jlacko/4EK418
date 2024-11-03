@@ -74,7 +74,7 @@ moran.test(objekt$autokorelovane, wahy, alternative = "two.sided")
 moran.test(objekt$nad_morem, wahy, alternative = "two.sided")
 
 # Monte Carlo nad náhodnými čísly
-mc_random <- moran.mc(objekt$nahodne, wahy, nsim = 999, alternative = "two.sided")
+mc_random <- moran.mc(objekt$nahodne, wahy, nsim = 9999, alternative = "two.sided")
 
 mc_random
 
@@ -82,7 +82,7 @@ hist(mc_random$res)
 abline(v = mc_random$statistic, col = "red")
 
 # Monte Carlo nad fake autokorelovanými čísly
-mc_fake <- moran.mc(objekt$autokorelovane, wahy, nsim = 999, alternative = "two.sided")
+mc_fake <- moran.mc(objekt$autokorelovane, wahy, nsim = 9999, alternative = "two.sided")
 
 mc_fake
 
@@ -90,7 +90,7 @@ hist(mc_fake$res)
 abline(v = mc_fake$statistic, col = "red")
 
 # Monte Carlo nad reálnými čísly
-mc_sudety <- moran.mc(objekt$nad_morem, wahy, nsim = 999, alternative = "two.sided")
+mc_sudety <- moran.mc(objekt$nad_morem, wahy, nsim = 9999, alternative = "two.sided")
 
 mc_sudety
 
