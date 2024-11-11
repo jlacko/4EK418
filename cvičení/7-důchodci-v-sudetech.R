@@ -9,17 +9,18 @@ library(dplyr)
 
 # census 1980
 okresy_1980 <- RCzechia::historie("okresy_1980") %>% 
-  mutate(metrika_vysvetlovana = `obyvatelstvo celkem věk 75+` / `počet obyvatel přítomných`) %>% 
-  select(metrika_vysvetlovana)
+  mutate(duchodci_80 = `obyvatelstvo celkem 65+` / `počet obyvatel přítomných`) %>% 
+  select(duchodci_80)
 
-plot(okresy_1980["metrika_vysvetlovana"])
+plot(okresy_1980["duchodci_80"])
 
 
 # census 1930
 okresy_1930 <- RCzechia::historie("okresy_1930") %>% 
-  mutate(metrika_vysvetlujici = `národnost německá` / `počet obyvatel přítomných`) %>% 
-  select(metrika_vysvetlujici)
+  mutate(nemci_30 = `národnost německá` / `počet obyvatel přítomných`,
+         duchodci_30 = `obyvatelstvo celkem věk 65+` / `počet obyvatel přítomných` ) %>% 
+  select(nemci_30, duchodci_30)
 
-plot(okresy_1930["metrika_vysvetlujici"])
+plot(okresy_1930[c("nemci_30", "duchodci_30")])
 
 # pro přenos metrik uvažujte sf::st_interpolate_aw(); věnujte pozornost argumentu extensive

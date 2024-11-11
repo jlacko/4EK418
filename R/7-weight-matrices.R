@@ -7,11 +7,15 @@ library(ggplot2)
 okresy <- RCzechia::okresy("low") %>% 
   st_transform(5514)
 
+# potlačit hnusnou warning o "attributes are _assumed_ constant over geometries" 
+st_agr(okresy) = "constant"
+
 # obecná jednořádková vizualizační fce; očekává vstup ve formátu listw
 celek <- function(sousedi) {
   
-  plot(st_geometry(RCzechia::republika()) %>% st_transform(5514))
-  plot(sousedi, st_geometry(okresy), col = "gray75", pch = 19, add = T)
+  plot(st_geometry(RCzechia::okresy("low")) %>% st_transform(5514), border = "gray75")
+  plot(st_geometry(RCzechia::republika("low")) %>% st_transform(5514), add = T)
+  plot(sousedi, st_geometry(okresy), col = "red", pch = 19, lty = "dotted", add = T)
    
 }
 
