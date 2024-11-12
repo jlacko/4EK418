@@ -1,7 +1,8 @@
 # Máte dva censy: 1980 a 1930, padesát let od sebe
-# posuďte závislost podílu obyvatel věkové kategorie 75+ v roce 1980
-# na podílu obyvatelstva německé národnosti v roce 1930
-# zkuste vysvětlit :)
+# posuďte závislost podílu obyvatel věkové kategorie 65+ v roce 1980
+# - na podílu obyvatel 65+ v roce 1930 / hypotéza "zdravý kraj"
+# - na podílu obyvatel německé národnosti v roce 1930 / hypotéza "Postupim"
+# výběr zdůvodněte :)
 
 
 library(RCzechia)
