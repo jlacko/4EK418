@@ -28,3 +28,20 @@ plot(okresy_1930[c("nemci_30", "duchodci_30")])
 
 
 # pro přenos metrik uvažujte sf::st_interpolate_aw(); věnujte pozornost argumentu extensive
+
+okresy_1930$duchodci_80 <- st_interpolate_aw(okresy_1980["duchodci_80"],
+                                             st_geometry(okresy_1930),
+                                             extensive = F) %>% 
+  pull(duchodci_80)
+
+model_zdrave_ovzdusi <- lm(data = okresy_1930,
+                           formula = duchodci_80 ~ duchodci_30)
+
+model_postupim <- lm(data = okresy_1930,
+                     formula = duchodci_80 ~ nemci_30)
+
+summary(model_zdrave_ovzdusi)
+summary(model_postupim)
+
+summary(model_zdrave_ovzdusi)['r.squared']
+summary(model_postupim)['r.squared']
