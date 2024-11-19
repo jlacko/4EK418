@@ -28,7 +28,7 @@ plot(objekt["nahodne"])
 
 # fake autokorelované - simulace podle variogramu
 fake_model <- gstat::gstat(formula = z ~ 1, dummy = TRUE, beta = 1/2,
-                           model = gstat::vgm(1/7,"Exp", 5), nmax = 4) 
+                           model = gstat::vgm(1/5,"Exp", 6.5), nmax = 3) 
 
 objekt$autokorelovane <- predict(fake_model, st_centroid(objekt), nsim = 1) %>% 
   pull(sim1) 

@@ -32,8 +32,8 @@ pavel_relativne <- ggplot() +
    labs(fill = "podíl\nPetra Pavla",
         title = "Prezidentské volby 2023") +
    theme_void() +
-   theme(legend.text.align = 1,
-         legend.title.align = 1/2)
+   theme(legend.text = element_text(hjust = 1),
+         legend.title = element_text(hjust = 1/2))
 
 pavel_relativne
 
@@ -50,25 +50,25 @@ babis_relativne <- ggplot() +
   labs(fill = "podíl\nAndreje Babiše",
        title = "Prezidentské volby 2023") +
   theme_void() +
-  theme(legend.text.align = 1,
-        legend.title.align = 1/2)
+  theme(legend.text = element_text(hjust = 1),
+        legend.title = element_text(hjust = 1/2))
 
 babis_relativne
 
 
 pavel_absolutne <- ggplot() +
-   geom_sf(data = clean_data, aes(fill = pavel), color = NA, alpha = 2/3) +
-   geom_sf(data = podklad, fill = NA, color = "gray60", linewidth = .25) +
-   geom_sf(data = obrysKraje, fill = NA, color = "gray40", linewidth = .75) +
-   scale_fill_continuous(low = "white",
-                         high = scales::muted("blue"),
-                  #       limits = c(0, 800),
-                         labels = scales::label_comma()) +
-   labs(fill = "hlasy pro\nPetra Pavla",
-        title = "Prezidentské volby 2023") +
-   theme_void() +
-   theme(legend.text.align = 1,
-         legend.title.align = 1/2)
+  geom_sf(data = clean_data, aes(fill = pavel), color = NA, alpha = 2/3) +
+  geom_sf(data = podklad, fill = NA, color = "gray60", linewidth = .25) +
+  geom_sf(data = obrysKraje, fill = NA, color = "gray40", linewidth = .75) +
+  scale_fill_continuous(low = "white",
+                        high = scales::muted("blue"),
+                  #     limits = c(0, 800),
+                        labels = scales::label_comma()) +
+  labs(fill = "hlasy pro\nPetra Pavla",
+       title = "Prezidentské volby 2023") +
+  theme_void() +
+  theme(legend.text = element_text(hjust = 1),
+        legend.title = element_text(hjust = 1/2))
 
 pavel_absolutne
 
