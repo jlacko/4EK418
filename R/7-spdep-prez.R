@@ -32,10 +32,25 @@ ggplot(data = moran_mapa) +
                         high = scales::muted("green")) +
    theme_void() +
    labs(title = "Lokální Moranovo I",
-        subtitle = "kladná hodnota = okrsek je obklopen sobě podobnými") +
+        subtitle = "surová hodnota Iᵢ") +
    theme(plot.margin = unit(rep(.5, 4), "cm"),
          legend.text = element_text(hjust = 1),
          legend.title = element_text(hjust = 1/2))
+
+# vizuální přehled Moranova I - normované na Z score
+ggplot(data = moran_mapa) +
+  geom_sf(aes(fill = Z.Ii), color = NA) +
+  geom_sf(data = st_transform(podklad, 4326), fill = NA, color = "gray60", size = .25) +
+  geom_sf(data = st_transform(obrysKraje, 4326), fill = NA, color = "gray40", size = .75) +
+  scale_fill_gradient2(low = scales::muted("red"),
+                       mid = "white",
+                       high = scales::muted("green")) +
+  theme_void() +
+  labs(title = "Lokální Moranovo I",
+       subtitle = "Z score lokálního Moranova Iᵢ / normální rozdělení") +
+  theme(plot.margin = unit(rep(.5, 4), "cm"),
+        legend.text = element_text(hjust = 1),
+        legend.title = element_text(hjust = 1/2))
 
 
 # Materialita lokálního Moranovo I
@@ -47,6 +62,7 @@ ggplot(data = moran_mapa) +
                      palette = 7) +
    theme_void() +
    labs(title = "Lokální Moranovo I",
+        subtitle = "materialita ve standardní hvězdičkové konvenci",
         fill = "materialita\nLocal Moran") +
    theme(plot.margin = unit(rep(.5, 4), "cm"),
          legend.text = element_text(hjust = 1),

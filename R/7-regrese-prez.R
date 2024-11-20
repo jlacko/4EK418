@@ -1,6 +1,6 @@
 # vysvětlení 
 
-source("./R/4-digest-data-prez.R") 
+source("./R/7-digest-data-prez.R") 
 
 clean_data <- clean_data %>% 
   st_transform(5514) # ve světě ing. Křováka je výpočet svižnější
