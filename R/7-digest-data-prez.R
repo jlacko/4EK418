@@ -6,7 +6,7 @@ library(sf)
 # načíst výsledky, zafiltrovat na STC kraj + vysčítat do 3 stran + zbytku světa
 raw_data <- read_csv2("./data/pet1.csv",
                       col_types = cols(OBEC = col_character(),
-                                       OKRSEK = col_character())) %>% 
+                                       OKRSEK = col_character())) %>%
   filter(OPRAVA == "0") %>% 
   mutate(OBEC = as.character(OBEC), # klíče v RCzechia jsou vždy text
          OKRSEK = as.character(OKRSEK),
@@ -21,8 +21,8 @@ raw_data <- read_csv2("./data/pet1.csv",
 clean_data <- RCzechia::volebni_okrsky("low") %>% 
   mutate(OBEC = coalesce(MomcKod, ObecKod)) %>% # mor na ty vaše rody!!!
   rename(OKRSEK = Cislo) %>% 
-   inner_join(raw_data, by = c("OBEC", "OKRSEK")) %>% 
-   select(Kod, pavel, babis, nerudova, zbytek, celkem)
+  inner_join(raw_data, by = c("OBEC", "OKRSEK")) %>% 
+  select(Kod, pavel, babis, nerudova, zbytek, celkem)
 
 # už není potřeba...
 rm(raw_data) # už je nepotřebujeme....

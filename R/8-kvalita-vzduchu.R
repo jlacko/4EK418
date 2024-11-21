@@ -109,7 +109,7 @@ aq_krige <- krige(value~1,  # vzoreček - hodnota podle konstanty
 # hlavní výhoda krigingu - rozptyl
 krige(value~1, stanice, ekonomka, vgram_fit)
 
-# srovnemjme
+# srovnemjme - věnujme pozornost sloupci var1.var :)
 predict(model, ekonomka)
 
 # kriging v prostoru - na raster pokrývající Prahu s bboxem
@@ -129,11 +129,21 @@ obrazek +
                  y = y),
              alpha = 1/2) +
   scale_fill_viridis_c() +
-  labs(title = "Znečištění vzduchu v Praze",
+  labs(title = "Znečištění vzduchu v Praze - Krige",
        fill = "PM 10") 
 
-# srovnemjme
+# srovnemjme s tím samým podle modelu = IDW interpolace
 stanice_stars <- predict(model, praha_stars)
+
+obrazek +
+  geom_stars(data = stanice_stars,
+             aes(fill = var1.pred, 
+                 x = x, 
+                 y = y),
+             alpha = 1/2) +
+  scale_fill_viridis_c() +
+  labs(title = "Znečištění vzduchu v Praze - IDW interpolace",
+       fill = "PM 10") 
 
 
 # pro ilustraci: variogram který se chová hezky :)
