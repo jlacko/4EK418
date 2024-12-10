@@ -1,6 +1,6 @@
 # úkol:
 # - interpolovat kvalitu vzduchu na náměstí Svobody (u Orloje)
-# - odhadnout míru znečisřění na Brnu jako celku
+# - odhadnout míru znečištění na Brnu jako celku
 
 
 library(sf)

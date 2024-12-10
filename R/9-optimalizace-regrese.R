@@ -59,7 +59,7 @@ AIC(zinb_model)
 resids <- residuals(jsof_model) # extract residuals from model
 predikce <- fitted(jsof_model) # předpovědi z modelu
 
-leaf_src <- grid %>% # ... attach them to grid
+leaf_src <- grid[-1,] %>% # ... attach them to grid
    cbind(resids) %>% 
    cbind(predikce)
 

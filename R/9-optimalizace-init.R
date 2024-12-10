@@ -25,7 +25,7 @@ search_res <- opq(bbox = "Praha") %>%
 hopsody <- search_res$osm_points %>%  
    filter(!is.na(amenity)) %>%  # pouze platné
    select(name) %>% 
-   subset(st_intersects(., obrys, sparse = F)) # jen ty uvnitř hranic / ne jen bboxu
+   st_filter(obrys) # jen ty uvnitř hranic / ne jen bboxu
 
 
 # vizuální overview
@@ -57,7 +57,7 @@ pruseciky <- st_join(hopsody, grid) %>%
    dplyr::select(id, barcount = n)
 
 grid <- left_join(grid, pruseciky, by = 'id') %>%
-   mutate(barcount = ifelse(is.na(barcount), 0, barcount)) # replace NAs with zero
+   mutate(barcount = coalesce(barcount, 0)) # replace NAs with zero
 
 # vizuální overview
 ggplot() +

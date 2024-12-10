@@ -42,7 +42,7 @@ luzka <- readr::read_csv('./data/CRU02_2012_2017.csv') %>%
    summarise(kapacita = sum(hodnota))
 
 prazska_luzka <- left_join(casti, luzka, by = c("KOD" = "uzemi_kod")) %>% 
-   mutate(kapacita = tidyr::replace_na(kapacita, 0))
+   mutate(kapacita = coalesce(kapacita, 0))
 
 # vizuální kontrola
 ggplot() +
