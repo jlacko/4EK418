@@ -11,11 +11,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE, fig.align="center")
 ```
 
-Kurs *Mapy, geodata a prostorová ekonometrie v R* proběhne prezenční formou, což klade o něco menší nároky na prostředí nežli vzdálená forma přes Týmsy.
+Pro aktivní účast na kurzu *Mapy, geodata a prostorová ekonometrie v R* velmi oceníte vlastní technické prostřed; školní počítače sice (většinou) fungují, ale pro pro skutečné sžití se s daty a kódem je praktické si materiály odnést s sebou a pracovat s nimi doma. Pro nastavení vlastního prostředí doporučuji postupovat podle podle návodu níže.
 
-Pokud budete chtít procházet kód a úlohy na vlastním technickém prostředí, což velmi doporučuji, tak budete muset splnit několik technických kroků; postupujte přitom podle návodu níže.
-
-V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.4.1 (2024-06-14) "Race for Your Life" a RStudio 2024.04.1+748 "Chocolate Cosmos" Release (2024-05-07) for Ubuntu Jammy - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto je konfigurace, kterou budu používat při prezentaci.
+V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.4.2 (2024-10-31) -- "Pile of Leaves" aRStudio 2024.12.0+467 "Kousa Dogwood" (2024-12-11) for Ubuntu Jammyy - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto je konfigurace, kterou budu používat já při prezentaci.
 
 Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to uděláte vykopírováním a spuštěním kódu níže.
 
@@ -51,7 +49,7 @@ installr::install.git()
 
 \newpage
 
-Když budete mít git funkční tak prosím v rámci RStudia založte nový projekt metodou z hlavní nabídky `File >> New Project >> Version Control >> Git`, a coby cestu k repozitáři zadáte [`https://github.com/jlacko/4EK418.git`](https://github.com/jlacko/4EK418.git). 
+Když budete mít git funkční, tak prosím v rámci RStudia založte nový projekt metodou z hlavní nabídky =  `File >> New Project >> Version Control >> Git`, a coby cestu k repozitáři zadejdte [`https://github.com/jlacko/4EK418.git`](https://github.com/jlacko/4EK418.git). 
 
 \bcenter
 
