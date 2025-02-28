@@ -33,3 +33,6 @@ https://www.mdcr.cz/Statistiky/Silnicni-doprava/Centralni-registr-vozidel/Statis
 
 ### Nezaměstnanost v roce 2024:
 * Uchazeči o zaměstnání dosažitelní a podíl nezaměstnaných osob podle obcí / (OD_NEZ01_2024090911065306.CSV) / Český statistický úřad - https://www.czso.cz/csu/czso/podminky_pro_vyuzivani_a_dalsi_zverejnovani_statistickych_udaju_csu
+
+### Bundestagswahl 2025
+* výsledky voleb do spolkového sněmu v Německu z jara 2025 (bundestagswahl_2025.csv)
