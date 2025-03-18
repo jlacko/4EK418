@@ -1,0 +1,45 @@
+---
+title: "2. úkol 4EK418"
+author: "Jindra Lacko"
+format: 
+  html:
+    self-contained: true
+toc: true
+execute: 
+  eval: true
+  echo: true
+  message: false
+  warning: false
+figures:
+  fig-width: 1000
+  fig-heigt: 1000
+---
+
+## Fotbal!
+
+Uvažujte, že jste ve škole / na adrese `"nám. Winstona Churchilla 1938/4, Praha"` a chcete vyrazit na fotbal - ale nechcete chodit daleko. 
+
+Zjistěte, jaký fotbalový stadion je ke škole nejblíže. Jako zdroj dat uvažujte Open Street Map, na které platí že fotbalový stadión má klíč (key) `sport` a hodnotu (value) `soccer` - viz [dokumentace OSM](https://wiki.openstreetmap.org/wiki/Tag:sport%3Dsoccer). Stadiony uvažujme jako polygony; jednoznačnou identifikaci stadionu představuje pole `osm_id`.
+
+Byl by váš výběr odlišný, pokud byste nebyli na VŠE, ale na přírodovědě / `"Albertov 6, Praha 2"`?
+
+
+```{r}
+library(sf)
+library(dplyr)
+library(osmdata)
+
+
+
+```
+
+Jako výstup je očekáván kód, který :
+
+- provede geokódování dvou adres
+- provede dohledání fotbalových stadionů v Praze jako polygonů
+- spočte fotbalový stadion s nejnižší vzdáleností od VŠE (kontrola: bude to Viktorka :)
+- spočte fotbalový stadion s nejnižší vzdáleností od PŘFUK 
+
+Očekávaným výstupem je soubor typu HTML, který uložíte do k tomu zřízené odevzdávárny.
+
+Pro zamezení pochybností: soubor jiného typu nežli HTML, ať už `*.R` či tento `*.qmd`, *není* očekávaným výstupem.
