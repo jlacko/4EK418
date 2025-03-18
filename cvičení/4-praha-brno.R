@@ -12,7 +12,7 @@ mesta <- RCzechia::obce_polygony() %>%
 st_distance(x = ___,
             y = ___)
 
-# založte nový objekt, v souřadnicovém systému inž. Křováka (EPSG::5514)
+# založte nový objekt, v souřadnicovém systému inž. Křováka (EPSG:5514)
 mesta_krovak <- st_transform(mesta,
                              crs = ___)
 
