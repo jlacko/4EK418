@@ -37,9 +37,9 @@ print(wahl)
 library(giscoR)
 
 # doplnění vítězné strany v objektu wahl
+wahl$strana <- colnames(wahl)[2+max.col(wahl[,-c(1:2)])]
 
-wahl$strana <- colnames(wahl)[2+max.col(wahl[,c(3:8)])]
-
+# propojení prostorové složky z GISCO a datové (wahl)
 vysledky_geo <- giscoR::gisco_get_nuts(country = "DE",
                                nuts_level = 1) %>% 
   inner_join(wahl)
