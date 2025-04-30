@@ -37,8 +37,19 @@ moran.test(orpecka$podil, vahy)
 # 3) jsou v ČR oblasti, kde se jezdí vlakem víc a kde méně? (= lokální test / LISA clusters)
 
 lokalni_moran <- localmoran(orpecka$podil, vahy) %>% 
-  data.frame()
+  data.frame() 
 
 orpecka$zscore <- lokalni_moran$Z.Ii
 
 plot(orpecka["zscore"])
+
+# rozšířený pohled: vyhodnocení materiality z-score přes kvantil normálního rozdělení
+# + identifikace "zajímavých" clusterů
+zajimava_orp <- orpecka %>% 
+  # spočíst zajímavost přes kvantily / oba "ocásky"
+  mutate(zajimave = ifelse(zscore < qnorm(.05) | zscore > qnorm(.95), T, F)) %>% 
+  filter(zajimave) %>% # vybrat jen zajímavé
+  summarise() # sloučit do jednoho celku
+
+plot(st_geometry(orpecka), border = "gray75")
+plot(zajimava_orp, col = "red", add = T)
