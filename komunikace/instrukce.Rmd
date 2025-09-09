@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE, fig.align="center")
 
 Pro aktivní účast na kurzu *Mapy, geodata a prostorová ekonometrie v R* velmi oceníte vlastní technické prostřed; školní počítače sice (většinou) fungují, ale pro pro skutečné sžití se s daty a kódem je praktické si materiály odnést s sebou a pracovat s nimi doma. Pro nastavení vlastního prostředí doporučuji postupovat podle podle návodu níže.
 
-V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě R 4.4.2 (2024-10-31) -- "Pile of Leaves" aRStudio 2024.12.0+467 "Kousa Dogwood" (2024-12-11) for Ubuntu Jammyy - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto je konfigurace, kterou budu používat já při prezentaci.
+V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě 4.5.1 (2025-06-13) -- "Great Square Root" a RStudio 2025.05.0+496 "Mariposa Orchid" Release (2025-05-04) for Ubuntu Jammy - stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Ale toto je konfigurace, kterou budu používat já při prezentaci.
 
 Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to uděláte vykopírováním a spuštěním kódu níže.
 
