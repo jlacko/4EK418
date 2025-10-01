@@ -28,5 +28,5 @@ Repozitář a podkladové materiály ke kurzu během zimního semestru 2025/2026
 -   `/komunikace` - komunikační materiály ke kurzu (včetně návodu pro nastavení prostředí!)
 -   `/prez` - prezentace, ve formátu Libre Office Impress (odp) a Adobe Acrobat (pdf)
 -   `/qgis` - vzorový GIS projekt
--   `/R` - "řešené"" příklady
+-   `/R` - "řešené" příklady
 -   `/řešení` - řešení "neřešených" příkladů
