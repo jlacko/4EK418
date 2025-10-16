@@ -45,3 +45,6 @@ data/builtup*.tif
 
 # Libre Office locky
 .~lock*
+
+# vygenerované HTML soubory od úkolů
+/cvičení/*html
