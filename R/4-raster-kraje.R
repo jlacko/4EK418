@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 
 # zastavěná střední Evropa z Copernicusu - https://lcviewer.vito.be
-cesta <- "https://s3-eu-west-1.amazonaws.com/vito.landcover.global/v3.0.1/2019/E000N60/E000N60_PROBAV_LC100_global_v3.0.1_2019-nrt_BuiltUp-CoverFraction-layer_EPSG-4326.tif"
+cesta <- "https://jla-unsecure.s3.eu-central-1.amazonaws.com/raster-data/builtup_2019.tif"
            
 # cílový soubor včetně cesty (z důvodu velikosti není v gitu)
 stazeny_rastr <- "./data/builtup_2019.tif"
