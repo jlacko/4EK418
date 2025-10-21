@@ -10,24 +10,20 @@ execute:
   echo: true
   message: false
   warning: false
-figures:
-  fig-width: 1000
-  fig-heigt: 1000
 ---
 
 ## Hospody blízké a daleké...
 
 Uvažujte dataset pražských hospod jako bodů - kdy hospoda je definována jako amenity typu [bar, pub nebo restaurant](https://wiki.openstreetmap.org/wiki/Key:amenity) - ze zdroje [Open Street Map](https://www.openstreetmap.org/).
 
-Z hospod, barů a restaurací vyberte pouze ty, které ve svém názvu (= sloupec `name`) obsahují vaše iniciály 
+Z hospod, barů a restaurací vyberte pouze ty, které ve svém názvu (= sloupec `name`) obsahují vaše iniciály; to znamená že:
 
-- tj. pokud se jmenujete _Jindra Lacko_, tak hledáte řetězec `"jl"`, což je podmínka kterou splňuje například podnik [Špejle](https://www.spejle.eu/) v Jindřišské ulici
+- pokud se jmenujete _Jindra Lacko_, tak hledáte řetězec `"jl"`, což je podmínka kterou splňuje například podnik [Špejle](https://www.spejle.eu/) v Jindřišské ulici
 - pokud se identifikujete jako _Vladimír Iljič Lenin_, tak hledáte řetězec `"vil"`, a podnik [Green Devil's Absinthe Bar](https://www.greendevils.cz/) za Týnským chrámem.
 
-Pokud žádný podnik vaše iniciály neobsahuje a umíte to ukázat, tak jako fallback uvažujte všechny.
+Pokud žádný podnik vaše iniciály neobsahuje [a umíte to ukázat]{.underline}, tak jako fallback uvažujte všechny.
 
 Z podniků obsahující vaše iniciály vyberte a v mapě města Prahy zakreslete ten, který je nejbližší k (= má nejmenší vzdálenost od) hlavnímu vchodu od VŠE, definovaného jako adresa `"nám. Winstona Churchilla 1938/4, Praha"`.
-
 
 ```{r}
 library(sf)
@@ -46,4 +42,8 @@ plot(pressure)
 
 Očekávaným výstupem je soubor typu HTML, který uložíte do k tomu zřízené odevzdávárny.
 
-Pro zamezení pochybností: soubor jiného typu nežli HTML, ať už `*.R` či tento `*.qmd`, *není* očekávaným výstupem.
+Soubor je napsaný v [Quarto Markdownu](https://quarto.org/) a má ve svém front matter nastavené [execution options](https://quarto.org/docs/computations/execution-options.html) = potlačuje chyby a prosté informace, ale zachovává zobrazení zdrojového kódu.
+
+V komerční praxi může být elegantnější podkladový zdroják potlačit (= nastavit `echo` na `false`), ale pro účely domácího úkolu nechte front matter tak jak je. Váš kód mě zajímá!
+
+Pro zamezení pochybností: soubor jiného typu nežli HTML, ať už `*.R` či tento `*.qmd`, *není* očekávaným výstupem. Prosté obrázky bez kódu *nejsou* očekávaným výstupem, stejně jako kód bez obrázků.
