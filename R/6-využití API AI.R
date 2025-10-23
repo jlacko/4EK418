@@ -8,7 +8,8 @@ library(leaflet)   # pro interaktivní vizualizaci
 # úvodní prompt
 prompt_header <- "you are an experienced geographer; analyze this text and 
                   give me all the location mentioned as a name and 
-                  as a POINT in simple features WKT format 
+                  as a POINT in simple features WKT format, together with 
+                  the relation to the overall message
                   and state your confidence on a scale from 0 to 100 \n\n"
 
 # vlastní text pro analýzu
@@ -58,6 +59,7 @@ schema <- list(
     type = "OBJECT",
     properties = list(
       name = list(type = "STRING"),
+      relation = list(type = "STRING"),
       location = list(type = "STRING"),
       confidence = list(type = "NUMBER")
     ),
@@ -70,12 +72,12 @@ location <- gemini_structured(prompt = paste(prompt_header, text_input),
                               model = "2.5-flash-lite", # for the cheapskates...
                               schema = schema)
 
-# náhled na výstup
+# náhled na výstup jako JSON
 prettify(location)
 
-# interpret the result as sf object
+# z ošklivého JSONu do hezkého sf dataframe
 sf_vystup <- location %>% 
-  fromJSON() %>% 
+  jsonlite::fromJSON() %>% 
   as.data.frame() %>% 
   sf::st_as_sf(wkt = "location", crs = 4326)
 
