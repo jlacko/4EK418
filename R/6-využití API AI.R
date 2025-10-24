@@ -7,10 +7,10 @@ library(leaflet)   # pro interaktivní vizualizaci
 
 # úvodní prompt
 prompt_header <- "you are an experienced geographer; analyze this text and 
-                  give me all the location mentioned as a name and 
-                  as a POINT in simple features WKT format, together with 
-                  the relation to the overall message
-                  and state your confidence on a scale from 0 to 100 \n\n"
+                  give me all the location mentioned as a name, together with 
+                  its relation to the overall message in the format of a POINT in 
+                  simple features WKT format, and state your confidence
+                  about the geocoding accuracy on a scale from 0 to 100 \n\n"
 
 # vlastní text pro analýzu
 text_input <- "Jedu takhle tábořit Škodou 100 na Oravu
@@ -63,7 +63,7 @@ schema <- list(
       location = list(type = "STRING"),
       confidence = list(type = "NUMBER")
     ),
-    propertyOrdering = c("name", "location", "confidence")
+    propertyOrdering = c("name", "relation", "location",  "confidence")
   )
 )
 
@@ -71,7 +71,7 @@ tictoc::tic() # stopky spuštěny
 
 # ať Gemini API předvede svojí magii...
 location <- gemini_structured(prompt = paste(prompt_header, text_input),
-#                              model = "2.5-pro", # for the cheapskates...
+#                              model = "2.5-pro", # when money is no issue
 #                              model = "2.5-flash", # střední cesta
                               model = "2.5-flash-lite", # for the cheapskates...
                               schema = schema)
@@ -83,16 +83,15 @@ prettify(location)
 
 # z ošklivého JSONu do hezkého sf dataframe
 sf_vystup <- location %>% 
-  jsonlite::fromJSON() %>% 
-  as.data.frame() %>% 
+  jsonlite::fromJSON() %>% # json >> data.frame
+  filter(location != "UNKNOWN") %>% 
   sf::st_as_sf(wkt = "location", crs = 4326)
 
 
 # datový overview
 leaflet(data = sf_vystup) %>% 
   addTiles() %>% 
-  addCircleMarkers(label = ~ paste(name, "- confidence", confidence, "of 100"),
-                   color = "red",
-                   stroke = NA,
-                   fillOpacity = 1)
+  addPopups(popup = ~ paste("<b>", name, "</b>:", 
+                            relation, "<br> confidence", 
+                            confidence, "of 100"))
 
