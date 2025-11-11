@@ -38,10 +38,10 @@ benzin$blizko <- st_intersects(benzin, okoli_dalnic, sparse = F)[, 1]
 mapview::mapview(benzin, zcol = "blizko")
 
 # mám data - dál už "jenom statistika" :)
-model_kategoricky <- lm(data = benzin, formula = cena ~ blizko)
+model_kategoricky <- lm(data = benzin,
+                        formula = cena ~ blizko)
 
 summary(model_kategoricky)
-
 
 # vzdálenost jako spojitá veličina
 
@@ -54,7 +54,8 @@ ggplot(benzin) +
   geom_point(aes(x = vzdalenost, y = cena), alpha = 1/3)
 
 
-model_spojity <- lm(data = benzin, formula = cena ~ vzdalenost)
+model_spojity <- lm(data = benzin, 
+                    formula = cena ~ vzdalenost)
 
 summary(model_spojity)
 
