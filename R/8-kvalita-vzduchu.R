@@ -85,7 +85,8 @@ aq_knn <- predict(model, ekonomka)$var1.pred
 
 # varianta gravitace - všechny stanice, vliv přímo úměrné vzdálenosti na druhou
 
-model <- gstat(formula = value~1, data = stanice, nmax = Inf, set = list(idp = 2))
+model <- gstat(formula = value~1, data = stanice, 
+               nmax = Inf, set = list(idp = 2))
 
 aq_gravity <- predict(model, ekonomka)$var1.pred
 
@@ -156,8 +157,8 @@ vgram_kola_fit <- fit.variogram(vgram_kola_raw, vgm(model = "Exp", nuggett = 100
 
 plot(vgram_kola_raw, model = vgram_kola_fit)
 
-# obálka - touto ořízneme cílový rastar
-obalka <- concaveman::concaveman(rnet_lnd)
+# obálka - touto ořízneme cílový raster
+obalka <- st_convex_hull(st_union(rnet_lnd))
 
 # grid - sem budeme modelovat
 grid <- st_bbox(rnet_lnd) %>%
