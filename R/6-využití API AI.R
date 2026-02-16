@@ -71,9 +71,8 @@ tictoc::tic() # stopky spuštěny
 
 # ať Gemini API předvede svojí magii...
 location <- gemini_structured(prompt = paste(prompt_header, text_input),
-                              model = "2.5-pro", # when money is no issue
-#                              model = "2.5-flash", # střední cesta
-#                              model = "2.5-flash-lite", # for the cheapskates...
+#                              model = "3-flash-preview", # our most balanced model built for speed, scale, and frontier intelligence.
+                              model = "2.5-flash-lite", # for the cheapskates...
                               schema = schema)
 
 tictoc::toc() # stopky odečet :)
