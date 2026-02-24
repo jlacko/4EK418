@@ -7,7 +7,7 @@
 library(sf)
 library(dplyr)
 
-# prostý data frame - dva slouce
+# prostý data frame - dva sloupce
 skoly <- data.frame(
    skola = c("VŠE", "Matfyz", "Přfuk"),
    adresa = c(
