@@ -18,6 +18,5 @@ vysledek <- st_join(okrsky, ekonomka, left = F)
 mapview::mapview(vysledek)
 
 # alternativa: prostorový filtr - sf::st_filter()
-
 st_filter(okrsky, ekonomka) %>% 
   mapview::mapview()
