@@ -12,12 +12,14 @@ banky <- data.frame(
    banka = c("ČSOB", "KB", "ČS"),
    adresa = c(
       "Radlická 333, Praha",
-      "Náměstí Junkových 1, Praha",
+      "Náměstí Junkových 2772/1, Praha 5",
       "Olbrachtova 62, Praha"
    )) 
 
 # oficiální cenová mapa města Prahy
-ceny <- st_read("./data/SED_CenovaMapa_p.shp") 
+ceny <- st_read("./data/SED_CenovaMapa_p.shp") %>% 
+  st_make_valid() %>% 
+  st_transform(4326)
 
 
 # nápověda:
