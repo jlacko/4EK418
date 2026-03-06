@@ -9,7 +9,7 @@ Repozitář a podkladové materiály ke kurzu během letního semestru 2025/2026
 1.  týden (2026-02-17): úvod, koncept + prostředí
 2.  týden (2026-02-24): zdroje dat, GIS nástroje
 3.  týden (2026-03-03): souřadnicové systémy
-4.  týden (2026-03-10): *special guest lecture*
+4.  týden (2026-03-10): *special guest lecture / Ondra Sokol* 
 5.  týden (2026-03-17): operace nad souřadnicemi
 6.  týden (2026-03-24): prostorové propojení
 7.  týden (2026-03-31): struktura `sf` objektů, tvorba vlastních
