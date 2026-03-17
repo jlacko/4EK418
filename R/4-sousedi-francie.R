@@ -14,8 +14,7 @@ lafrance <- svet %>%
    filter(CNTR_ID == "FR") # Vive La France!
 
 # logický vektor: sousedí s Francií?
-sousedi <- sf::st_touches(lafrance,
-                          svet, sparse = F)
+sousedi <- sf::st_touches(lafrance, svet, sparse = F)[1,]
 
 # zde je akce!
 sf::st_intersection(lafrance, svet[sousedi, ]) %>% # průsečík jako čára
