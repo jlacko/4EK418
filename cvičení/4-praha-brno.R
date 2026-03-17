@@ -20,7 +20,7 @@ mesta_krovak <- st_transform(mesta,
 st_distance(___)
 
 # založte třetí objekt, v souřadnicovém systému Web Mercator (EPSG:3857)
-mesta_mercator <- st_transform(mesta, 3857)
+mesta_mercator <- st_transform(mesta, ___)
 
 # spočtěte vzdálenost mezi prvním a druhým objektu mesta_mercator
 st_distance(___)
