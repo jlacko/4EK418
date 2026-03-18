@@ -7,8 +7,9 @@ library(dplyr)
 library(giscoR)
 library(ggplot2)
 
-# všechny státy světa, jedna ku 60 milionům
-staty_sveta <- gisco_get_countries(resolution = "60")
+# všechny státy světa, s platnou geometrií jedna ku 60 milionům
+staty_sveta <- gisco_get_countries(resolution = "60") %>% 
+  filter(st_is_valid(.)) # neplatné nebrat!
 
 # řeka Nil, jedna ku 50 milionům
 reka_nil <- st_read("./data/ne_50m_rivers_lake_centerlines.shp") %>% 

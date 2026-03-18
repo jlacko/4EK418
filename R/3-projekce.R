@@ -4,7 +4,8 @@ library(giscoR)
 library(ggplot2)
 
 # celý svět, 1: 20M
-svet <- gisco_get_countries(resolution = "20")
+svet <- gisco_get_countries(resolution = 1) %>% 
+  rmapshaper::ms_simplify(keep = 1/100, keep_shapes = T) # zjednodušit pro zrychlení
 
 # Grónsko a Kongo
 glmd <- svet %>% 
