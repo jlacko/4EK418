@@ -42,7 +42,7 @@ obrazek <- ggplot() +
 # ukážeme obrázek, když jsme si ho uložili...
 obrazek 
 
-#1) buffer okolo škol ("kolečka" o průměru x metrů)
+# 1) buffer okolo škol ("kolečka" o průměru x metrů)
 
 buffer <- skoly %>% 
    st_buffer(dist = 1000) # Křovák je v metrech = 1 kilometřík
