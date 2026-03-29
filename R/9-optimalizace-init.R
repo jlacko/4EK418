@@ -22,7 +22,7 @@ search_res <- opq(bbox = "Praha") %>%
    osmdata_sf(quiet = F)  # ukáže průběh
 
 # z výsledku vybere data frame bodů / ještě jsou polygony & lines
-hopsody <- search_res$osm_points %>%  
+hospody <- search_res$osm_points %>%  
    filter(!is.na(amenity)) %>%  # pouze platné
    select(name) %>% 
    st_filter(obrys) # jen ty uvnitř hranic / ne jen bboxu
@@ -32,7 +32,7 @@ hopsody <- search_res$osm_points %>%
 ggplot() +
    geom_sf(data = obrys, fill = NA, color = "gray40") +
    geom_sf(data = reky("Praha"), color = "steelblue") +
-   geom_sf(data = hopsody, color = "red", pch = 4, alpha = 1/3) +
+   geom_sf(data = hospody, color = "red", pch = 4, alpha = 1/3) +
    theme_void() +
    labs(title = "Pražské hospody")
 
@@ -50,7 +50,7 @@ grid <- obrys %>%
    mutate(id = row_number()) # create id of the grid cell
 
 
-pruseciky <- st_join(hopsody, grid) %>%
+pruseciky <- st_join(hospody, grid) %>%
    st_drop_geometry() %>%
    group_by(id) %>%
    tally() %>%

@@ -33,13 +33,12 @@ ggplot() +
    geom_sf(data = grid, aes(fill = obyvatel))
 
 # hotelová lůžka
-luzka <- readr::read_csv('./data/CRU02_2012_2017.csv') %>%
-   filter(rok == 2017 
+luzka <- czso::czso_get_table("020055") %>% # dataset "Kapacity hromadných ubytovacích zařízení"
+   filter(rok == 2024 # poslední známý...
           & uzemi_kod %in% casti$KOD
           & stapro_kod == 2658 # hotelová lůžka
-          & !is.na(hodnota)) %>%
-   group_by(uzemi_kod, uzemi_txt) %>%
-   summarise(kapacita = sum(hodnota))
+          & kat_kod == '1') %>% # součty, ne struktura
+   rename(kapacita = hodnota)
 
 prazska_luzka <- left_join(casti, luzka, by = c("KOD" = "uzemi_kod")) %>% 
    mutate(kapacita = coalesce(kapacita, 0))
