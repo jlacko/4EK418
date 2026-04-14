@@ -23,3 +23,9 @@ reka_nil %>%
   st_length() %>% 
   units::set_units("km")
 
+reka_nil %>% 
+  st_intersection(staty_sveta) %>% 
+  mutate(delka_nilu = st_length(.)) %>% 
+  st_drop_geometry() %>% 
+  select(CNTR_NAME, delka_nilu) %>% 
+  arrange(desc(delka_nilu))

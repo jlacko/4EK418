@@ -6,25 +6,42 @@
 
 
 library(RCzechia)
+library(ggplot2)
 library(dplyr)
 
 # census 1980
 okresy_1980 <- RCzechia::historie("okresy_1980") %>% 
-  mutate(duchodci_80 = `obyvatelstvo celkem 65+` / `počet obyvatel přítomných`) %>% 
-  select(duchodci_80) %>% 
+  mutate(duchodci_80 = `obyvatelstvo celkem 65+`,
+         obyvatele_80 = `počet obyvatel přítomných`) %>% 
   st_transform(5514)
 
-plot(okresy_1980["duchodci_80"])
-
+ggplot(data = okresy_1980) +
+  geom_sf(aes(fill = duchodci_80 / obyvatele_80)) +
+  labs(title = "Důchodci v roce 1980") +
+  scale_fill_viridis_c("podíl z celku") +
+  theme_void() +
+  theme(legend.position="bottom")
+  
 
 # census 1930
 okresy_1930 <- RCzechia::historie("okresy_1930") %>% 
-  mutate(nemci_30 = `národnost německá` / `počet obyvatel přítomných`,
-         duchodci_30 = `obyvatelstvo celkem věk 65+` / `počet obyvatel přítomných` ) %>% 
-  select(nemci_30, duchodci_30) %>% 
+  mutate(nemci_30 = `národnost německá`,
+         obyvatele_30 = `počet obyvatel přítomných`,
+         duchodci_30 = `obyvatelstvo celkem věk 65+`) %>% 
   st_transform(5514)
 
-plot(okresy_1930[c("nemci_30", "duchodci_30")])
+ggplot(data = okresy_1930) +
+  geom_sf(aes(fill = duchodci_30 / obyvatele_30)) +
+  labs(title = "Důchodci v roce 1930") +
+  scale_fill_viridis_c("podíl z celku") +
+  theme_void() +
+  theme(legend.position="bottom")
 
+ggplot(data = okresy_1930) +
+  geom_sf(aes(fill = nemci_30 / obyvatele_30)) +
+  labs(title = "Němci v roce 1930") +
+  scale_fill_viridis_c("podíl z celku") +
+  theme_void() +
+  theme(legend.position="bottom")
 
-# pro přenos metrik uvažujte sf::st_interpolate_aw(); věnujte pozornost argumentu extensive
+# pro přenos metrik uvažujte sf::st_interpolate_aw()
