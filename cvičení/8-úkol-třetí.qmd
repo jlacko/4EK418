@@ -1,0 +1,67 @@
+---
+title: "3. úkol 4EK418"
+author: "Jindra Lacko"
+format: 
+  html:
+    self-contained: true
+toc: true
+execute: 
+  eval: true
+  echo: true
+  message: false
+  warning: false
+---
+  
+## Body v Brně...
+  
+Uvažujte dataset významných bodů zájmu města Brna; obsahuje dva základní typy objektů:
+
+- zdravotnické
+- vzdělávací
+
+Posuďte, které z těchto dvou typů bodů zájmu jsou více koncentrované v rámci městských částí města Brna.
+
+Uvažujete přitom, že městské části bydlí v `RCzechia::casti()` a Brno je obec s kódem `582786`.
+
+Jako měřítko koncentrace uvažujte Moranovo *I*, s tím že více je více (větší íčko = větší koncentrace). Pro matici vah uvažujme defaultní královnu.
+
+Očekávanou odpovědí je typ institucí s větší koncentrací, tj. očekávám výpočet dvou íček a slovní odpověď že jedno z nich je vyšší (a kód který ukáže, proč je to pravda).
+
+```{r}
+library(sf)
+library(dplyr)
+library(leaflet)
+
+# body v Brně
+poi_brno <- readr::read_csv("../data/poi-metropole-brno.csv") %>% 
+  st_as_sf(coords = c("long", "lat"), crs = 4326)
+
+# základní orientace
+glimpse(poi_brno)
+
+# přehled součtů po typech
+table(poi_brno$typ)
+
+# mapový náhled
+pal <- colorFactor(palette = "Set1", 
+                   domain = c("Vzdělání", "Zdravotnictví"))
+
+leaflet(data = poi_brno) %>% 
+  addProviderTiles("CartoDB.Positron") %>% 
+  addPolygons(data = subset(RCzechia::casti(),
+                            KOD_OBEC == "582786"),
+              color = "cornflowerblue") %>% 
+  addCircleMarkers(stroke = F,
+                   fillOpacity = 1/2,
+                   label = ~ nazev,
+                   color = ~pal(typ))
+
+```
+
+Očekávaným výstupem je soubor typu HTML, který uložíte do k tomu zřízené odevzdávárny.
+
+Soubor je napsaný v [Quarto Markdownu](https://quarto.org/) a má ve svém front matter nastavené [execution options](https://quarto.org/docs/computations/execution-options.html) = potlačuje chyby a prosté informace, ale zachovává zobrazení zdrojového kódu.
+
+V komerční praxi může být elegantnější podkladový zdroják potlačit (= nastavit `echo` na `false`), ale pro účely domácího úkolu nechte front matter tak jak je. Váš kód mě zajímá!
+
+Pro zamezení pochybností: soubor jiného typu nežli HTML, ať už `*.R` či tento `*.qmd`, *není* očekávaným výstupem. Prosté obrázky bez kódu *nejsou* očekávaným výstupem, stejně jako kód bez obrázků.
