@@ -7,10 +7,11 @@ library(leaflet)   # pro interaktivní vizualizaci
 
 # úvodní prompt
 prompt_header <- "you are an experienced geographer; analyze this text and 
-                  give me all the location mentioned as a name, together with 
-                  its relation to the overall message in the format of a POINT in 
-                  simple features WKT format, and state your confidence
-                  about the geocoding accuracy on a scale from 0 to 100 \n\n"
+                  give me all the locations mentioned as a name and coordinates
+                  in the format of a POINT in simple features WKT format, 
+                  toghether with a brief description of its relation to the
+                  text and state your confidence about the geocoding accuracy 
+                  on a scale from 0 (lowest) to 100 (highest) \n\n"
 
 # vlastní text pro analýzu
 text_input <- "Jedu takhle tábořit Škodou 100 na Oravu
@@ -71,7 +72,7 @@ tictoc::tic() # stopky spuštěny
 
 # ať Gemini API předvede svojí magii...
 location <- gemini_structured(prompt = paste(prompt_header, text_input),
-#                              model = "3-flash-preview", # our most balanced model built for speed, scale, and frontier intelligence.
+#                              model = "3.1-flash-lite-preview", # best for high-volume agentic tasks, simple data extraction, and extremely low-latency applications where budget and speed are the primary constraints
                               model = "2.5-flash-lite", # for the cheapskates...
                               schema = schema)
 

@@ -48,3 +48,4 @@ data/builtup*.tif
 
 # vygenerované HTML soubory od úkolů
 /cvičení/*html
+.positai
