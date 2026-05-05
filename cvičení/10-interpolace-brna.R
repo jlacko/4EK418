@@ -7,9 +7,12 @@ library(sf)
 library(dplyr)
 library(stars)
 
-# loni v Brně...
+# jak bylo v Brně?
 brno_data <- st_read("./data/brno-AQ.gpkg") %>% 
   st_transform(5514)
+
+# náhled vizuálně...
+mapview::mapview(brno_data, zcol = "pm10_1h")
 
 # náš cíl - tady stojí Orloj
 svobodak <- tidygeocoder::geo("náměstí Svobody, Brno") %>% 
