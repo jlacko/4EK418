@@ -79,14 +79,18 @@ aq_voronoi <- st_join(ekonomka, voronoi, left = F)$value
 
 library(gstat)
 
-model <- gstat(formula = value~1, data = stanice, nmax = 3)
+model <- gstat(formula = value~1, 
+               data = stanice, 
+               nmax = 3)
 
 aq_knn <- predict(model, ekonomka)$var1.pred
 
 # varianta gravitace - všechny stanice, vliv přímo úměrné vzdálenosti na druhou
 
-model <- gstat(formula = value~1, data = stanice, 
-               nmax = Inf, set = list(idp = 2))
+model <- gstat(formula = value~1, 
+               data = stanice, 
+               nmax = Inf, 
+               set = list(idp = 2))
 
 aq_gravity <- predict(model, ekonomka)$var1.pred
 
