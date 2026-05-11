@@ -49,3 +49,6 @@ data/builtup*.tif
 # vygenerované HTML soubory od úkolů
 /cvičení/*html
 .positai
+
+# pojistná záloha hospod kdyby spadlo API
+/data/praha-hospody.rds

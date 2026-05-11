@@ -27,6 +27,8 @@ hospody <- search_res$osm_points %>%
    select(name) %>% 
    st_filter(obrys) # jen ty uvnitř hranic / ne jen bboxu
 
+# pojistka pro spadlé API
+# hospody <- readRDS("./data/praha-hospody.rds")
 
 # vizuální overview
 ggplot() +
