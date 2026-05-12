@@ -155,7 +155,7 @@ ggplot() +
   geom_sf_label(data = y2k, aes(label = teplota)) +
   theme_void()
 ```
-## Úkol devátý: Prostorová statistika (20b)
+## Úkol devátý: Prostorová statistika (15 b)
 
 Ze sčítání lidu v roce 2021 máme k dispozici publikovaný výstup o dojížďce do zaměstnání podle druhu dopravy. Níže uvedený kód z této statistiky vybírá součet za muže a ženy (tj. bez rozdílu pohlaví) v úrovni detailu ORP.
 
@@ -197,7 +197,7 @@ nadmorska_vyska <- RCzechia::vyskopis(format = "actual",
 plot(nadmorska_vyska)
 ```
 
-## Úkol desátý: Analýza volebních výsledků (20b)
+## Úkol desátý: Analýza volebních výsledků (15 b)
 
 Z ofiko volebních výsledků ze stránek [https://www.volby.cz](https://www.volby.cz) máme výsledky charizmatického politika; poznáte v jaké části ČR je těžiště jeho podpory? 
 
