@@ -6,19 +6,19 @@ Repozitář a podkladové materiály ke kurzu během letního semestru 2025/2026
 
 ### Plánovaná struktura kurzu:
 
-1.  týden (2026-02-17): úvod, koncept + prostředí
-2.  týden (2026-02-24): zdroje dat, GIS nástroje
-3.  týden (2026-03-03): souřadnicové systémy
-4.  týden (2026-03-10): *special guest lecture / Ondra Sokol* 
-5.  týden (2026-03-17): operace nad souřadnicemi
-6.  týden (2026-03-24): prostorové propojení
-7.  týden (2026-03-31): struktura `sf` objektů, tvorba vlastních
-8.  týden (2026-04-07): *inovační týden (bez rozvrhované výuky)*
-9.  týden (2026-04-14): vzdálenosti a routing; externí API
-10. týden (2026-04-21): prostorová informace ve statistice / úvod
-11. týden (2026-04-28): prostorová informace ve statistice / pokračování
-12. týden (2026-05-05): případová studie: volby
-13. týden (2026-05-12): případová studie: distribuční síť
+1.  týden (2026-09-22): úvod, koncept + prostředí
+2.  týden (2026-09-29): zdroje dat, GIS nástroje
+3.  týden (2026-10-06): souřadnicové systémy
+4.  týden (2026-10-13): operace nad souřadnicemi
+5.  týden (2026-10-20): prostorové propojení
+6.  týden (2026-10-27): struktura `sf` objektů, tvorba vlastních
+7.  týden (2026-11-03): *inovační týden (bez rozvrhované výuky)*
+8.  týden (2026-11-10): vzdálenosti a routing; externí API
+9.  týden (2026-11-17): *Den boje studentů za svobodu a demokracii*
+10. týden (2026-11-24): prostorová informace ve statistice / úvod
+11. týden (2026-12-01): prostorová informace ve statistice / pokračování
+12. týden (2026-12-08): *special guest lecture / Ondra Sokol* 
+13. týden (2026-12-15): případová studie
 <hr>
 
 ### Struktura repozitáře:

@@ -13,11 +13,14 @@ knitr::opts_chunk$set(echo = TRUE, fig.align="center")
 
 Pro aktivní účast na kurzu *Mapy, geodata a prostorová ekonometrie v R* velmi oceníte vlastní technické prostředí; školní počítače sice (většinou) fungují, ale pro pro skutečné sžití se s daty a kódem je praktické si materiály odnést s sebou a pracovat s nimi doma. Pro nastavení vlastního prostředí doporučuji postupovat podle podle návodu níže.
 
-V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble" a RStudio 2026.01.0+392 "Apple Blossom" Release (2026-01-04)  -- ale stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Nicméně toto je konfigurace, kterou budu používat já při prezentaci.
+V první řadě budete potřebovat přiměřeně čerstvé R a RStudio. V ideálním případě 4.6.1 (2026-06-24) -- "Happy Hop" a RStudio 2026.09.0+174 "Autumn Hawkbit" -- ale stačit bude jakákoliv čtyřková verze erka a RStudio může být i nižší. Nicméně toto je konfigurace, kterou budu používat já při prezentaci.
 
-Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to uděláte vykopírováním a spuštěním kódu níže.
+Dále bude třeba nainstalovat balíčky použité v kurzu; nejsnáze to uděláte vykopírováním a spuštěním kódu níže. Pozor! kód může běžet vyšší jednotky či nižší desítky minut.
 
 ```{r instalace-packagi, eval = F}
+# toto mám:
+installed <- installed.packages()[, "Package"]
+
 # toto potřebuju:
 required <- c("czso", "DHARMa", "dplyr", "exactextractr",
               "geojsonsf", "ggplot2", "giscoR", "glmmTMB",
@@ -27,11 +30,12 @@ required <- c("czso", "DHARMa", "dplyr", "exactextractr",
               "rgeoda", "rmapshaper", "rmarkdown", "scales",
               "sf", "spdep", "stars", "terra", "tidygeocoder",
               "tidyr", "tidyverse")
-# toto mám:
-installed <- installed.packages()[, "Package"]
 
-# a tedy rozdíl stahnu z CRANu...
-install.packages(setdiff(required, installed))
+# chybějící balíčky nainstaluji z CRANu
+install.packages(pkgs = setdiff(required, installed))
+
+# existující balíčky povýším na aktuální verzi
+update.packages(ask = FALSE, oldPkgs = intersect(required, installed))
 ```
 
 Instalace balíčků by měla proběhnout bez větších složitostí - zejména v prostředí Windows, kde jsou k dispozici předkompilované binárky - ale komplikace se dopředu nedají zcela vyloučit.
@@ -49,23 +53,26 @@ installr::install.git()
 
 \newpage
 
-Když budete mít git funkční, tak prosím v rámci RStudia založte nový projekt metodou z hlavní nabídky =  `File >> New Project >> Version Control >> Git`, a coby cestu k repozitáři zadejdte [`https://github.com/jlacko/4EK418.git`](https://github.com/jlacko/4EK418.git). 
+Když budete mít git funkční, tak prosím v rámci RStudia založte nový projekt metodou z hlavní nabídky:  `File >> New Project >> Version Control >> Git`, a coby cestu k repozitáři zadejdte [`https://github.com/jlacko/4EK418.git`](https://github.com/jlacko/4EK418.git). 
 
-\bcenter
-
-![](images/new-project.png){width=500px}
-
-![](images/clone-git.png){width=500px}
-
-\ecenter
-
-Vyklonováním získáte aktivní projekt, do kterého budu vkládat kurzovné materiály. Snadno si jej aktualizujete příkazem Pull na záložce Git (modrá šipka směrem dolů). Zatím je to prázdná schránka, ale až začneme tak budou materiály doplněny.
+Alternativou je link vzít ze GitHubového repozitáře kurzu, který "bydlí" na odkazu https://github.com/jlacko/4EK418 (tyto stránky se mohou hodit i v budoucnu, budu je aktualizovat).
 
 \bcenter
 
 ![](images/screenshot-git.png){width=500px}
 
 \ecenter
+
+V každém případě je třeba ve "svém" RStudiu založit nový projekt, a hlídat si že ho máte aktivní. Aktivní projekt vám zaručí, že bude fungovat git integrace, a že skripty budou vědět kde na disku je aktuální adresář. Díky tomu budou očekávaným způsobem fungovat relativní linky v kódu (například odkazy na načtení dat).
+
+\bcenter
+
+![](images/new-project.png){width=300px} ![](images/clone-git.png){width=300px}
+
+\ecenter
+
+Vyklonováním získáte aktivní projekt, do kterého budu vkládat kurzovné materiály. V rámci RStudia si jej pak snadno aktualizujete příkazem Pull na záložce Git (modrá šipka směrem dolů). 
+
 
 \newpage
 
