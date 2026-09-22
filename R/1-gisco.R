@@ -19,5 +19,5 @@ orisky <- gisco_get_nuts(
 mesta <- orisky %>% 
   filter(geo %in% c("PL911", "AT130"))
 
-# vizuální kontrola
+# vizuální kontrola / https://github.com/r-spatial/mapview/issues/520
 mapview::mapview(mesta)

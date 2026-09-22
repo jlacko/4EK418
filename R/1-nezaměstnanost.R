@@ -50,7 +50,7 @@ ggplot(chrt_src) +
    labs(title = "Podíl nezaměstnaných osob (%)",
         subtitle = "stav k srpnu 2024")
 
-# mapview - jednoduchý interaktivní
+# mapview - jednoduchý interaktivní / https://github.com/r-spatial/mapview/issues/520
 library(mapview)
 
 mapview::mapview(chrt_src, zcol = "hodnota")
