@@ -64,7 +64,7 @@ pal <- leaflet::colorBin(palette = "RdYlBu",
                          bins = 7)
 
 leaflet::leaflet(data = chrt_src) %>% 
-  leaflet::addProviderTiles("CartoDB.Positron") %>% 
+  leaflet::addProviderTiles("OpenStreetMap.Mapnik") %>% 
   leaflet::addPolygons(fillColor = ~pal(log10(chrt_src$hodnota)),
                        stroke = NA,
                        fillOpacity = 2/3,
