@@ -1,11 +1,12 @@
 # dohledání souřadnic a zakreslení na mapě
 # přístup:
 # - tidygeocoder::geocode() nad data framem
-# - tidygeocoder::geo() nad vektrorem adres
+# - tidygeocoder::geo() nad vektorem adres
 # - API ČUZK via RCzechia
  
 library(sf)
 library(dplyr)
+library(leaflet)
 
 # prostý data frame - dva sloupce
 skoly <- data.frame(
@@ -25,17 +26,23 @@ skoly_sf <- skoly_souradnice %>%
    sf::st_as_sf(coords = c("long", "lat"), crs = 4326) 
 
 # rychlá vizuální kontrola
-mapview::mapview(skoly_sf)
+leaflet(data = skoly_sf) |> 
+  addProviderTiles("Stadia.AlidadeSmooth") |> 
+  addMarkers()
 
 # adresa s jistotou v zahraničí / geo_osm bere jako vstup textový vektor
 zahranici <- tidygeocoder::geo("1600 Pennsylvania Avenue NW, Washington DC",
                                method = "osm") %>% 
    sf::st_as_sf(coords = c("long", "lat"), crs = 4326)
 
-mapview::mapview(zahranici)
+leaflet(data = zahranici) |> 
+  addProviderTiles("Stadia.AlidadeSmooth") |> 
+  addMarkers()
 
 # proti API ČUZK / očekává se vstup jako vektor adres (textový vektor)
 ekonomka <- RCzechia::geocode("náměstí Winstona Churchilla 1938, Praha 3")
 
 # rychlá vizuální kontrola
-mapview::mapview(ekonomka)
+leaflet(data = ekonomka) |> 
+  addProviderTiles("Stadia.AlidadeSmooth") |> 
+  addMarkers()
