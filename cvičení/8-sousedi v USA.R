@@ -14,7 +14,7 @@ karolina <- st_read(system.file("shape/nc.shp", package="sf")) # included with s
 
 # základní orientace
 leaflet() %>% 
-  addProviderTiles("CartoDB.Positron") %>% 
+  addProviderTiles("Stadia.AlidadeSmooth") %>% 
   # hrabství, co se NEjmenují po manželce krále Jiřího
   addPolygons(data = subset(karolina, NAME != "Mecklenburg"),
               label = ~ NAME) %>% 

@@ -17,7 +17,7 @@ hopsody <- search_res$osm_points %>%
 
 # protože ukázaná platí...
 leaflet(hopsody) %>% 
-  addProviderTiles("CartoDB.Positron") %>% 
+  addProviderTiles("Stadia.AlidadeSmooth") %>% 
   addCircleMarkers(fillColor = "red",
                    radius = 5,
                    stroke = F,
@@ -42,7 +42,7 @@ vejsky <- search_res$osm_polygons
 
 # protože ukázaná platí...
 leaflet(vejsky) %>% 
-  addProviderTiles("CartoDB.Positron") %>% 
+  addProviderTiles("Stadia.AlidadeSmooth") %>% 
   addPolygons(fillColor = "red",
               stroke = F,
               fillOpacity = .75,

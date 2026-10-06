@@ -76,7 +76,7 @@ leaf_src <- leaf_src %>% # create a HTML formatted popup label of grid cell
                          ifelse(resids > 0, '+', '-'), abs(round(resids)), '</b>.'))
 
 leaflet() %>%
-   addProviderTiles(providers$CartoDB.Positron) %>%
+   addProviderTiles("Stadia.AlidadeSmooth") %>%
    setView(lng = 14.46, lat = 50.07, zoom = 10) %>%
    addPolygons(data = leaf_src, 
                fillColor = ~pal(resids),

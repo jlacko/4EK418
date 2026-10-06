@@ -23,7 +23,7 @@ bars <- search_res$osm_points %>%
 
 # show results
 leaflet(bars) %>% 
-  addProviderTiles("CartoDB.Positron") %>% 
+  addProviderTiles("Stadia.AlidadeSmooth") %>% 
   addCircleMarkers(fillColor = "red",
                    radius = 5,
                    stroke = F,
@@ -45,7 +45,7 @@ beer_icon <- makeAwesomeIcon(
 
 # a quick overview of our selection
 leaflet(vzorek) %>% 
-  addProviderTiles("CartoDB.Positron") %>% 
+  addProviderTiles("Stadia.AlidadeSmooth") %>% 
   addAwesomeMarkers(data = vzorek,
                     icon = beer_icon, # the awesome icon declared earlier
                     label = ~name)
@@ -82,7 +82,7 @@ crow_result <- vzorek[c(stops, stops[1]), ] %>%
 
 # present the as-the-crow-flies based route in crimson color
 leaflet(crow_result) %>% 
-  addProviderTiles("CartoDB.Positron") %>% 
+  addProviderTiles("Stadia.AlidadeSmooth") %>% 
   addPolylines(color = "crimson",
                popup = "as the crow flies...") %>% 
   addAwesomeMarkers(data = vzorek,
@@ -163,7 +163,7 @@ distance_result <-  distance_route %>%
 
 # present the distance based route in goldenrod color
 leaflet(distance_result) %>% 
-  addProviderTiles("CartoDB.Positron") %>% 
+  addProviderTiles("Stadia.AlidadeSmooth") %>% 
   addPolylines(color = "GoldenRod",
                popup = ~route_name) %>% 
   addAwesomeMarkers(data = vzorek,
@@ -204,7 +204,7 @@ duration_result <-  duration_route %>%
 
 # present the duration based route in light blue color
 leaflet(duration_result) %>% 
-  addProviderTiles("CartoDB.Positron") %>% 
+  addProviderTiles("Stadia.AlidadeSmooth") %>% 
   addPolylines(color = "cornflowerblue",
                popup = ~route_name) %>% 
   addAwesomeMarkers(data = vzorek,
