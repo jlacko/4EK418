@@ -36,4 +36,4 @@ vysledek <- c("wgs84" = st_area(wgs84),
 sort(vysledek) %>% 
   units::set_units("km2")
 
-sort(vysledek) / vysledek["krovak"]
+sort(vysledek) / vysledek["wgs84"]
