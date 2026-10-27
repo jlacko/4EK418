@@ -31,6 +31,9 @@ library(sf)
 library(dplyr)
 library(osmdata)
 
+# protože licence na Carto / https://github.com/r-spatial/mapview/issues/520
+options("mapviewBasemaps" = c("OpenStreetMap"))
+
 # kód pro spočtení posledního místo hashe
 en <- rlang::hash("Jindra Lacko") %>%
          substr(32, 32) %>%
