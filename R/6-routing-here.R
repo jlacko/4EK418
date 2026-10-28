@@ -4,6 +4,10 @@ library(hereR)
 library(dplyr)
 library(sf)
 
+# protože licence na Carto / https://github.com/r-spatial/mapview/issues/520
+options("mapviewBasemaps" = c("OpenStreetMap"))
+
+
 hereR::set_key(Sys.getenv("HERE_API_KEY")) # sem dáte vlastní :)
 
 lokalita <- c("Úřad vlády České republiky, nábřeží Edvarda Beneše 4, Praha 1",

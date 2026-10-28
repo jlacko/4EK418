@@ -5,6 +5,10 @@ library(leaflet) # to show data interactively
 library(hereR) # interface to routing engine
 library(TSP) # to solve TSP
 
+# protože licence na Carto / https://github.com/r-spatial/mapview/issues/520
+options("mapviewBasemaps" = c("OpenStreetMap"))
+
+
 
 # bbox = http://bboxfinder.com - "core" Žižkov
 core_zizkov <- c(14.437408,50.081131,

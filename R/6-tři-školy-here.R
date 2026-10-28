@@ -6,6 +6,10 @@ library(tidygeocoder)
 library(osmdata)
 library(hereR)
 
+# protože licence na Carto / https://github.com/r-spatial/mapview/issues/520
+options("mapviewBasemaps" = c("OpenStreetMap"))
+
+
 # set up the secret key / mine is hidden in .Rprofile
 hereR::set_key(Sys.getenv("HERE_API_KEY")) # sem dáte vlastní :)
 

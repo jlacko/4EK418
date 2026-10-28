@@ -49,7 +49,7 @@ ggplot() +
    geom_sf(data = prazske_pocty, aes(fill = obyvatel)) +
    geom_sf(data = reka, color = "red")
 
-# interpolace obyvatel přes plochu městskáých částí
+# interpolace obyvatel přes plochu městských částí
 prusecik <- st_interpolate_aw(x = prazske_pocty["obyvatel"],
                               to = st_geometry(pulky),
                               extensive = T)
