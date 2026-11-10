@@ -33,9 +33,9 @@ Podle hypotézy Postupim očekáváme, že podíl důchodců v roce 1980 v regio
 
 Oba datasety jsou pro zjednodušení transformovány do souřadnicového systému [ing. Křováka](https://cs.wikipedia.org/wiki/Josef_K%C5%99ov%C3%A1k).
 
-Oba datasety obsahují **absolutní počty** obyvatel, ne podíly. Počty jsou tzv. *extenzivní* veličina – když okres rozpůlíte, rozpůlí se i jeho obyvatelé. Podíly spočtěte až po přenosu dat z jednoho datasetu na druhý.
+Oba datasety obsahují **absolutní počty** obyvatel, ne podíly. Počty jsou tzv. *extenzivní* veličina – když okres rozdělíte, rozdělí se i jeho obyvatelé. Mějte to na paměti při počítání podílů.
 
-Kontrola: přenášená metrika (důchodci a / nebo Němci) by se přenosem z jedněch okresů na druhé neměla (výrazně) změnit. Tuto kontrolu vykonejte spolu s regresí.
+Kontrola: přenášená metrika (obyvatelé, důchodci a / nebo Němci) by se přenosem z jedněch okresů na druhé neměla (výrazně) změnit. Tuto kontrolu vykonejte před vlastní regresí.
 
 ```{r}
 library(RCzechia)
