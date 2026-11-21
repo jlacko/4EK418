@@ -55,3 +55,6 @@ data/builtup*.tif
 
 # markdown v rootu
 /*md
+
+# OSM extrakt Prahy (stahuje se z S3) + gpkg cache od osmextract
+/data/praha.*

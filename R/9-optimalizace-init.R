@@ -30,6 +30,21 @@ hospody <- search_res$osm_points %>%
 # pojistka pro spadlé API
 # hospody <- readRDS("./data/praha-hospody.rds")
 
+# alternativa bez Overpass API: lokální extrakt OSM dat Prahy (Geofabrik k 2026-10-24)
+cesta <- "https://jla-unsecure.s3.eu-central-1.amazonaws.com/osm-data/praha.osm.pbf"
+stazene_osm <- "./data/praha.osm.pbf" # z důvodu velikosti není v gitu
+
+# stažení právě jednou = pokud soubor existuje, download se přeskočí
+if(!file.exists(stazene_osm)) curl::curl_download(url = cesta, destfile = stazene_osm)
+
+# amenity není mezi výchozími sloupci vrstvy points => extra_tags
+hospody <- osmextract::oe_read(stazene_osm,
+                               layer = "points",
+                               extra_tags = "amenity",
+                               query = "SELECT * FROM points WHERE amenity IN ('bar', 'restaurant', 'pub')") %>%
+   select(name) %>%
+   st_filter(obrys) # jen ty uvnitř hranic / extrakt má 500 m přesah
+
 # vizuální overview
 ggplot() +
    geom_sf(data = obrys, fill = NA, color = "gray40") +

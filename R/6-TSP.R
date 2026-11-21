@@ -21,8 +21,26 @@ search_res <- opq(bbox = core_zizkov) %>%
   osmdata_sf(quiet = T) 
 
 # pulls bars as points
-bars <- search_res$osm_points %>%  
-  filter(!is.na(name)) %>% 
+bars <- search_res$osm_points %>%
+  filter(!is.na(name)) %>%
+  select(name)
+
+# alternative without Overpass API: local OSM extract of Prague (Geofabrik as of 2026-10-24)
+library(osmextract)
+
+cesta <- "https://jla-unsecure.s3.eu-central-1.amazonaws.com/osm-data/praha.osm.pbf"
+stazene_osm <- "./data/praha.osm.pbf" # not in git due to size
+
+# download just once = skipped if the file exists
+if(!file.exists(stazene_osm)) curl::curl_download(url = cesta, destfile = stazene_osm)
+
+bars <- oe_read(stazene_osm,
+                layer = "points",
+                extra_tags = "amenity", # not a default column of points layer
+                query = "SELECT * FROM points WHERE amenity IN ('bar', 'restaurant', 'pub')") %>%
+  st_filter(st_as_sfc(st_bbox(c(xmin = core_zizkov[1], ymin = core_zizkov[2],
+                                xmax = core_zizkov[3], ymax = core_zizkov[4]), crs = 4326))) %>%
+  filter(!is.na(name)) %>%
   select(name)
 
 # show results

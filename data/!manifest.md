@@ -39,3 +39,6 @@ https://www.mdcr.cz/Statistiky/Silnicni-doprava/Centralni-registr-vozidel/Statis
 
 ### Ministerstvo financí ČR
 * předpokládané daňové příjmy obcí a krajů v roce 2026 (projekce RUD 2026.xlsx) / https://mf.gov.cz/cs/rozpoctova-politika/uzemni-rozpocty/hospodareni-uzemnich-rozpoctu/zakladni-informace/2025/predpokladane-danove-prijmy-obci-a-kraju-v-roce-20-61233
+
+### OpenStreetMap
+* extrakt OSM dat pro území hl. m. Prahy s přesahem 500 m (praha.osm.pbf) / © přispěvatelé OpenStreetMap, ODbL - https://www.openstreetmap.org/copyright / vyříznuto z extraktu Evropy od Geofabrik (https://download.geofabrik.de/europe.html) platného k 2026-10-24; z důvodu velikosti není v gitu, skripty jej stahují z AWS S3
