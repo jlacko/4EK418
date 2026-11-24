@@ -29,7 +29,8 @@ podklad_regrese <- census %>%
   st_drop_geometry() 
 
 # podat zprávu...
-model_babis_nemci <- lm(data = podklad_regrese, pct_babis ~ pct_nemci)
+model_babis_nemci <- lm(data = podklad_regrese, 
+                        pct_babis ~ pct_nemci)
 
 summary(model_babis_nemci)
 
